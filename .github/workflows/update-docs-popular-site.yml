@@ -1,4 +1,4 @@
-name: Update Context7 Docs Popular Site
+name: Update Context7 Rankings Site
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-docs-popular-site
+  group: update-context7-rankings-site
   cancel-in-progress: false
 
 jobs:
@@ -24,21 +24,32 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Refresh dataset
+      - name: Refresh docs popular dataset
         run: |
           python3 scripts/fetch_context7_docs_popular.py \
             --limit 50 \
             --output-json docs/data/context7_docs_popular_top50.json \
             --output-csv docs/data/context7_docs_popular_top50.csv
 
+      - name: Refresh skills ranked dataset
+        run: |
+          python3 scripts/fetch_context7_skills_for_site.py \
+            --min-installs 36 \
+            --output-json docs/data/context7_skills_ranked_min36.json \
+            --output-csv docs/data/context7_skills_ranked_min36.csv
+
       - name: Commit and push if changed
         run: |
           if [[ -n "$(git status --porcelain docs/data)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/data/context7_docs_popular_top50.json docs/data/context7_docs_popular_top50.csv
-            git commit -m "chore: refresh Context7 docs popular ranking data"
+            git add \
+              docs/data/context7_docs_popular_top50.json \
+              docs/data/context7_docs_popular_top50.csv \
+              docs/data/context7_skills_ranked_min36.json \
+              docs/data/context7_skills_ranked_min36.csv
+            git commit -m "chore: refresh Context7 docs+skills ranking data"
             git push
           else
-            echo "No docs ranking changes."
+            echo "No ranking data changes."
           fi

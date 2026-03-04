@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Context7 Docs Popular Ranking</title>
-  <meta name="description" content="Auto-updated Context7 docs popularity ranking dashboard." />
+  <title>Context7 Rankings Dashboard</title>
+  <meta name="description" content="Auto-updated Context7 docs and skills rankings dashboard." />
   <style>
     :root {
       --bg: #f4f6f8;
@@ -15,7 +15,6 @@
       --accent: #0f766e;
       --accent-soft: #e6f5f3;
     }
-
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -23,59 +22,83 @@
       color: var(--text);
       font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     }
-
     .wrap {
-      max-width: 1200px;
+      max-width: 1260px;
       margin: 0 auto;
       padding: 24px 18px 40px;
     }
-
     h1 {
       margin: 0;
       font-size: clamp(24px, 4vw, 36px);
       letter-spacing: 0.02em;
     }
-
     .sub {
       margin-top: 8px;
       color: var(--muted);
       font-size: 15px;
     }
-
+    .tabs {
+      margin-top: 14px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .tab.active {
+      color: var(--accent);
+      border-color: #9bd6d0;
+      background: var(--accent-soft);
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 10px;
+      color: #475569;
+      background: #f8fbfd;
+      border: 1px solid #dbe7f3;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
     .bar {
-      margin-top: 18px;
+      margin-top: 14px;
       display: grid;
-      grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr;
+      grid-template-columns: 1.1fr 1fr 1fr 1fr;
       gap: 10px;
     }
-
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 12px;
       padding: 12px 14px;
     }
-
     .k {
       color: var(--muted);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-
     .v {
       margin-top: 6px;
       font-size: 20px;
       font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-
     .controls {
       margin-top: 14px;
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 10px;
     }
-
     input[type="search"] {
       width: 100%;
       border: 1px solid var(--line);
@@ -84,7 +107,6 @@
       font-size: 14px;
       background: #fff;
     }
-
     .btn {
       border: 1px solid var(--line);
       border-radius: 10px;
@@ -94,7 +116,6 @@
       cursor: pointer;
       color: var(--muted);
     }
-
     .table-shell {
       margin-top: 12px;
       border: 1px solid var(--line);
@@ -102,20 +123,17 @@
       overflow: hidden;
       background: #fff;
     }
-
     .table-wrap {
       width: 100%;
       overflow: auto;
       max-height: 70vh;
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 1040px;
+      min-width: 980px;
       font-size: 14px;
     }
-
     th, td {
       border-bottom: 1px solid #edf1f5;
       padding: 10px 10px;
@@ -123,7 +141,6 @@
       vertical-align: middle;
       white-space: nowrap;
     }
-
     thead th {
       position: sticky;
       top: 0;
@@ -136,28 +153,12 @@
       cursor: pointer;
       user-select: none;
     }
-
-    tr:hover td {
-      background: #f8fbfd;
-    }
-
-    .rank {
-      font-variant-numeric: tabular-nums;
-      font-weight: 700;
-      color: #1f2937;
-      width: 56px;
-    }
-
-    .mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-      font-size: 12px;
-      color: #334155;
-    }
-
+    tr:hover td { background: #f8fbfd; }
+    .rank { font-variant-numeric: tabular-nums; font-weight: 700; width: 56px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: #334155; }
     .num { font-variant-numeric: tabular-nums; }
     .pct { color: #0f766e; font-weight: 600; }
     .muted { color: var(--muted); }
-
     .badge {
       display: inline-flex;
       align-items: center;
@@ -166,25 +167,16 @@
       padding: 3px 8px;
       border: 1px solid transparent;
     }
-
-    .ok {
-      background: #e8faf1;
-      color: #11673d;
-      border-color: #bce8d0;
-    }
-
-    .no {
-      background: #f6f6f7;
-      color: #65717f;
-      border-color: #e2e8f0;
-    }
-
+    .ok { background: #e8faf1; color: #11673d; border-color: #bce8d0; }
+    .no { background: #f6f6f7; color: #65717f; border-color: #e2e8f0; }
     .footer {
       margin-top: 12px;
       color: var(--muted);
       font-size: 12px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
-
     .error {
       margin-top: 16px;
       border: 1px solid #fecaca;
@@ -193,195 +185,269 @@
       border-radius: 10px;
       padding: 12px;
       display: none;
+      white-space: pre-wrap;
     }
-
-    @media (max-width: 840px) {
-      .bar {
-        grid-template-columns: 1fr 1fr;
-      }
-      .controls {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 860px) {
+      .bar { grid-template-columns: 1fr 1fr; }
+      .controls { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Context7 Docs Popular Ranking</h1>
-    <div class="sub">
-      Auto-updated from Context7 API. Useful for spotting active docs ecosystems and tech momentum.
+    <h1>Context7 Rankings Dashboard</h1>
+    <div class="sub">Auto-updated ranking board for <b>docs libraries</b> and <b>skills</b>.</div>
+
+    <div class="tabs">
+      <button class="tab active" data-mode="docs">Docs Popular</button>
+      <button class="tab" data-mode="skills">Skills (installs >= 36)</button>
     </div>
 
+    <div class="note" id="modeNote">Docs market-share ranking is currently limited by Context7 API to top 50 libraries.</div>
+
     <div class="bar">
-      <div class="card">
-        <div class="k">Rows</div>
-        <div class="v num" id="rowsCount">-</div>
-      </div>
-      <div class="card">
-        <div class="k">Top Library</div>
-        <div class="v" id="topLibrary">-</div>
-      </div>
-      <div class="card">
-        <div class="k">Top Market Share</div>
-        <div class="v num" id="topShare">-</div>
-      </div>
-      <div class="card">
-        <div class="k">Last Updated (UTC)</div>
-        <div class="v num" id="generatedAt">-</div>
-      </div>
+      <div class="card"><div class="k">Rows</div><div class="v num" id="rowsCount">-</div></div>
+      <div class="card"><div class="k" id="topLabel">Top Item</div><div class="v" id="topItem">-</div></div>
+      <div class="card"><div class="k" id="metricLabel">Top Metric</div><div class="v num" id="topMetric">-</div></div>
+      <div class="card"><div class="k">Last Updated (UTC)</div><div class="v num" id="generatedAt">-</div></div>
     </div>
 
     <div class="controls">
-      <input id="searchBox" type="search" placeholder="Filter by title or source..." />
+      <input id="searchBox" type="search" placeholder="Filter by name/source..." />
       <button id="resetBtn" class="btn" type="button">Reset Search/Sort</button>
     </div>
 
     <div class="table-shell">
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th data-key="rank">Rank</th>
-              <th data-key="title">Library</th>
-              <th data-key="source">Source</th>
-              <th data-key="marketShare">Share %</th>
-              <th data-key="tokens">Tokens</th>
-              <th data-key="snippets">Snippets</th>
-              <th data-key="updateAgo">Updated</th>
-              <th data-key="trustScore">Trust</th>
-              <th data-key="verified">Verified</th>
-            </tr>
-          </thead>
+          <thead><tr id="theadRow"></tr></thead>
           <tbody id="tbody"></tbody>
         </table>
       </div>
     </div>
 
     <div id="errorBox" class="error"></div>
-    <div class="footer">
-      Data file: <span class="mono">docs/data/context7_docs_popular_top50.json</span>
-    </div>
+    <div class="footer" id="footerInfo"></div>
   </div>
 
   <script>
-    const DATA_URL = "./data/context7_docs_popular_top50.json";
+    const MODES = {
+      docs: {
+        label: "Docs Popular",
+        dataUrl: "./data/context7_docs_popular_top50.json",
+        note: "Docs market-share ranking is currently limited by Context7 API to top 50 libraries.",
+        topLabel: "Top Library",
+        metricLabel: "Top Market Share",
+        metricKey: "marketShare",
+        metricFmt: (v) => (typeof v === "number" ? v.toFixed(2) + "%" : "-"),
+        columns: [
+          { key: "rank", label: "Rank", type: "num" },
+          { key: "title", label: "Library", type: "text" },
+          { key: "source", label: "Source", type: "mono" },
+          { key: "marketShare", label: "Share %", type: "pct" },
+          { key: "tokens", label: "Tokens", type: "num" },
+          { key: "snippets", label: "Snippets", type: "num" },
+          { key: "updateAgo", label: "Updated", type: "text" },
+          { key: "trustScore", label: "Trust", type: "num" },
+          { key: "verified", label: "Verified", type: "bool" }
+        ]
+      },
+      skills: {
+        label: "Skills (installs >= 36)",
+        dataUrl: "./data/context7_skills_ranked_min36.json",
+        note: "Skills list shows all ranked rows with installs >= 36, not just top 50.",
+        topLabel: "Top Skill",
+        metricLabel: "Top Installs",
+        metricKey: "installCount",
+        metricFmt: (v) => (typeof v === "number" ? new Intl.NumberFormat("en-US").format(v) : "-"),
+        columns: [
+          { key: "rank", label: "Rank", type: "num" },
+          { key: "name", label: "Skill", type: "text" },
+          { key: "source", label: "Source", type: "mono" },
+          { key: "installCount", label: "Installs", type: "num" },
+          { key: "trustScore", label: "Trust", type: "num" },
+          { key: "verified", label: "Verified", type: "bool" },
+          { key: "benchmarkScore", label: "Benchmark", type: "num" }
+        ]
+      }
+    };
+
     const state = {
+      mode: "docs",
+      datasets: {},
       rows: [],
-      filtered: [],
       query: "",
       sortKey: "rank",
-      sortDir: "asc",
-      generatedAtUtc: ""
+      sortDir: "asc"
     };
 
     const el = {
+      tabs: Array.from(document.querySelectorAll(".tab")),
+      modeNote: document.getElementById("modeNote"),
       rowsCount: document.getElementById("rowsCount"),
-      topLibrary: document.getElementById("topLibrary"),
-      topShare: document.getElementById("topShare"),
+      topLabel: document.getElementById("topLabel"),
+      topItem: document.getElementById("topItem"),
+      metricLabel: document.getElementById("metricLabel"),
+      topMetric: document.getElementById("topMetric"),
       generatedAt: document.getElementById("generatedAt"),
-      tbody: document.getElementById("tbody"),
       searchBox: document.getElementById("searchBox"),
       resetBtn: document.getElementById("resetBtn"),
-      errorBox: document.getElementById("errorBox"),
-      headers: Array.from(document.querySelectorAll("thead th"))
+      theadRow: document.getElementById("theadRow"),
+      tbody: document.getElementById("tbody"),
+      footerInfo: document.getElementById("footerInfo"),
+      errorBox: document.getElementById("errorBox")
     };
-
-    function fmtNum(v) {
-      if (typeof v !== "number" || Number.isNaN(v)) return "-";
-      return new Intl.NumberFormat("en-US").format(v);
-    }
-
-    function fmtPct(v) {
-      if (typeof v !== "number" || Number.isNaN(v)) return "-";
-      return v.toFixed(2) + "%";
-    }
-
-    function asComparable(row, key) {
-      const v = row[key];
-      if (key === "updateAgo") {
-        return typeof row.updateUtc === "string" ? row.updateUtc : "";
-      }
-      if (typeof v === "number") return v;
-      if (typeof v === "boolean") return v ? 1 : 0;
-      return (v || "").toString().toLowerCase();
-    }
-
-    function sortRows(rows) {
-      const arr = [...rows];
-      arr.sort((a, b) => {
-        const va = asComparable(a, state.sortKey);
-        const vb = asComparable(b, state.sortKey);
-        if (va < vb) return state.sortDir === "asc" ? -1 : 1;
-        if (va > vb) return state.sortDir === "asc" ? 1 : -1;
-        return 0;
-      });
-      return arr;
-    }
-
-    function filterRows(rows) {
-      const q = state.query.trim().toLowerCase();
-      if (!q) return rows;
-      return rows.filter((r) =>
-        (r.title || "").toLowerCase().includes(q) ||
-        (r.source || "").toLowerCase().includes(q)
-      );
-    }
-
-    function render() {
-      state.filtered = sortRows(filterRows(state.rows));
-
-      el.rowsCount.textContent = fmtNum(state.filtered.length);
-      const top = state.rows.find((r) => r.rank === 1) || state.rows[0];
-      el.topLibrary.textContent = top ? top.title : "-";
-      el.topShare.textContent = top ? fmtPct(top.marketShare) : "-";
-      el.generatedAt.textContent = state.generatedAtUtc
-        ? state.generatedAtUtc.replace("T", " ").replace(".000000+00:00", "")
-        : "-";
-
-      const rowsHtml = state.filtered.map((r) => {
-        const verified = r.verified ? '<span class="badge ok">yes</span>' : '<span class="badge no">no</span>';
-        return `
-          <tr>
-            <td class="rank num">${fmtNum(r.rank)}</td>
-            <td>${r.title || "-"}</td>
-            <td class="mono">${r.source || "-"}</td>
-            <td class="pct num">${fmtPct(r.marketShare)}</td>
-            <td class="num">${fmtNum(r.tokens)}</td>
-            <td class="num">${fmtNum(r.snippets)}</td>
-            <td class="muted">${r.updateAgo || "-"}</td>
-            <td class="num">${r.trustScore ?? "-"}</td>
-            <td>${verified}</td>
-          </tr>
-        `;
-      }).join("");
-      el.tbody.innerHTML = rowsHtml;
-
-      el.headers.forEach((th) => {
-        const key = th.dataset.key;
-        if (!key) return;
-        const dir = (state.sortKey === key) ? (state.sortDir === "asc" ? " ↑" : " ↓") : "";
-        th.textContent = th.textContent.replace(/ [↑↓]$/, "") + dir;
-      });
-    }
 
     function showError(msg) {
       el.errorBox.style.display = "block";
       el.errorBox.textContent = msg;
     }
 
-    async function loadData() {
-      try {
-        const resp = await fetch(DATA_URL, { cache: "no-store" });
-        if (!resp.ok) throw new Error(`HTTP ${resp.status} while loading ${DATA_URL}`);
-        const payload = await resp.json();
-        state.rows = Array.isArray(payload.items) ? payload.items : [];
-        state.generatedAtUtc = payload.generatedAtUtc || "";
-        render();
-      } catch (err) {
-        showError("Failed to load ranking data. Ensure GitHub Action generated docs/data/context7_docs_popular_top50.json");
-        console.error(err);
-      }
+    function fmtNum(v) {
+      if (typeof v !== "number" || Number.isNaN(v)) return "-";
+      return new Intl.NumberFormat("en-US").format(v);
     }
+
+    function asComparable(row, key, mode) {
+      const v = row[key];
+      if (mode === "docs" && key === "updateAgo") return row.updateUtc || "";
+      if (typeof v === "number") return v;
+      if (typeof v === "boolean") return v ? 1 : 0;
+      return (v || "").toString().toLowerCase();
+    }
+
+    function rowMatches(row, q, mode) {
+      if (!q) return true;
+      const key1 = mode === "docs" ? "title" : "name";
+      return (row[key1] || "").toLowerCase().includes(q) || (row.source || "").toLowerCase().includes(q);
+    }
+
+    function getRenderedRows() {
+      const q = state.query.trim().toLowerCase();
+      const mode = state.mode;
+      const rows = state.rows.filter((r) => rowMatches(r, q, mode));
+      rows.sort((a, b) => {
+        const va = asComparable(a, state.sortKey, mode);
+        const vb = asComparable(b, state.sortKey, mode);
+        if (va < vb) return state.sortDir === "asc" ? -1 : 1;
+        if (va > vb) return state.sortDir === "asc" ? 1 : -1;
+        return 0;
+      });
+      return rows;
+    }
+
+    function renderHeader() {
+      const cfg = MODES[state.mode];
+      el.theadRow.innerHTML = cfg.columns
+        .map((c) => {
+          const mark = state.sortKey === c.key ? (state.sortDir === "asc" ? " ↑" : " ↓") : "";
+          return `<th data-key="${c.key}">${c.label}${mark}</th>`;
+        })
+        .join("");
+
+      Array.from(el.theadRow.querySelectorAll("th")).forEach((th) => {
+        th.addEventListener("click", () => {
+          const key = th.dataset.key;
+          if (!key) return;
+          if (state.sortKey === key) {
+            state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+          } else {
+            state.sortKey = key;
+            state.sortDir = key === "rank" ? "asc" : "desc";
+          }
+          render();
+        });
+      });
+    }
+
+    function renderRows() {
+      const cfg = MODES[state.mode];
+      const rows = getRenderedRows();
+      el.tbody.innerHTML = rows
+        .map((r) => {
+          const tds = cfg.columns
+            .map((c) => {
+              const v = r[c.key];
+              if (c.type === "num") return `<td class="num">${fmtNum(v)}</td>`;
+              if (c.type === "pct") return `<td class="pct num">${typeof v === "number" ? v.toFixed(2) + "%" : "-"}</td>`;
+              if (c.type === "mono") return `<td class="mono">${v || "-"}</td>`;
+              if (c.type === "bool") {
+                return `<td>${v ? '<span class="badge ok">yes</span>' : '<span class="badge no">no</span>'}</td>`;
+              }
+              if (c.key === "rank") return `<td class="rank num">${fmtNum(v)}</td>`;
+              return `<td>${v || "-"}</td>`;
+            })
+            .join("");
+          return `<tr>${tds}</tr>`;
+        })
+        .join("");
+      return rows;
+    }
+
+    function renderMeta(rows) {
+      const cfg = MODES[state.mode];
+      const ds = state.datasets[state.mode] || {};
+      const top = state.rows.find((x) => x.rank === 1) || state.rows[0] || null;
+
+      el.modeNote.textContent = cfg.note;
+      el.rowsCount.textContent = fmtNum(rows.length);
+      el.topLabel.textContent = cfg.topLabel;
+      el.metricLabel.textContent = cfg.metricLabel;
+      el.topItem.textContent = top ? (top.title || top.name || "-") : "-";
+      el.topMetric.textContent = top ? cfg.metricFmt(top[cfg.metricKey]) : "-";
+      el.generatedAt.textContent = (ds.generatedAtUtc || "-").replace("T", " ").replace("+00:00", " UTC");
+
+      const footer = [
+        `Mode: ${cfg.label}`,
+        `Rows in dataset: ${fmtNum(state.rows.length)}`,
+        `Rows shown: ${fmtNum(rows.length)}`,
+        `Source: ${cfg.dataUrl}`
+      ];
+      el.footerInfo.textContent = footer.join(" | ");
+    }
+
+    function render() {
+      el.tabs.forEach((t) => t.classList.toggle("active", t.dataset.mode === state.mode));
+      renderHeader();
+      const rows = renderRows();
+      renderMeta(rows);
+    }
+
+    async function loadMode(mode) {
+      if (state.datasets[mode]) {
+        state.mode = mode;
+        state.rows = state.datasets[mode].items || [];
+        state.sortKey = "rank";
+        state.sortDir = "asc";
+        render();
+        return;
+      }
+
+      const cfg = MODES[mode];
+      const resp = await fetch(cfg.dataUrl, { cache: "no-store" });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} loading ${cfg.dataUrl}`);
+      const payload = await resp.json();
+      if (!Array.isArray(payload.items)) throw new Error(`Invalid payload shape in ${cfg.dataUrl}`);
+      state.datasets[mode] = payload;
+      state.mode = mode;
+      state.rows = payload.items;
+      state.sortKey = "rank";
+      state.sortDir = "asc";
+      render();
+    }
+
+    el.tabs.forEach((tab) => {
+      tab.addEventListener("click", async () => {
+        const mode = tab.dataset.mode;
+        if (!mode || mode === state.mode) return;
+        try {
+          await loadMode(mode);
+        } catch (err) {
+          showError(String(err));
+          console.error(err);
+        }
+      });
+    });
 
     el.searchBox.addEventListener("input", (e) => {
       state.query = e.target.value || "";
@@ -396,21 +462,21 @@
       render();
     });
 
-    el.headers.forEach((th) => {
-      th.addEventListener("click", () => {
-        const key = th.dataset.key;
-        if (!key) return;
-        if (state.sortKey === key) {
-          state.sortDir = (state.sortDir === "asc") ? "desc" : "asc";
-        } else {
-          state.sortKey = key;
-          state.sortDir = (key === "rank") ? "asc" : "desc";
-        }
+    (async () => {
+      try {
+        await loadMode("docs");
+        await loadMode("skills");
+        // switch back to docs initial view
+        state.mode = "docs";
+        state.rows = state.datasets.docs.items;
+        state.sortKey = "rank";
+        state.sortDir = "asc";
         render();
-      });
-    });
-
-    loadData();
+      } catch (err) {
+        showError("Failed to load ranking data files. Check GitHub Action outputs in docs/data.");
+        console.error(err);
+      }
+    })();
   </script>
 </body>
 </html>

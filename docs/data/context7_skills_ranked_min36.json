@@ -1,0 +1,2409 @@
+{
+  "generatedAtUtc": "2026-03-04T01:41:33.737329+00:00",
+  "baseUrl": "https://context7.com",
+  "minInstalls": 36,
+  "rows": 240,
+  "apiCalls": 4,
+  "items": [
+    {
+      "rank": 1,
+      "name": "frontend-design",
+      "source": "/anthropics/skills",
+      "installCount": 2707,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/frontend-design/SKILL.md"
+    },
+    {
+      "rank": 2,
+      "name": "vercel-react-best-practices",
+      "source": "/vercel-labs/agent-skills",
+      "installCount": 1407,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/refs/heads/main/skills/react-best-practices/SKILL.md"
+    },
+    {
+      "rank": 3,
+      "name": "senior-frontend",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 1052,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-frontend/SKILL.md"
+    },
+    {
+      "rank": 4,
+      "name": "skill-creator",
+      "source": "/anthropics/skills",
+      "installCount": 1038,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/skill-creator/SKILL.md"
+    },
+    {
+      "rank": 5,
+      "name": "pdf",
+      "source": "/anthropics/skills",
+      "installCount": 958,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/pdf/SKILL.md"
+    },
+    {
+      "rank": 6,
+      "name": "webapp-testing",
+      "source": "/anthropics/skills",
+      "installCount": 723,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/webapp-testing/SKILL.md"
+    },
+    {
+      "rank": 7,
+      "name": "web-design-guidelines",
+      "source": "/vercel-labs/agent-skills",
+      "installCount": 721,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/refs/heads/main/skills/web-design-guidelines/SKILL.md"
+    },
+    {
+      "rank": 8,
+      "name": "mcp-builder",
+      "source": "/anthropics/skills",
+      "installCount": 663,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/mcp-builder/SKILL.md"
+    },
+    {
+      "rank": 9,
+      "name": "gemini-api-dev",
+      "source": "/google-gemini/gemini-skills",
+      "installCount": 638,
+      "trustScore": 8,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/google-gemini/gemini-skills/refs/heads/main/skills/gemini-api-dev/SKILL.md"
+    },
+    {
+      "rank": 10,
+      "name": "web-artifacts-builder",
+      "source": "/anthropics/skills",
+      "installCount": 634,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/web-artifacts-builder/SKILL.md"
+    },
+    {
+      "rank": 11,
+      "name": "canvas-design",
+      "source": "/anthropics/skills",
+      "installCount": 549,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 42,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/canvas-design/SKILL.md"
+    },
+    {
+      "rank": 12,
+      "name": "docx",
+      "source": "/anthropics/skills",
+      "installCount": 518,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/docx/SKILL.md"
+    },
+    {
+      "rank": 13,
+      "name": "xlsx",
+      "source": "/anthropics/skills",
+      "installCount": 504,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/xlsx/SKILL.md"
+    },
+    {
+      "rank": 14,
+      "name": "theme-factory",
+      "source": "/anthropics/skills",
+      "installCount": 472,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/theme-factory/SKILL.md"
+    },
+    {
+      "rank": 15,
+      "name": "pptx",
+      "source": "/anthropics/skills",
+      "installCount": 458,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 94,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/pptx/SKILL.md"
+    },
+    {
+      "rank": 16,
+      "name": "doc-coauthoring",
+      "source": "/anthropics/skills",
+      "installCount": 434,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 94,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/doc-coauthoring/SKILL.md"
+    },
+    {
+      "rank": 17,
+      "name": "algorithmic-art",
+      "source": "/anthropics/skills",
+      "installCount": 433,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 92,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/algorithmic-art/SKILL.md"
+    },
+    {
+      "rank": 18,
+      "name": "brand-guidelines",
+      "source": "/anthropics/skills",
+      "installCount": 403,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 72.5,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/brand-guidelines/SKILL.md"
+    },
+    {
+      "rank": 19,
+      "name": "template-skill",
+      "source": "/anthropics/skills",
+      "installCount": 393,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 45,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/template/SKILL.md"
+    },
+    {
+      "rank": 20,
+      "name": "internal-comms",
+      "source": "/anthropics/skills",
+      "installCount": 383,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 62,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/internal-comms/SKILL.md"
+    },
+    {
+      "rank": 21,
+      "name": "slack-gif-creator",
+      "source": "/anthropics/skills",
+      "installCount": 332,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/anthropics/skills/refs/heads/main/skills/slack-gif-creator/SKILL.md"
+    },
+    {
+      "rank": 22,
+      "name": "senior-fullstack",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 296,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-fullstack/SKILL.md"
+    },
+    {
+      "rank": 23,
+      "name": "senior-backend",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 288,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-backend/SKILL.md"
+    },
+    {
+      "rank": 24,
+      "name": "better-auth-best-practices",
+      "source": "/better-auth/skills",
+      "installCount": 287,
+      "trustScore": 7.8,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/better-auth/skills/refs/heads/main/better-auth/best-practices/SKILL.md"
+    },
+    {
+      "rank": 25,
+      "name": "senior-architect",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 274,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-architect/SKILL.md"
+    },
+    {
+      "rank": 26,
+      "name": "tailwind-design-system",
+      "source": "/wshobson/agents",
+      "installCount": 266,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md"
+    },
+    {
+      "rank": 27,
+      "name": "code-reviewer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 257,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/code-reviewer/SKILL.md"
+    },
+    {
+      "rank": 28,
+      "name": "nextjs-app-router-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 244,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/frontend-mobile-development/skills/nextjs-app-router-patterns/SKILL.md"
+    },
+    {
+      "rank": 29,
+      "name": "agent-browser",
+      "source": "/vercel-labs/agent-browser",
+      "installCount": 244,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-browser/refs/heads/main/skills/agent-browser/SKILL.md"
+    },
+    {
+      "rank": 30,
+      "name": "cache-components",
+      "source": "/vercel/next.js",
+      "installCount": 243,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/vercel/next.js/refs/heads/canary/.claude-plugin/plugins/cache-components/skills/cache-components/SKILL.md"
+    },
+    {
+      "rank": 31,
+      "name": "react-best-practices",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 230,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/web-development/react-best-practices/SKILL.md"
+    },
+    {
+      "rank": 32,
+      "name": "shadcn-ui",
+      "source": "/giuseppe-trisciuoglio/developer-kit",
+      "installCount": 227,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/giuseppe-trisciuoglio/developer-kit/refs/heads/main/plugins/developer-kit-typescript/skills/shadcn-ui/SKILL.md"
+    },
+    {
+      "rank": 33,
+      "name": "react-state-management",
+      "source": "/wshobson/agents",
+      "installCount": 178,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/frontend-mobile-development/skills/react-state-management/SKILL.md"
+    },
+    {
+      "rank": 34,
+      "name": "vue",
+      "source": "/onmax/nuxt-skills",
+      "installCount": 168,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/onmax/nuxt-skills/refs/heads/main/skills/vue/SKILL.md"
+    },
+    {
+      "rank": 35,
+      "name": "react-native-architecture",
+      "source": "/wshobson/agents",
+      "installCount": 165,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/frontend-mobile-development/skills/react-native-architecture/SKILL.md"
+    },
+    {
+      "rank": 36,
+      "name": "senior-devops",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 159,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 53,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-devops/SKILL.md"
+    },
+    {
+      "rank": 37,
+      "name": "vercel-deploy",
+      "source": "/vercel-labs/agent-skills",
+      "installCount": 158,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/refs/heads/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md"
+    },
+    {
+      "rank": 38,
+      "name": "update-docs",
+      "source": "/vercel/next.js",
+      "installCount": 142,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/vercel/next.js/refs/heads/canary/.claude/skills/update-docs/SKILL.md"
+    },
+    {
+      "rank": 39,
+      "name": "architecture-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 136,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/backend-development/skills/architecture-patterns/SKILL.md"
+    },
+    {
+      "rank": 40,
+      "name": "typescript-advanced-types",
+      "source": "/wshobson/agents",
+      "installCount": 135,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/javascript-typescript/skills/typescript-advanced-types/SKILL.md"
+    },
+    {
+      "rank": 41,
+      "name": "vercel-react-native-skills",
+      "source": "/vercel-labs/agent-skills",
+      "installCount": 133,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/refs/heads/main/skills/react-native-skills/SKILL.md"
+    },
+    {
+      "rank": 42,
+      "name": "code-review",
+      "source": "/agno-agi/agno",
+      "installCount": 133,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 88,
+      "url": "https://raw.githubusercontent.com/agno-agi/agno/refs/heads/main/cookbook/02_agents/16_skills/sample_skills/code-review/SKILL.md"
+    },
+    {
+      "rank": 43,
+      "name": "postgresql-table-design",
+      "source": "/wshobson/agents",
+      "installCount": 129,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/database-design/skills/postgresql/SKILL.md"
+    },
+    {
+      "rank": 44,
+      "name": "ui-design-system",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 128,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/product-team/ui-design-system/SKILL.md"
+    },
+    {
+      "rank": 45,
+      "name": "senior-architect",
+      "source": "/sickn33/antigravity-awesome-skills",
+      "installCount": 127,
+      "trustScore": 6.8,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/sickn33/antigravity-awesome-skills/refs/heads/main/skills/senior-architect/SKILL.md"
+    },
+    {
+      "rank": 46,
+      "name": "remotion-best-practices",
+      "source": "/remotion-dev/skills",
+      "installCount": 127,
+      "trustScore": 8.3,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/remotion-dev/skills/refs/heads/main/skills/remotion/SKILL.md"
+    },
+    {
+      "rank": 47,
+      "name": "dotnet-backend-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 124,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/dotnet-contribution/skills/dotnet-backend-patterns/SKILL.md"
+    },
+    {
+      "rank": 48,
+      "name": "senior-security",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 121,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 90,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-security/SKILL.md"
+    },
+    {
+      "rank": 49,
+      "name": "epic-react-best-practices",
+      "source": "/rubenpenap/epic-stack-agent-skills",
+      "installCount": 120,
+      "trustScore": 7.1,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/rubenpenap/epic-stack-agent-skills/refs/heads/main/skills/epic-react-patterns/SKILL.md"
+    },
+    {
+      "rank": 50,
+      "name": "supabase-nextjs",
+      "source": "/alinaqi/claude-bootstrap",
+      "installCount": 120,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 81,
+      "url": "https://raw.githubusercontent.com/alinaqi/claude-bootstrap/refs/heads/main/skills/supabase-nextjs/SKILL.md"
+    },
+    {
+      "rank": 51,
+      "name": "claude-automation-recommender",
+      "source": "/anthropics/claude-plugins-official",
+      "installCount": 117,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/refs/heads/main/plugins/claude-code-setup/skills/claude-automation-recommender/SKILL.md"
+    },
+    {
+      "rank": 52,
+      "name": "create-auth-skill",
+      "source": "/better-auth/skills",
+      "installCount": 116,
+      "trustScore": 7.8,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/better-auth/skills/refs/heads/main/better-auth/create-auth/SKILL.md"
+    },
+    {
+      "rank": 53,
+      "name": "vercel-composition-patterns",
+      "source": "/vercel-labs/agent-skills",
+      "installCount": 115,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/refs/heads/main/skills/composition-patterns/SKILL.md"
+    },
+    {
+      "rank": 54,
+      "name": "react-native-design",
+      "source": "/wshobson/agents",
+      "installCount": 114,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/react-native-design/SKILL.md"
+    },
+    {
+      "rank": 55,
+      "name": "frontend-patterns",
+      "source": "/affaan-m/everything-claude-code",
+      "installCount": 112,
+      "trustScore": 9.4,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/affaan-m/everything-claude-code/refs/heads/main/skills/frontend-patterns/SKILL.md"
+    },
+    {
+      "rank": 56,
+      "name": "fastapi-templates",
+      "source": "/wshobson/agents",
+      "installCount": 107,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/api-scaffolding/skills/fastapi-templates/SKILL.md"
+    },
+    {
+      "rank": 57,
+      "name": "building-native-ui",
+      "source": "/expo/skills",
+      "installCount": 107,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/building-native-ui/SKILL.md"
+    },
+    {
+      "rank": 58,
+      "name": "senior-data-engineer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 107,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-data-engineer/SKILL.md"
+    },
+    {
+      "rank": 59,
+      "name": "react-modernization",
+      "source": "/wshobson/agents",
+      "installCount": 105,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/framework-migration/skills/react-modernization/SKILL.md"
+    },
+    {
+      "rank": 60,
+      "name": "expo-tailwind-setup",
+      "source": "/expo/skills",
+      "installCount": 104,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/expo-tailwind-setup/SKILL.md"
+    },
+    {
+      "rank": 61,
+      "name": "api-design-principles",
+      "source": "/wshobson/agents",
+      "installCount": 103,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/backend-development/skills/api-design-principles/SKILL.md"
+    },
+    {
+      "rank": 62,
+      "name": "laravel",
+      "source": "/rawveg/skillsforge-marketplace",
+      "installCount": 101,
+      "trustScore": 9,
+      "verified": true,
+      "benchmarkScore": 93,
+      "url": "https://raw.githubusercontent.com/rawveg/skillsforge-marketplace/refs/heads/main/laravel/SKILL.md"
+    },
+    {
+      "rank": 63,
+      "name": "frontend-design",
+      "source": "/anthropics/claude-code",
+      "installCount": 100,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/frontend-design/skills/frontend-design/SKILL.md"
+    },
+    {
+      "rank": 64,
+      "name": "rag-implementation",
+      "source": "/wshobson/agents",
+      "installCount": 96,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/llm-application-dev/skills/rag-implementation/SKILL.md"
+    },
+    {
+      "rank": 65,
+      "name": "responsive-design",
+      "source": "/wshobson/agents",
+      "installCount": 95,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/responsive-design/SKILL.md"
+    },
+    {
+      "rank": 66,
+      "name": "next-best-practices",
+      "source": "/vercel-labs/next-skills",
+      "installCount": 95,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vercel-labs/next-skills/refs/heads/main/skills/next-best-practices/SKILL.md"
+    },
+    {
+      "rank": 67,
+      "name": "aws-solution-architect",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 95,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/aws-solution-architect/SKILL.md"
+    },
+    {
+      "rank": 68,
+      "name": "nextjs",
+      "source": "/jezweb/claude-skills",
+      "installCount": 91,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/nextjs/SKILL.md"
+    },
+    {
+      "rank": 69,
+      "name": "senior-prompt-engineer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 89,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-prompt-engineer/SKILL.md"
+    },
+    {
+      "rank": 70,
+      "name": "senior-qa",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 88,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/development/senior-qa/SKILL.md"
+    },
+    {
+      "rank": 71,
+      "name": "senior-frontend",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 88,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/development/senior-frontend/SKILL.md"
+    },
+    {
+      "rank": 72,
+      "name": "context7",
+      "source": "/intellectronica/agent-skills",
+      "installCount": 87,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/intellectronica/agent-skills/refs/heads/main/skills/context7/SKILL.md"
+    },
+    {
+      "rank": 73,
+      "name": "expo-deployment",
+      "source": "/expo/skills",
+      "installCount": 87,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-deployment/skills/expo-deployment/SKILL.md"
+    },
+    {
+      "rank": 74,
+      "name": "auth-implementation-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 85,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md"
+    },
+    {
+      "rank": 75,
+      "name": "nuxt-ui",
+      "source": "/onmax/nuxt-skills",
+      "installCount": 85,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/onmax/nuxt-skills/refs/heads/main/skills/nuxt-ui/SKILL.md"
+    },
+    {
+      "rank": 76,
+      "name": "nodejs-backend-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 82,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md"
+    },
+    {
+      "rank": 77,
+      "name": "tailwind-v4-shadcn",
+      "source": "/jezweb/claude-skills",
+      "installCount": 82,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/tailwind-v4-shadcn/SKILL.md"
+    },
+    {
+      "rank": 78,
+      "name": "context7-skills",
+      "source": "/narumiruna/context7-skills-skill",
+      "installCount": 81,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/narumiruna/context7-skills-skill/refs/heads/main/skills/context7-skills/SKILL.md"
+    },
+    {
+      "rank": 79,
+      "name": "Agent Development",
+      "source": "/anthropics/claude-code",
+      "installCount": 81,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/agent-development/SKILL.md"
+    },
+    {
+      "rank": 80,
+      "name": "content-creator",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 81,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/marketing-skill/content-creator/SKILL.md"
+    },
+    {
+      "rank": 81,
+      "name": "ui-dev",
+      "source": "/gabrielantonyxaviour/Velox",
+      "installCount": 79,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/gabrielantonyxaviour/Velox/refs/heads/main/.claude/skills/ui-dev/SKILL.md"
+    },
+    {
+      "rank": 82,
+      "name": "shadcn",
+      "source": "/blencorp/claude-code-kit",
+      "installCount": 79,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 96,
+      "url": "https://raw.githubusercontent.com/blencorp/claude-code-kit/refs/heads/main/cli/kits/shadcn/skills/shadcn/SKILL.md"
+    },
+    {
+      "rank": 83,
+      "name": "Bun Next.js",
+      "source": "/secondsky/claude-skills",
+      "installCount": 78,
+      "trustScore": 6.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/secondsky/claude-skills/refs/heads/main/plugins/bun/skills/bun-nextjs/SKILL.md"
+    },
+    {
+      "rank": 84,
+      "name": "react-web",
+      "source": "/alinaqi/claude-bootstrap",
+      "installCount": 78,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alinaqi/claude-bootstrap/refs/heads/main/skills/react-web/SKILL.md"
+    },
+    {
+      "rank": 85,
+      "name": "mobile-ios-design",
+      "source": "/wshobson/agents",
+      "installCount": 77,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/mobile-ios-design/SKILL.md"
+    },
+    {
+      "rank": 86,
+      "name": "langchain-architecture",
+      "source": "/wshobson/agents",
+      "installCount": 77,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/llm-application-dev/skills/langchain-architecture/SKILL.md"
+    },
+    {
+      "rank": 87,
+      "name": "nextjs",
+      "source": "/NaimalArain13/Hackathon-II_The-Evolution-of-Todo",
+      "installCount": 77,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/NaimalArain13/Hackathon-II_The-Evolution-of-Todo/refs/heads/master/.claude/skills/nextjs/SKILL.md"
+    },
+    {
+      "rank": 88,
+      "name": "python-performance-optimization",
+      "source": "/wshobson/agents",
+      "installCount": 76,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/python-development/skills/python-performance-optimization/SKILL.md"
+    },
+    {
+      "rank": 89,
+      "name": "react:components",
+      "source": "/google-labs-code/stitch-skills",
+      "installCount": 76,
+      "trustScore": 6.8,
+      "verified": true,
+      "benchmarkScore": 62,
+      "url": "https://raw.githubusercontent.com/google-labs-code/stitch-skills/refs/heads/main/skills/react-components/SKILL.md"
+    },
+    {
+      "rank": 90,
+      "name": "coding-standards",
+      "source": "/affaan-m/everything-claude-code",
+      "installCount": 76,
+      "trustScore": 9.4,
+      "verified": true,
+      "benchmarkScore": 84,
+      "url": "https://raw.githubusercontent.com/affaan-m/everything-claude-code/refs/heads/main/.agents/skills/coding-standards/SKILL.md"
+    },
+    {
+      "rank": 91,
+      "name": "stripe-integration",
+      "source": "/wshobson/agents",
+      "installCount": 75,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/payment-processing/skills/stripe-integration/SKILL.md"
+    },
+    {
+      "rank": 92,
+      "name": "senior-data-scientist",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 75,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 32,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-data-scientist/SKILL.md"
+    },
+    {
+      "rank": 93,
+      "name": "react-dev",
+      "source": "/softaworks/agent-toolkit",
+      "installCount": 74,
+      "trustScore": 6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/softaworks/agent-toolkit/refs/heads/main/skills/react-dev/SKILL.md"
+    },
+    {
+      "rank": 94,
+      "name": "tanstack-query",
+      "source": "/jezweb/claude-skills",
+      "installCount": 74,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 75,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/tanstack-query/SKILL.md"
+    },
+    {
+      "rank": 95,
+      "name": "nextjs-expert",
+      "source": "/VoTruongDanh/Sentiment",
+      "installCount": 74,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/VoTruongDanh/Sentiment/refs/heads/main/.agent/skills/nextjs-expert/SKILL.md"
+    },
+    {
+      "rank": 96,
+      "name": "async-python-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 73,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/python-development/skills/async-python-patterns/SKILL.md"
+    },
+    {
+      "rank": 97,
+      "name": "premium-ui-systems",
+      "source": "/njrini99-code/helmv3",
+      "installCount": 73,
+      "trustScore": 2.3,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/njrini99-code/helmv3/refs/heads/main/.claude/skills/premium-ui-systems/SKILL.md"
+    },
+    {
+      "rank": 98,
+      "name": "native-data-fetching",
+      "source": "/expo/skills",
+      "installCount": 73,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 80,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/native-data-fetching/SKILL.md"
+    },
+    {
+      "rank": 99,
+      "name": "ux-researcher-designer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 73,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/product-team/ux-researcher-designer/SKILL.md"
+    },
+    {
+      "rank": 100,
+      "name": "terraform-module-library",
+      "source": "/wshobson/agents",
+      "installCount": 72,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md"
+    },
+    {
+      "rank": 101,
+      "name": "nuxt",
+      "source": "/onmax/nuxt-skills",
+      "installCount": 72,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/onmax/nuxt-skills/refs/heads/main/skills/nuxt/SKILL.md"
+    },
+    {
+      "rank": 102,
+      "name": "nextjs",
+      "source": "/secondsky/claude-skills",
+      "installCount": 71,
+      "trustScore": 6.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/secondsky/claude-skills/refs/heads/main/plugins/nextjs/skills/nextjs/SKILL.md"
+    },
+    {
+      "rank": 103,
+      "name": "nuxt-better-auth",
+      "source": "/onmax/nuxt-skills",
+      "installCount": 71,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/onmax/nuxt-skills/refs/heads/main/skills/nuxt-better-auth/SKILL.md"
+    },
+    {
+      "rank": 104,
+      "name": "senior-qa",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 71,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-qa/SKILL.md"
+    },
+    {
+      "rank": 105,
+      "name": "web-component-design",
+      "source": "/wshobson/agents",
+      "installCount": 70,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/web-component-design/SKILL.md"
+    },
+    {
+      "rank": 106,
+      "name": "frontend-testing",
+      "source": "/langgenius/dify",
+      "installCount": 70,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 85,
+      "url": "https://raw.githubusercontent.com/langgenius/dify/refs/heads/main/.agents/skills/frontend-testing/SKILL.md"
+    },
+    {
+      "rank": 107,
+      "name": "uv-package-manager",
+      "source": "/wshobson/agents",
+      "installCount": 69,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/python-development/skills/uv-package-manager/SKILL.md"
+    },
+    {
+      "rank": 108,
+      "name": "monorepo-management",
+      "source": "/wshobson/agents",
+      "installCount": 69,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/developer-essentials/skills/monorepo-management/SKILL.md"
+    },
+    {
+      "rank": 109,
+      "name": "e2e-testing-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 69,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md"
+    },
+    {
+      "rank": 110,
+      "name": "rust-async-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 68,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/systems-programming/skills/rust-async-patterns/SKILL.md"
+    },
+    {
+      "rank": 111,
+      "name": "vite",
+      "source": "/antfu/skills",
+      "installCount": 68,
+      "trustScore": 9.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/antfu/skills/refs/heads/main/skills/vite/SKILL.md"
+    },
+    {
+      "rank": 112,
+      "name": "brainstorming",
+      "source": "/obra/superpowers",
+      "installCount": 67,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/brainstorming/SKILL.md"
+    },
+    {
+      "rank": 113,
+      "name": "use-dom",
+      "source": "/expo/skills",
+      "installCount": 67,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/use-dom/SKILL.md"
+    },
+    {
+      "rank": 114,
+      "name": "upgrading-expo",
+      "source": "/expo/skills",
+      "installCount": 67,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/upgrading-expo/skills/upgrading-expo/SKILL.md"
+    },
+    {
+      "rank": 115,
+      "name": "qstash-js",
+      "source": "/upstash/qstash-js",
+      "installCount": 65,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/upstash/qstash-js/refs/heads/main/skills/SKILL.md"
+    },
+    {
+      "rank": 116,
+      "name": "Skill Development",
+      "source": "/anthropics/claude-code",
+      "installCount": 65,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/skill-development/SKILL.md"
+    },
+    {
+      "rank": 117,
+      "name": "app-store-optimization",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 62,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 90,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/marketing-skill/app-store-optimization/SKILL.md"
+    },
+    {
+      "rank": 118,
+      "name": "react-19",
+      "source": "/Gentleman-Programming/Gentleman-Skills",
+      "installCount": 61,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/Gentleman-Programming/Gentleman-Skills/refs/heads/main/curated/react-19/SKILL.md"
+    },
+    {
+      "rank": 119,
+      "name": "MCP Integration",
+      "source": "/anthropics/claude-code",
+      "installCount": 60,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/mcp-integration/SKILL.md"
+    },
+    {
+      "rank": 120,
+      "name": "Convex Best Practices",
+      "source": "/waynesutton/convexskills",
+      "installCount": 59,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/waynesutton/convexskills/refs/heads/main/skills/convex-best-practices/SKILL.md"
+    },
+    {
+      "rank": 121,
+      "name": "documentation-lookup",
+      "source": "/upstash/context7",
+      "installCount": 59,
+      "trustScore": 8.5,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/upstash/context7/refs/heads/master/plugins/claude/context7/skills/documentation-lookup/SKILL.md"
+    },
+    {
+      "rank": 122,
+      "name": "gemini",
+      "source": "/openclaw/openclaw",
+      "installCount": 59,
+      "trustScore": 7.8,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/openclaw/openclaw/refs/heads/main/skills/gemini/SKILL.md"
+    },
+    {
+      "rank": 123,
+      "name": "gsap",
+      "source": "/martinholovsky/claude-skills-generator",
+      "installCount": 59,
+      "trustScore": 7.7,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/martinholovsky/claude-skills-generator/refs/heads/main/skills/gsap/SKILL.md"
+    },
+    {
+      "rank": 124,
+      "name": "senior-architect",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 59,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 73,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/development/senior-architect/SKILL.md"
+    },
+    {
+      "rank": 125,
+      "name": "nextjs-15",
+      "source": "/Gentleman-Programming/Gentleman-Skills",
+      "installCount": 59,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/Gentleman-Programming/Gentleman-Skills/refs/heads/main/curated/nextjs-15/SKILL.md"
+    },
+    {
+      "rank": 126,
+      "name": "vitest",
+      "source": "/antfu/skills",
+      "installCount": 58,
+      "trustScore": 9.9,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/antfu/skills/refs/heads/main/skills/vitest/SKILL.md"
+    },
+    {
+      "rank": 127,
+      "name": "mobile-android-design",
+      "source": "/wshobson/agents",
+      "installCount": 57,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/mobile-android-design/SKILL.md"
+    },
+    {
+      "rank": 128,
+      "name": "go-concurrency-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 57,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/systems-programming/skills/go-concurrency-patterns/SKILL.md"
+    },
+    {
+      "rank": 129,
+      "name": "epic-database",
+      "source": "/rubenpenap/epic-stack-agent-skills",
+      "installCount": 56,
+      "trustScore": 7.1,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/rubenpenap/epic-stack-agent-skills/refs/heads/main/skills/epic-database/SKILL.md"
+    },
+    {
+      "rank": 130,
+      "name": "better-auth",
+      "source": "/mrgoonie/claudekit-skills",
+      "installCount": 56,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/mrgoonie/claudekit-skills/refs/heads/main/.claude/skills/better-auth/SKILL.md"
+    },
+    {
+      "rank": 131,
+      "name": "expo-dev-client",
+      "source": "/expo/skills",
+      "installCount": 56,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/expo-dev-client/SKILL.md"
+    },
+    {
+      "rank": 132,
+      "name": "tdd-guide",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 56,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/tdd-guide/SKILL.md"
+    },
+    {
+      "rank": 133,
+      "name": "react-best-practices",
+      "source": "/0xBigBoss/claude-code",
+      "installCount": 55,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/0xBigBoss/claude-code/refs/heads/main/.claude/skills/react-best-practices/SKILL.md"
+    },
+    {
+      "rank": 134,
+      "name": "memory-safety-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 54,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/systems-programming/skills/memory-safety-patterns/SKILL.md"
+    },
+    {
+      "rank": 135,
+      "name": "expo-api-routes",
+      "source": "/expo/skills",
+      "installCount": 54,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-app-design/skills/expo-api-routes/SKILL.md"
+    },
+    {
+      "rank": 136,
+      "name": "better-auth",
+      "source": "/binhmuc/autobot-review",
+      "installCount": 54,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/binhmuc/autobot-review/refs/heads/main/.claude/skills/better-auth/SKILL.md"
+    },
+    {
+      "rank": 137,
+      "name": "tailwind-patterns",
+      "source": "/jezweb/claude-skills",
+      "installCount": 53,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/tailwind-patterns/SKILL.md"
+    },
+    {
+      "rank": 138,
+      "name": "senior-ml-engineer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 53,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-ml-engineer/SKILL.md"
+    },
+    {
+      "rank": 139,
+      "name": "context7-docs-lookup",
+      "source": "/upstash/context7",
+      "installCount": 52,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/upstash/context7/refs/heads/master/plugins/cursor/context7/skills/context7-docs-lookup/SKILL.md"
+    },
+    {
+      "rank": 140,
+      "name": "stripe-best-practices",
+      "source": "/stripe/ai",
+      "installCount": 52,
+      "trustScore": 9,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/stripe/ai/refs/heads/main/skills/stripe-best-practices/SKILL.md"
+    },
+    {
+      "rank": 141,
+      "name": "react-native-components",
+      "source": "/shipshitdev/library",
+      "installCount": 52,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/shipshitdev/library/refs/heads/master/skills/react-native-components/SKILL.md"
+    },
+    {
+      "rank": 142,
+      "name": "react-testing",
+      "source": "/citypaul/dotfiles",
+      "installCount": 52,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/citypaul/dotfiles/refs/heads/main/claude/.claude/skills/react-testing/SKILL.md"
+    },
+    {
+      "rank": 143,
+      "name": "tech-stack-evaluator",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 52,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/tech-stack-evaluator/SKILL.md"
+    },
+    {
+      "rank": 144,
+      "name": "ceo-advisor",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 52,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 62,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/c-level-advisor/ceo-advisor/SKILL.md"
+    },
+    {
+      "rank": 145,
+      "name": "instructor",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 51,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/ai-research/prompt-engineering-instructor/SKILL.md"
+    },
+    {
+      "rank": 146,
+      "name": "senior-computer-vision",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 51,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/senior-computer-vision/SKILL.md"
+    },
+    {
+      "rank": 147,
+      "name": "product-manager-toolkit",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 51,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/product-team/product-manager-toolkit/SKILL.md"
+    },
+    {
+      "rank": 148,
+      "name": "cto-advisor",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 51,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/c-level-advisor/cto-advisor/SKILL.md"
+    },
+    {
+      "rank": 149,
+      "name": "better-auth",
+      "source": "/jezweb/claude-skills",
+      "installCount": 50,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/better-auth/SKILL.md"
+    },
+    {
+      "rank": 150,
+      "name": "TanStack Table",
+      "source": "/jezweb/claude-skills",
+      "installCount": 50,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/tanstack-table/SKILL.md"
+    },
+    {
+      "rank": 151,
+      "name": "frontend-design",
+      "source": "/dmmulroy/.dotfiles",
+      "installCount": 50,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/dmmulroy/.dotfiles/refs/heads/main/home/.config/opencode/skill/frontend-design/SKILL.md"
+    },
+    {
+      "rank": 152,
+      "name": "artifacts-builder",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 50,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 99,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/development/artifacts-builder/SKILL.md"
+    },
+    {
+      "rank": 153,
+      "name": "sql-optimization-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 49,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md"
+    },
+    {
+      "rank": 154,
+      "name": "systematic-debugging",
+      "source": "/obra/superpowers",
+      "installCount": 49,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/systematic-debugging/SKILL.md"
+    },
+    {
+      "rank": 155,
+      "name": "expo-cicd-workflows",
+      "source": "/expo/skills",
+      "installCount": 49,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/expo/skills/refs/heads/main/plugins/expo-deployment/skills/expo-cicd-workflows/SKILL.md"
+    },
+    {
+      "rank": 156,
+      "name": "prisma",
+      "source": "/blencorp/claude-code-kit",
+      "installCount": 48,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/blencorp/claude-code-kit/refs/heads/main/cli/kits/prisma/skills/prisma/SKILL.md"
+    },
+    {
+      "rank": 157,
+      "name": "claude-opus-4-5-migration",
+      "source": "/anthropics/claude-code",
+      "installCount": 48,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/claude-opus-4-5-migration/skills/claude-opus-4-5-migration/SKILL.md"
+    },
+    {
+      "rank": 158,
+      "name": "nextjs-boilerplate",
+      "source": "/petekp/claude-skills",
+      "installCount": 47,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/petekp/claude-skills/refs/heads/main/skills/nextjs-boilerplate/SKILL.md"
+    },
+    {
+      "rank": 159,
+      "name": "writing-plans",
+      "source": "/obra/superpowers",
+      "installCount": 47,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/writing-plans/SKILL.md"
+    },
+    {
+      "rank": 160,
+      "name": "tailwind-best-practices",
+      "source": "/mastra-ai/mastra",
+      "installCount": 47,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 99,
+      "url": "https://raw.githubusercontent.com/mastra-ai/mastra/refs/heads/main/.claude/skills/tailwind-best-practices/SKILL.md"
+    },
+    {
+      "rank": 161,
+      "name": "nextjs-server-components",
+      "source": "/TheBushidoCollective/han",
+      "installCount": 47,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/TheBushidoCollective/han/refs/heads/main/plugins/frameworks/nextjs/skills/nextjs-server-components/SKILL.md"
+    },
+    {
+      "rank": 162,
+      "name": "test-driven-development",
+      "source": "/obra/superpowers",
+      "installCount": 46,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/test-driven-development/SKILL.md"
+    },
+    {
+      "rank": 163,
+      "name": "markitdown",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 46,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 62,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/scientific/markitdown/SKILL.md"
+    },
+    {
+      "rank": 164,
+      "name": "wrangler",
+      "source": "/cloudflare/skills",
+      "installCount": 46,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/cloudflare/skills/refs/heads/main/skills/wrangler/SKILL.md"
+    },
+    {
+      "rank": 165,
+      "name": "nextjs-patterns",
+      "source": "/ashchupliak/dream-team",
+      "installCount": 46,
+      "trustScore": 5.8,
+      "verified": false,
+      "benchmarkScore": 93,
+      "url": "https://raw.githubusercontent.com/ashchupliak/dream-team/refs/heads/main/skills/nextjs-patterns/SKILL.md"
+    },
+    {
+      "rank": 166,
+      "name": "marketing-strategy-pmm",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 46,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/marketing-skill/marketing-strategy-pmm/SKILL.md"
+    },
+    {
+      "rank": 167,
+      "name": "flutter",
+      "source": "/alinaqi/claude-bootstrap",
+      "installCount": 46,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/alinaqi/claude-bootstrap/refs/heads/main/skills/flutter/SKILL.md"
+    },
+    {
+      "rank": 168,
+      "name": "nextjs-app-router",
+      "source": "/TheBushidoCollective/han",
+      "installCount": 46,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 90,
+      "url": "https://raw.githubusercontent.com/TheBushidoCollective/han/refs/heads/main/plugins/frameworks/nextjs/skills/nextjs-app-router/SKILL.md"
+    },
+    {
+      "rank": 169,
+      "name": "nextjs-modal-integration",
+      "source": "/JosiahSiegel/claude-plugin-marketplace",
+      "installCount": 46,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/JosiahSiegel/claude-plugin-marketplace/refs/heads/main/plugins/nextjs-master/skills/nextjs-modal-integration/SKILL.md"
+    },
+    {
+      "rank": 170,
+      "name": "github-actions-templates",
+      "source": "/wshobson/agents",
+      "installCount": 45,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/cicd-automation/skills/github-actions-templates/SKILL.md"
+    },
+    {
+      "rank": 171,
+      "name": "embedding-strategies",
+      "source": "/wshobson/agents",
+      "installCount": 45,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/llm-application-dev/skills/embedding-strategies/SKILL.md"
+    },
+    {
+      "rank": 172,
+      "name": "cloudflare-nextjs",
+      "source": "/secondsky/claude-skills",
+      "installCount": 45,
+      "trustScore": 6.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/secondsky/claude-skills/refs/heads/main/plugins/cloudflare-nextjs/skills/cloudflare-nextjs/SKILL.md"
+    },
+    {
+      "rank": 173,
+      "name": "tailwind-4",
+      "source": "/prowler-cloud/prowler",
+      "installCount": 45,
+      "trustScore": 7.8,
+      "verified": false,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/prowler-cloud/prowler/refs/heads/master/skills/tailwind-4/SKILL.md"
+    },
+    {
+      "rank": 174,
+      "name": "SEO Optimizer",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 45,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 84,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/business-marketing/seo-optimizer/SKILL.md"
+    },
+    {
+      "rank": 175,
+      "name": "Hook Development",
+      "source": "/anthropics/claude-code",
+      "installCount": 45,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 83,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/hook-development/SKILL.md"
+    },
+    {
+      "rank": 176,
+      "name": "Command Development",
+      "source": "/anthropics/claude-code",
+      "installCount": 45,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/command-development/SKILL.md"
+    },
+    {
+      "rank": 177,
+      "name": "quality-documentation-manager",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 45,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 75,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/quality-documentation-manager/SKILL.md"
+    },
+    {
+      "rank": 178,
+      "name": "agile-product-owner",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 45,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/product-team/agile-product-owner/SKILL.md"
+    },
+    {
+      "rank": 179,
+      "name": "polars",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 44,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/scientific/polars/SKILL.md"
+    },
+    {
+      "rank": 180,
+      "name": "backend-patterns",
+      "source": "/affaan-m/everything-claude-code",
+      "installCount": 44,
+      "trustScore": 9.4,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/affaan-m/everything-claude-code/refs/heads/main/skills/backend-patterns/SKILL.md"
+    },
+    {
+      "rank": 181,
+      "name": "ai-elements",
+      "source": "/vercel/ai-elements",
+      "installCount": 43,
+      "trustScore": 10,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vercel/ai-elements/refs/heads/main/skills/ai-elements/SKILL.md"
+    },
+    {
+      "rank": 182,
+      "name": "svelte-code-writer",
+      "source": "/sveltejs/mcp",
+      "installCount": 43,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/sveltejs/mcp/refs/heads/main/plugins/svelte/skills/svelte-code-writer/SKILL.md"
+    },
+    {
+      "rank": 183,
+      "name": "motion",
+      "source": "/jezweb/claude-skills",
+      "installCount": 43,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/motion/SKILL.md"
+    },
+    {
+      "rank": 184,
+      "name": "react-native-best-practices",
+      "source": "/callstackincubator/agent-skills",
+      "installCount": 43,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/callstackincubator/agent-skills/refs/heads/main/skills/react-native-best-practices/SKILL.md"
+    },
+    {
+      "rank": 185,
+      "name": "Plugin Structure",
+      "source": "/anthropics/claude-code",
+      "installCount": 43,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/plugin-structure/SKILL.md"
+    },
+    {
+      "rank": 186,
+      "name": "information-security-manager-iso27001",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 43,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/information-security-manager-iso27001/SKILL.md"
+    },
+    {
+      "rank": 187,
+      "name": "capa-officer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 43,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/capa-officer/SKILL.md"
+    },
+    {
+      "rank": 188,
+      "name": "nextjs-data-fetching",
+      "source": "/TheBushidoCollective/han",
+      "installCount": 43,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/TheBushidoCollective/han/refs/heads/main/plugins/frameworks/nextjs/skills/nextjs-data-fetching/SKILL.md"
+    },
+    {
+      "rank": 189,
+      "name": "backtesting-frameworks",
+      "source": "/wshobson/agents",
+      "installCount": 42,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/quantitative-trading/skills/backtesting-frameworks/SKILL.md"
+    },
+    {
+      "rank": 190,
+      "name": "architecture-decision-records",
+      "source": "/wshobson/agents",
+      "installCount": 42,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/documentation-generation/skills/architecture-decision-records/SKILL.md"
+    },
+    {
+      "rank": 191,
+      "name": "react-email",
+      "source": "/resend/react-email",
+      "installCount": 42,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/resend/react-email/refs/heads/canary/skills/react-email/SKILL.md"
+    },
+    {
+      "rank": 192,
+      "name": "ai-sdk-core",
+      "source": "/jezweb/claude-skills",
+      "installCount": 42,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 70,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/ai-sdk-core/SKILL.md"
+    },
+    {
+      "rank": 193,
+      "name": "Plugin Settings",
+      "source": "/anthropics/claude-code",
+      "installCount": 42,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 99,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/plugin-dev/skills/plugin-settings/SKILL.md"
+    },
+    {
+      "rank": 194,
+      "name": "social-media-analyzer",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 42,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/marketing-skill/social-media-analyzer/SKILL.md"
+    },
+    {
+      "rank": 195,
+      "name": "risk-management-specialist",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 42,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/risk-management-specialist/SKILL.md"
+    },
+    {
+      "rank": 196,
+      "name": "tanstack-query-best-practices",
+      "source": "/DeckardGer/tanstack-agent-skills",
+      "installCount": 42,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/DeckardGer/tanstack-agent-skills/refs/heads/main/skills/tanstack-query/SKILL.md"
+    },
+    {
+      "rank": 197,
+      "name": "using-superpowers",
+      "source": "/obra/superpowers",
+      "installCount": 41,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 18,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/using-superpowers/SKILL.md"
+    },
+    {
+      "rank": 198,
+      "name": "authjs-skills",
+      "source": "/gocallum/nextjs16-agent-skills",
+      "installCount": 41,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/gocallum/nextjs16-agent-skills/refs/heads/main/skills/authjs-skills/SKILL.md"
+    },
+    {
+      "rank": 201,
+      "name": "isms-audit-expert",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 41,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/isms-audit-expert/SKILL.md"
+    },
+    {
+      "rank": 202,
+      "name": "ui-web",
+      "source": "/alinaqi/claude-bootstrap",
+      "installCount": 41,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 88,
+      "url": "https://raw.githubusercontent.com/alinaqi/claude-bootstrap/refs/heads/main/skills/ui-web/SKILL.md"
+    },
+    {
+      "rank": 203,
+      "name": "executing-plans",
+      "source": "/obra/superpowers",
+      "installCount": 40,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 99,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/executing-plans/SKILL.md"
+    },
+    {
+      "rank": 204,
+      "name": "nano-banana-prompting",
+      "source": "/nikiforovall/claude-code-rules",
+      "installCount": 40,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/nikiforovall/claude-code-rules/refs/heads/main/plugins/handbook-nano-banana/skills/nano-banana-prompting/SKILL.md"
+    },
+    {
+      "rank": 205,
+      "name": "vani-async-client-only",
+      "source": "/itsjavi/vani",
+      "installCount": 40,
+      "trustScore": 9.3,
+      "verified": true,
+      "benchmarkScore": 80,
+      "url": "https://raw.githubusercontent.com/itsjavi/vani/refs/heads/main/skills/vani-async-client-only/SKILL.md"
+    },
+    {
+      "rank": 206,
+      "name": "shadcn-ui",
+      "source": "/existential-birds/beagle",
+      "installCount": 40,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 95,
+      "url": "https://raw.githubusercontent.com/existential-birds/beagle/refs/heads/main/plugins/beagle-react/skills/shadcn-ui/SKILL.md"
+    },
+    {
+      "rank": 207,
+      "name": "web-perf",
+      "source": "/cloudflare/skills",
+      "installCount": 40,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 98,
+      "url": "https://raw.githubusercontent.com/cloudflare/skills/refs/heads/main/skills/web-perf/SKILL.md"
+    },
+    {
+      "rank": 208,
+      "name": "java-coding-standards",
+      "source": "/affaan-m/everything-claude-code",
+      "installCount": 40,
+      "trustScore": 9.4,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/affaan-m/everything-claude-code/refs/heads/main/skills/java-coding-standards/SKILL.md"
+    },
+    {
+      "rank": 209,
+      "name": "redis-js",
+      "source": "/upstash/redis-js",
+      "installCount": 39,
+      "trustScore": 8.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/upstash/redis-js/refs/heads/main/skills/SKILL.md"
+    },
+    {
+      "rank": 210,
+      "name": "zustand-state-management",
+      "source": "/jezweb/claude-skills",
+      "installCount": 39,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 88,
+      "url": "https://raw.githubusercontent.com/jezweb/claude-skills/refs/heads/main/skills/zustand-state-management/SKILL.md"
+    },
+    {
+      "rank": 211,
+      "name": "senior-fullstack",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 39,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 42,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/development/senior-fullstack/SKILL.md"
+    },
+    {
+      "rank": 212,
+      "name": "langchain",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 39,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/ai-research/agents-langchain/SKILL.md"
+    },
+    {
+      "rank": 213,
+      "name": "gdpr-dsgvo-expert",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 39,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/gdpr-dsgvo-expert/SKILL.md"
+    },
+    {
+      "rank": 214,
+      "name": "better-auth",
+      "source": "/zircote/.claude",
+      "installCount": 38,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/zircote/.claude/refs/heads/main/skills/better-auth/SKILL.md"
+    },
+    {
+      "rank": 215,
+      "name": "prompt-engineering-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 38,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/llm-application-dev/skills/prompt-engineering-patterns/SKILL.md"
+    },
+    {
+      "rank": 216,
+      "name": "data-storytelling",
+      "source": "/wshobson/agents",
+      "installCount": 38,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/business-analytics/skills/data-storytelling/SKILL.md"
+    },
+    {
+      "rank": 217,
+      "name": "bash-defensive-patterns",
+      "source": "/wshobson/agents",
+      "installCount": 38,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md"
+    },
+    {
+      "rank": 218,
+      "name": "nestjs",
+      "source": "/pluginagentmarketplace/custom-plugin-nodejs",
+      "installCount": 38,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/pluginagentmarketplace/custom-plugin-nodejs/refs/heads/main/skills/nestjs/SKILL.md"
+    },
+    {
+      "rank": 219,
+      "name": "Writing Hookify Rules",
+      "source": "/anthropics/claude-code",
+      "installCount": 38,
+      "trustScore": 8.8,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/plugins/hookify/skills/writing-rules/SKILL.md"
+    },
+    {
+      "rank": 220,
+      "name": "fda-consultant-specialist",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 38,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 96,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/ra-qm-team/fda-consultant-specialist/SKILL.md"
+    },
+    {
+      "rank": 221,
+      "name": "ui-ux-pro-max",
+      "source": "/VoTruongDanh/Sentiment",
+      "installCount": 38,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": 87,
+      "url": "https://raw.githubusercontent.com/VoTruongDanh/Sentiment/refs/heads/main/.agent/skills/ui-ux-pro-max/SKILL.md"
+    },
+    {
+      "rank": 222,
+      "name": "hybrid-search-implementation",
+      "source": "/wshobson/agents",
+      "installCount": 37,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/llm-application-dev/skills/hybrid-search-implementation/SKILL.md"
+    },
+    {
+      "rank": 223,
+      "name": "better-auth",
+      "source": "/vibery-studio/templates",
+      "installCount": 37,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/vibery-studio/templates/refs/heads/main/skills/better-auth/SKILL.md"
+    },
+    {
+      "rank": 224,
+      "name": "motion",
+      "source": "/onmax/nuxt-skills",
+      "installCount": 37,
+      "trustScore": 9.6,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/onmax/nuxt-skills/refs/heads/main/skills/motion/SKILL.md"
+    },
+    {
+      "rank": 225,
+      "name": "component-refactoring",
+      "source": "/langgenius/dify",
+      "installCount": 37,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/langgenius/dify/refs/heads/main/.agents/skills/component-refactoring/SKILL.md"
+    },
+    {
+      "rank": 226,
+      "name": "typescript",
+      "source": "/alinaqi/claude-bootstrap",
+      "installCount": 37,
+      "trustScore": 8.7,
+      "verified": true,
+      "benchmarkScore": 96,
+      "url": "https://raw.githubusercontent.com/alinaqi/claude-bootstrap/refs/heads/main/skills/typescript/SKILL.md"
+    },
+    {
+      "rank": 227,
+      "name": "nextjs-data-fetching",
+      "source": "/JosiahSiegel/claude-plugin-marketplace",
+      "installCount": 37,
+      "trustScore": null,
+      "verified": false,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/JosiahSiegel/claude-plugin-marketplace/refs/heads/main/plugins/nextjs-master/skills/nextjs-data-fetching/SKILL.md"
+    },
+    {
+      "rank": 228,
+      "name": "DevOps & Deployment",
+      "source": "/ArieGoldkin/ai-agent-hub",
+      "installCount": 37,
+      "trustScore": null,
+      "verified": null,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/ArieGoldkin/ai-agent-hub/refs/heads/main/skills/devops-deployment/SKILL.md"
+    },
+    {
+      "rank": 229,
+      "name": "anti-reversing-techniques",
+      "source": "/wshobson/agents",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/reverse-engineering/skills/anti-reversing-techniques/SKILL.md"
+    },
+    {
+      "rank": 230,
+      "name": "accessibility-compliance",
+      "source": "/wshobson/agents",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": null,
+      "url": "https://raw.githubusercontent.com/wshobson/agents/refs/heads/main/plugins/ui-design/skills/accessibility-compliance/SKILL.md"
+    },
+    {
+      "rank": 231,
+      "name": "tailwind",
+      "source": "/tartinerlabs/skills",
+      "installCount": 36,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 90,
+      "url": "https://raw.githubusercontent.com/tartinerlabs/skills/refs/heads/main/skills/tailwind/SKILL.md"
+    },
+    {
+      "rank": 232,
+      "name": "subagent-driven-development",
+      "source": "/obra/superpowers",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/subagent-driven-development/SKILL.md"
+    },
+    {
+      "rank": 233,
+      "name": "requesting-code-review",
+      "source": "/obra/superpowers",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/requesting-code-review/SKILL.md"
+    },
+    {
+      "rank": 234,
+      "name": "dispatching-parallel-agents",
+      "source": "/obra/superpowers",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/skills/dispatching-parallel-agents/SKILL.md"
+    },
+    {
+      "rank": 235,
+      "name": "tauri",
+      "source": "/martinholovsky/claude-skills-generator",
+      "installCount": 36,
+      "trustScore": 7.7,
+      "verified": false,
+      "benchmarkScore": 97,
+      "url": "https://raw.githubusercontent.com/martinholovsky/claude-skills-generator/refs/heads/main/skills/tauri/SKILL.md"
+    },
+    {
+      "rank": 236,
+      "name": "go",
+      "source": "/grafana/loki",
+      "installCount": 36,
+      "trustScore": 9.7,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/grafana/loki/refs/heads/main/.cursor/skills/go/SKILL.md"
+    },
+    {
+      "rank": 237,
+      "name": "react-patterns",
+      "source": "/giuseppe-trisciuoglio/developer-kit",
+      "installCount": 36,
+      "trustScore": 7.5,
+      "verified": true,
+      "benchmarkScore": 86,
+      "url": "https://raw.githubusercontent.com/giuseppe-trisciuoglio/developer-kit/refs/heads/main/plugins/developer-kit-typescript/skills/react-patterns/SKILL.md"
+    },
+    {
+      "rank": 238,
+      "name": "playwright-testing",
+      "source": "/fcakyon/claude-codex-settings",
+      "installCount": 36,
+      "trustScore": 9.4,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/fcakyon/claude-codex-settings/refs/heads/main/plugins/playwright-tools/skills/playwright-testing/SKILL.md"
+    },
+    {
+      "rank": 239,
+      "name": "commit",
+      "source": "/davila7/claude-code-templates",
+      "installCount": 36,
+      "trustScore": 10,
+      "verified": true,
+      "benchmarkScore": 82,
+      "url": "https://raw.githubusercontent.com/davila7/claude-code-templates/refs/heads/main/cli-tool/components/skills/sentry/commit/SKILL.md"
+    },
+    {
+      "rank": 240,
+      "name": "app-router",
+      "source": "/davepoon/claude-code-subagents-collection",
+      "installCount": 36,
+      "trustScore": 9.5,
+      "verified": true,
+      "benchmarkScore": 100,
+      "url": "https://raw.githubusercontent.com/davepoon/claude-code-subagents-collection/refs/heads/main/plugins/nextjs-expert/skills/app-router/SKILL.md"
+    },
+    {
+      "rank": 241,
+      "name": "ms365-tenant-manager",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 36,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 72,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/engineering-team/ms365-tenant-manager/SKILL.md"
+    },
+    {
+      "rank": 242,
+      "name": "marketing-demand-acquisition",
+      "source": "/alirezarezvani/claude-skills",
+      "installCount": 36,
+      "trustScore": 8.9,
+      "verified": true,
+      "benchmarkScore": 78,
+      "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/refs/heads/main/marketing-skill/marketing-demand-acquisition/SKILL.md"
+    }
+  ]
+}
