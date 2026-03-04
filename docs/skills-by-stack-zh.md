@@ -1,28 +1,28 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 177（含 `.system`）
+- 总计目录数: 163（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
+- 数据源: `skills_selected.txt`
 
 ## 分类总览
 
-- 前端与Web UI: 57
+- 前端与Web UI: 46
 - 后端与服务端(Node/多语言): 16
 - 移动端(React Native/Expo/Flutter): 18
 - Python/AI/数据科学: 6
-- 数据库与数据工程: 10
+- 数据库与数据工程: 9
 - 云与DevOps/基础设施: 7
 - LLM/Agent与提示工程: 27
 - 测试/质量保障: 11
 - 安全与架构: 5
 - 文档与办公自动化: 8
-- 工程流程与协作: 11
-- 系统内置: 1
+- 工程流程与协作: 10
 
-## 前端与Web UI（57）
+## 前端与Web UI（46）
 
 主要是 React/Next/Vue/Nuxt/Svelte、Tailwind/shadcn、动画与性能优化相关能力。
 
-`algorithmic-art`, `artifacts-builder`, `bun-next-js`, `cache-components`, `canvas-design`, `frontend-design`, `frontend-patterns`, `gsap`, `motion`, `next-best-practices`, `nextjs`, `nextjs-15`, `nextjs-app-router`, `nextjs-app-router-patterns`, `nextjs-expert`, `nextjs-modal-integration`, `nextjs-patterns`, `nextjs-server-components`, `nuxt`, `nuxt-better-auth`, `nuxt-ui`, `react-19`, `react-best-practices`, `react-components`, `react-dev`, `react-email`, `react-modernization`, `react-state-management`, `react-web`, `remotion-best-practices`, `responsive-design`, `senior-frontend`, `shadcn`, `shadcn-ui`, `slack-gif-creator`, `svelte-code-writer`, `tailwind-4`, `tailwind-best-practices`, `tailwind-design-system`, `tailwind-patterns`, `tailwind-v4-shadcn`, `tanstack-query`, `tanstack-query-best-practices`, `tanstack-table`, `ui-design-system`, `ui-dev`, `ui-web`, `ux-researcher-designer`, `vercel-composition-patterns`, `vercel-react-best-practices`, `vite`, `vue`, `web-artifacts-builder`, `web-component-design`, `web-design-guidelines`, `web-perf`, `zustand-state-management`
+`algorithmic-art`, `bun-next-js`, `cache-components`, `canvas-design`, `frontend-design`, `frontend-patterns`, `gsap`, `motion`, `next-best-practices`, `nextjs`, `nextjs-app-router-patterns`, `nextjs-modal-integration`, `nuxt`, `nuxt-better-auth`, `nuxt-ui`, `react-19`, `react-best-practices`, `react-components`, `react-dev`, `react-email`, `react-modernization`, `react-state-management`, `react-web`, `remotion-best-practices`, `responsive-design`, `senior-frontend`, `shadcn-ui`, `slack-gif-creator`, `svelte-code-writer`, `tailwind-design-system`, `tailwind-v4-shadcn`, `tanstack-query`, `tanstack-query-best-practices`, `tanstack-table`, `ui-design-system`, `ui-dev`, `ui-web`, `ux-researcher-designer`, `vercel-composition-patterns`, `vercel-react-best-practices`, `vite`, `vue`, `web-artifacts-builder`, `web-component-design`, `web-design-guidelines`, `web-perf`
 
 ## 后端与服务端(Node/多语言)（16）
 
@@ -42,11 +42,11 @@
 
 `async-python-patterns`, `fastapi-templates`, `python-performance-optimization`, `senior-computer-vision`, `senior-ml-engineer`, `uv-package-manager`
 
-## 数据库与数据工程（10）
+## 数据库与数据工程（9）
 
 主要是 Postgres/SQL/Prisma/Redis/Supabase 与数据工程实践。
 
-`backtesting-frameworks`, `epic-database`, `polars`, `postgresql-table-design`, `prisma`, `redis-js`, `senior-data-engineer`, `senior-data-scientist`, `sql-optimization-patterns`, `supabase-nextjs`
+`backtesting-frameworks`, `polars`, `postgresql-table-design`, `prisma`, `redis-js`, `senior-data-engineer`, `senior-data-scientist`, `sql-optimization-patterns`, `supabase-nextjs`
 
 ## 云与DevOps/基础设施（7）
 
@@ -78,15 +78,8 @@
 
 `doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `update-docs`, `xlsx`
 
-## 工程流程与协作（11）
+## 工程流程与协作（10）
 
 主要是规划执行、规范、项目组织与工程协同。
 
-`app-store-optimization`, `brainstorming`, `coding-standards`, `convex-best-practices`, `epic-react-best-practices`, `executing-plans`, `monorepo-management`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`
-
-## 系统内置（1）
-
-系统自身依赖技能，不建议删除。
-
-`.system`
-
+`app-store-optimization`, `brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `monorepo-management`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`

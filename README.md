@@ -45,8 +45,45 @@ Supported targets:
 - `skills_manifest.csv`: `slug, skill_name, source, installs, trust, score`
 - `skills_selected.txt`: current selected slugs
 - `manifest_summary.json`: generation metadata
+- `scripts/fetch_context7_skill_rankings.py`: pull live ranked skills from Context7 API
+- `scripts/rebuild_skills_by_stack_zh.py`: regenerate Chinese category doc from current `skills_selected.txt`
 - `docs/dedup-policy.md`: de-dup rule
 - `docs/skills-by-stack-zh.md`: Chinese stack/language categorization
+
+## Live Ranking Pull (Context7)
+
+You can pull the **dynamic** Context7 ranked skills list directly from Context7:
+
+```bash
+python3 scripts/fetch_context7_skill_rankings.py \
+  --min-installs 36 \
+  --output-csv data/context7_ranked_skills_min36.csv \
+  --output-json data/context7_ranked_skills_min36.meta.json
+```
+
+The script uses:
+- `GET /api/skills/count`
+- `GET /api/skills/ranked?limit=100&offset=...`
+
+Note: this is a live leaderboard; counts change over time.
+
+## 163 Skills Distribution (Current Pack)
+
+High-level stack distribution for the current curated 163 skills:
+
+| Category | Count | Share |
+| --- | ---: | ---: |
+| Frontend & Web UI | 46 | 28.2% |
+| LLM / Agent / Prompting | 27 | 16.6% |
+| Mobile (RN / Expo / Flutter) | 18 | 11.0% |
+| Backend & Services | 16 | 9.8% |
+| Testing & QA | 11 | 6.7% |
+| Engineering Workflow | 10 | 6.1% |
+| Database & Data Engineering | 9 | 5.5% |
+| Docs & Office Automation | 8 | 4.9% |
+| Cloud & DevOps | 7 | 4.3% |
+| Python / AI / Data Science | 6 | 3.7% |
+| Security & Architecture | 5 | 3.1% |
 
 ## Selection Rule
 
