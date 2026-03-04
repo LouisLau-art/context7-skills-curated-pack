@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-04T02:56:00.521385+00:00",
+  "generatedAtUtc": "2026-03-04T03:14:34.583513+00:00",
   "project": "context7-skills-curated-pack",
   "siteUrl": "https://louislau-art.github.io/context7-skills-curated-pack",
   "datasets": [
@@ -7,7 +7,7 @@
       "id": "docs_popular_top50",
       "title": "Context7 Docs Popular Ranking (Top 50)",
       "relativePath": "docs/data/context7_docs_popular_top50.json",
-      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_docs_popular_top50.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_popular_top50.json",
       "generatedAtUtc": "2026-03-04T01:42:12.202845+00:00",
       "rows": 50,
       "sourceEndpoint": "https://context7.com/api/rankings",
@@ -34,7 +34,7 @@
       "id": "docs_extended_top1000",
       "title": "Context7 Docs Extended Ranking (Official Top 50 + Estimated)",
       "relativePath": "docs/data/context7_docs_extended_top1000.json",
-      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_docs_extended_top1000.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_extended_top1000.json",
       "generatedAtUtc": "2026-03-04T02:55:45.133656+00:00",
       "rows": 50,
       "officialRows": 50,
@@ -64,7 +64,7 @@
       "id": "skills_ranked_all",
       "title": "Context7 Skills Ranking (No installs threshold)",
       "relativePath": "docs/data/context7_skills_ranked_all.json",
-      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_skills_ranked_all.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_skills_ranked_all.json",
       "generatedAtUtc": "2026-03-04T01:50:52.679394+00:00",
       "rows": 4920,
       "baseUrl": "https://context7.com",
@@ -91,6 +91,6 @@
       "Then fetch dataset publicUrl needed for your task.",
       "Use generatedAtUtc and rows for freshness checks."
     ],
-    "manifestPublicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_rankings_manifest.json"
+    "manifestPublicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json"
   }
 }

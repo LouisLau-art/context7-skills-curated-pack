@@ -5,10 +5,16 @@ This guide is for external AI models/agents that need to consume the two public 
 ## Canonical Public URLs
 
 - Site: `https://louislau-art.github.io/context7-skills-curated-pack/`
-- Manifest (read this first): `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_rankings_manifest.json`
-- Docs ranking JSON: `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_docs_popular_top50.json`
-- Docs extended JSON: `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_docs_extended_top1000.json`
-- Skills ranking JSON: `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_skills_ranked_all.json`
+- Manifest (read this first): `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json`
+- Docs ranking JSON: `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_popular_top50.json`
+- Docs extended JSON: `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_extended_top1000.json`
+- Skills ranking JSON: `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_skills_ranked_all.json`
+
+Raw GitHub fallback (if Pages cache/deploy lags):
+- Manifest: `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
+- Docs ranking: `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_docs_popular_top50.json`
+- Docs extended: `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_docs_extended_top1000.json`
+- Skills ranking: `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_skills_ranked_all.json`
 
 ## What Each Dataset Means
 

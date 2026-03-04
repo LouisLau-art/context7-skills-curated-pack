@@ -102,7 +102,9 @@ python3 scripts/fetch_context7_skills_for_site.py \
 - 说明文档：`AI_RANKINGS_GUIDE.md`
 - 机器可读清单：`docs/data/context7_rankings_manifest.json`
 - 公网 manifest 地址：
-  `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_rankings_manifest.json`
+  `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json`
+- Raw GitHub 兜底地址：
+  `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
 ## 当前 163 技能分布（摘要）
 

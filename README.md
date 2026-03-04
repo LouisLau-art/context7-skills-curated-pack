@@ -160,7 +160,9 @@ If another model/agent needs these rankings, start here:
 - Guide: `AI_RANKINGS_GUIDE.md`
 - Machine-readable manifest: `docs/data/context7_rankings_manifest.json`
 - Public manifest URL:
-  `https://louislau-art.github.io/context7-skills-curated-pack/docs/data/context7_rankings_manifest.json`
+  `https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json`
+- Raw GitHub fallback:
+  `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
 ## 163 Skills Distribution (Current Pack)
 

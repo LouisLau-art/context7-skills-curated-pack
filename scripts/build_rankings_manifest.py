@@ -28,8 +28,16 @@ def load_payload(path: Path) -> dict[str, Any]:
     return payload
 
 
+def to_pages_path(relative_path: str) -> str:
+    path = relative_path.strip().lstrip("./")
+    # GitHub Pages is configured to serve from the repo's /docs folder as site root.
+    if path.startswith("docs/"):
+        return path[len("docs/") :]
+    return path
+
+
 def public_url(base: str, relative_path: str) -> str:
-    return f"{base.rstrip('/')}/{relative_path.lstrip('/')}"
+    return f"{base.rstrip('/')}/{to_pages_path(relative_path)}"
 
 
 def main() -> int:
