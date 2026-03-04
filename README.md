@@ -46,6 +46,7 @@ Supported targets:
 - `skills_selected.txt`: current selected slugs
 - `manifest_summary.json`: generation metadata
 - `scripts/fetch_context7_skill_rankings.py`: pull live ranked skills from Context7 API
+- `scripts/fetch_context7_library_rankings.py`: pull live docs library rankings (popular/trending/latest)
 - `scripts/rebuild_skills_by_stack_zh.py`: regenerate Chinese category doc from current `skills_selected.txt`
 - `docs/dedup-policy.md`: de-dup rule
 - `docs/skills-by-stack-zh.md`: Chinese stack/language categorization
@@ -66,6 +67,31 @@ The script uses:
 - `GET /api/skills/ranked?limit=100&offset=...`
 
 Note: this is a live leaderboard; counts change over time.
+
+## Live Docs Popular Ranking
+
+You can also pull Context7 docs library rankings (popular/trending/latest):
+
+```bash
+# Popular docs ranking (includes source/tokens/snippets/update fields)
+python3 scripts/fetch_context7_library_rankings.py \
+  --kind popular \
+  --output-csv data/context7_popular_libraries.csv \
+  --output-json data/context7_popular_libraries.meta.json
+
+# Optional: trending/latest
+python3 scripts/fetch_context7_library_rankings.py --kind trending \
+  --output-csv data/context7_trending_libraries.csv \
+  --output-json data/context7_trending_libraries.meta.json
+python3 scripts/fetch_context7_library_rankings.py --kind latest \
+  --output-csv data/context7_latest_libraries.csv \
+  --output-json data/context7_latest_libraries.meta.json
+```
+
+Endpoints used:
+- `GET /api/libraries/homepage?type=popular|trending`
+- `GET /api/libraries/latest?limit=...`
+- `GET /api/libraries/count`
 
 ## 163 Skills Distribution (Current Pack)
 

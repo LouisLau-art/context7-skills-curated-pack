@@ -1,0 +1,21 @@
+rank,title,source,type,tokens,snippets,updateUtc,updateAgo,trustScore,verified,popularityRank,benchmarkScore,docsRepoUrl,docsSiteUrl
+1,Next.js,/vercel/next.js,repo,595014,2035,2026-03-03T01:36:19.617000Z,23h,10,True,1,93,https://github.com/vercel/next.js,
+2,Shadcn UI,/shadcn-ui/ui,repo,173801,847,2026-02-24T00:44:38.058000Z,8d,10,True,4,78,https://github.com/shadcn-ui/ui,
+3,OpenClaw,/openclaw/openclaw,repo,903853,2896,2026-02-26T13:03:08.360000Z,5d,7.8,True,3,72.9,https://github.com/openclaw/openclaw,
+4,Better Auth,/better-auth/better-auth,repo,473556,2018,2026-02-26T10:48:07.729000Z,5d,7.6,True,2,77.1,https://github.com/better-auth/better-auth,
+5,AI SDK,/websites/ai-sdk_dev,website,881174,3048,2026-02-17T18:50:53.586000Z,14d,9.6,True,6,88.1,https://github.com/context7/ai-sdk_dev,https://ai-sdk.dev/
+6,React,/websites/react_dev,website,871771,2784,2026-02-23T09:48:32.833000Z,8d,10,True,5,93.5,https://github.com/context7/react_dev,https://react.dev/
+7,Claude Code,/anthropics/claude-code,repo,211503,767,2026-03-03T00:59:55.736000Z,1d,8.8,True,7,76.8,https://github.com/anthropics/claude-code,
+8,Vercel AI SDK,/vercel/ai,repo,1004567,3565,2026-02-19T12:43:35.647000Z,12d,10,True,8,76.9,https://github.com/vercel/ai,
+9,Better Auth,/llmstxt/better-auth_llms_txt,llmstxt,421701,1816,2026-02-27T13:01:10.442000Z,4d,9.3,True,28,87.4,https://www.better-auth.com/llms.txt,
+10,TanStack Query,/tanstack/query,repo,268923,1093,2026-02-26T16:45:14.922000Z,5d,8,True,11,95.1,https://github.com/tanstack/query,
+11,Supabase,/supabase/supabase,repo,1754311,5116,2026-02-26T20:54:36.544000Z,5d,10,True,15,77.3,https://github.com/supabase/supabase,
+12,LangGraph,/websites/langchain_oss_python_langgraph,website,130817,445,2026-02-17T18:41:06.594000Z,14d,10,True,9,86.9,https://github.com/context7/langchain_oss_python_langgraph,https://docs.langchain.com/oss/python/langgraph/
+13,n8n,/n8n-io/n8n-docs,repo,542996,888,2026-02-27T06:54:05.617000Z,4d,9.7,True,21,84.3,https://github.com/n8n-io/n8n-docs,
+14,Mastra,/mastra-ai/mastra,repo,1265731,4939,2026-02-28T01:04:17.684000Z,4d,7.5,True,43,85.7,https://github.com/mastra-ai/mastra,
+15,Model Context Protocol Typescript SDK,/modelcontextprotocol/typescript-sdk,repo,50629,162,2026-02-26T18:43:36.688000Z,5d,7.8,True,16,77.7,https://github.com/modelcontextprotocol/typescript-sdk,
+16,Drizzle ORM,/drizzle-team/drizzle-orm-docs,repo,420389,1905,2026-02-24T04:43:30.484000Z,7d,7.6,True,12,78.3,https://github.com/drizzle-team/drizzle-orm-docs,
+17,Gemini API,/websites/ai_google_dev_gemini-api,website,1302230,2722,2026-02-27T16:19:57.506000Z,4d,9,True,19,75.4,https://github.com/context7/ai_google_dev_gemini-api,https://ai.google.dev/gemini-api/docs
+18,Tailwind CSS,/websites/tailwindcss,website,345839,1680,2026-02-25T11:39:10.332000Z,6d,9.9,True,17,73.3,https://github.com/context7/tailwindcss,https://tailwindcss.com/docs
+19,Prisma,/prisma/docs,repo,1415389,5317,2026-02-26T15:15:29.686000Z,5d,10,True,10,76.9,https://github.com/prisma/docs,
+20,Playwright,/microsoft/playwright,repo,821596,3323,2026-03-01T00:53:36.403000Z,3d,9.9,True,69,92.5,https://github.com/microsoft/playwright,

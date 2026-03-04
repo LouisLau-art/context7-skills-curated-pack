@@ -1,0 +1,21 @@
+rank,title,source,type,tokens,snippets,updateUtc,updateAgo,trustScore,verified,popularityRank,benchmarkScore,docsRepoUrl,docsSiteUrl
+1,PyTorch,/websites/pytorch_2_10,website,6728718,17129,2026-02-26T21:10:51.876000Z,5d,10,True,3254,59.6,https://github.com/context7/pytorch_2_10,https://docs.pytorch.org/docs/2.10/
+2,vinext,/cloudflare/vinext,repo,24965,60,2026-02-25T05:06:29.434000Z,6d,8.8,,1539,73,https://github.com/cloudflare/vinext,
+3,scikit-learn,/websites/scikit-learn_dev,website,4141102,9711,2026-02-25T12:04:51.466000Z,6d,9.5,True,1985,94.4,https://github.com/context7/scikit-learn_dev,https://scikit-learn.org/dev/
+4,Poe Creator Platform,/websites/creator_poe,website,98263,454,2025-08-07T09:08:56.774000Z,6mo,9.8,True,12124,,https://github.com/context7/creator_poe,https://creator.poe.com/docs
+5,Fabric,/fabric/fabric,repo,6467,65,2025-05-08T11:23:43.807000Z,9mo,6.7,,6976,,https://github.com/fabric/fabric,
+6,SurrealDB Rust SDK,/websites/surrealdb_sdk_rust,website,151874,419,2026-02-23T15:53:00.464000Z,8d,10,True,1755,90.8,https://github.com/context7/surrealdb_sdk_rust,https://surrealdb.com/docs/sdk/rust
+7,New Relic,/websites/newrelic,website,5473472,5650,2026-02-25T03:36:07.216000Z,6d,10,True,2507,74.7,https://github.com/context7/newrelic,https://docs.newrelic.com
+8,Ball Don't Lie NBA API,/websites/balldontlie_io,website,28187,70,2025-12-19T14:00:39.662000Z,2mo,3.9,,8128,59.2,https://github.com/context7/balldontlie_io,https://docs.balldontlie.io
+9,Openclaw 中文社区版,/jiulingyun/openclaw-cn,repo,682505,2158,2026-02-22T07:16:05.236000Z,9d,8.5,,2081,68.2,https://github.com/jiulingyun/openclaw-cn,
+10,Chat SDK,/vercel/chat,repo,79542,330,2026-02-24T21:54:33.136000Z,7d,9.9,True,1052,87.5,https://github.com/vercel/chat,
+11,Instructor,/jxnl/instructor,repo,472403,1469,2026-02-24T08:31:57.792000Z,7d,9.6,True,825,88.1,https://github.com/jxnl/instructor,
+12,SpacetimeDB,/websites/spacetimedb,website,394924,1394,2026-02-24T18:13:10.843000Z,7d,8,,859,81.2,https://github.com/context7/spacetimedb,https://spacetimedb.com/docs
+13,Context7 MCP,/upstash/context7-mcp,repo,70220,281,2026-02-24T14:17:47.058000Z,7d,9.8,True,904,79.5,https://github.com/upstash/context7-mcp,
+14,Bevy,/websites/bevy-cheatbook_github_io,website,130242,361,2026-02-23T09:15:07.199000Z,8d,8.3,,1165,74.9,https://github.com/context7/bevy-cheatbook_github_io,https://bevy-cheatbook.github.io
+15,Bacons Xcode,/evanbacon/xcode,repo,5825,16,2025-10-20T23:07:18.602000Z,4mo,9.9,True,2437,90.2,https://github.com/evanbacon/xcode,
+16,Visomaster,/visomaster/visomaster,repo,996,8,2025-06-04T07:36:44.186000Z,9mo,5.5,,3809,,https://github.com/visomaster/visomaster,
+17,Face Make AI,/anthony-wu-1226/facemakeai,repo,1361366,6803,2025-09-02T05:11:25.525000Z,6mo,2.7,,17686,66,https://github.com/anthony-wu-1226/facemakeai,
+18,KX,/websites/kx,website,1961814,12791,2025-09-18T07:47:03.376000Z,5mo,10,True,1567,88.1,https://github.com/context7/kx,https://docs.kx.com/
+19,AdonisJS v7,/adonisjs/v7-docs,repo,424859,1788,2026-03-01T08:08:51.940000Z,2d,9.7,True,7223,54.2,https://github.com/adonisjs/v7-docs,
+20,WXT,/llmstxt/wxt_dev_llms_txt,llmstxt,109669,543,2026-03-01T09:36:57.726000Z,2d,8.1,,9010,78,https://wxt.dev/llms.txt,

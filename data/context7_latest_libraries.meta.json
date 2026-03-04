@@ -1,0 +1,10 @@
+{
+  "generatedAtUtc": "2026-03-04T01:15:19.094888+00:00",
+  "baseUrl": "https://context7.com",
+  "kind": "latest",
+  "apiTotalLibraries": 71775,
+  "allEndpointTotalCount": null,
+  "apiCalls": 2,
+  "rowsKept": 10,
+  "outputCsv": "data/context7_latest_libraries.csv"
+}

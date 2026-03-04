@@ -1,0 +1,11 @@
+rank,title,source,type,tokens,snippets,updateUtc,updateAgo,trustScore,verified,popularityRank,benchmarkScore,docsRepoUrl,docsSiteUrl
+1,Nimvault,/haozeke/nimvault,repo,15611,63,2026-03-04T01:14:19.341000Z,1m,9.3,True,,,https://github.com/haozeke/nimvault,
+2,The Missing Semester of Your CS Education,/missing-semester/missing-semester,repo,58505,179,2026-03-04T01:10:49.896000Z,4m,6,,,76.5,https://github.com/missing-semester/missing-semester,
+3,massgravel/massgrave.dev,/massgravel/massgrave.dev,repo,-1,-1,2026-03-04T01:03:43.961000Z,11m,8.5,,,,https://github.com/massgravel/massgrave.dev,
+4,WorkForce Ready,/websites/secure_workforceready_au_ta_rest_public,website,398,0,2026-03-04T01:01:56.067000Z,13m,7.3,,,9.9,https://github.com/context7/secure_workforceready_au_ta_rest_public,https://secure.workforceready.com.au/ta/docs/rest/public
+5,C Programming Tutorial,/websites/tutorialspoint_cprogramming_index,website,1128,1,2026-03-04T00:58:59.124000Z,16m,10,True,,14.5,https://github.com/context7/tutorialspoint_cprogramming_index,https://www.tutorialspoint.com/cprogramming/index.htm
+6,Connic,/websites/connic_co_v1,website,75373,227,2026-03-04T00:57:52.734000Z,17m,7.5,True,35581,75.3,https://github.com/context7/connic_co_v1,https://connic.co/docs/v1
+7,nalloc,/3axap4ehko/nalloc,repo,29684,83,2026-03-04T00:54:37.894000Z,20m,8.9,,,88.1,https://github.com/3axap4ehko/nalloc,
+8,Bash Hackers Wiki,/flokoe/bash-hackers-wiki,repo,168005,608,2026-03-04T00:54:04.811000Z,21m,8,,,61.3,https://github.com/flokoe/bash-hackers-wiki,
+9,CS:APP Lab Assignments,/notdroid/cs-app,repo,11814,26,2026-03-04T00:53:41.646000Z,21m,5.4,,,68,https://github.com/notdroid/cs-app,
+10,Sudachi,/worksapplications/sudachi,repo,14029,25,2026-03-04T00:45:18.076000Z,30m,8.4,,,86.8,https://github.com/worksapplications/sudachi,
