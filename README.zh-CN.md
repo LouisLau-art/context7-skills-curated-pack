@@ -39,9 +39,9 @@ DRY_RUN=1 bash scripts/install_curated.sh claude
 
 ```bash
 python3 scripts/fetch_context7_skill_rankings.py \
-  --min-installs 36 \
-  --output-csv data/context7_ranked_skills_min36.csv \
-  --output-json data/context7_ranked_skills_min36.meta.json
+  --min-installs 0 \
+  --output-csv data/context7_ranked_skills_all.csv \
+  --output-json data/context7_ranked_skills_all.meta.json
 ```
 
 ### 2) Docs 库排行（popular / trending / latest）
@@ -56,12 +56,12 @@ python3 scripts/fetch_context7_library_rankings.py --kind popular \
 
 页面已支持双榜单：
 - `Docs Popular`（Context7 API 当前提供前 50 的市场份额榜）
-- `Skills Ranking`（`installs >= 36`，当前约 240 条）
+- `Skills Ranking`（不设 installs 阈值的全量榜单，当前为数千条）
 
 页面与数据文件：
 - `docs/index.html`
 - `docs/data/context7_docs_popular_top50.json`
-- `docs/data/context7_skills_ranked_min36.json`
+- `docs/data/context7_skills_ranked_all.json`
 
 数据生成命令：
 
@@ -72,9 +72,9 @@ python3 scripts/fetch_context7_docs_popular.py \
   --output-csv docs/data/context7_docs_popular_top50.csv
 
 python3 scripts/fetch_context7_skills_for_site.py \
-  --min-installs 36 \
-  --output-json docs/data/context7_skills_ranked_min36.json \
-  --output-csv docs/data/context7_skills_ranked_min36.csv
+  --min-installs 0 \
+  --output-json docs/data/context7_skills_ranked_all.json \
+  --output-csv docs/data/context7_skills_ranked_all.csv
 ```
 
 自动更新由 GitHub Actions 执行：

@@ -61,9 +61,9 @@ You can pull the **dynamic** Context7 ranked skills list directly from Context7:
 
 ```bash
 python3 scripts/fetch_context7_skill_rankings.py \
-  --min-installs 36 \
-  --output-csv data/context7_ranked_skills_min36.csv \
-  --output-json data/context7_ranked_skills_min36.meta.json
+  --min-installs 0 \
+  --output-csv data/context7_ranked_skills_all.csv \
+  --output-json data/context7_ranked_skills_all.meta.json
 ```
 
 The script uses:
@@ -101,12 +101,12 @@ Endpoints used:
 
 This repo now includes a static dashboard with two tabs:
 - `Docs Popular` (Context7 market-share list, currently top 50 from API)
-- `Skills Ranking` (current list with `installs >= 36`, currently around 240 rows)
+- `Skills Ranking` (current ranked list without installs threshold, currently thousands of rows)
 
 Files:
 - `docs/index.html`
 - `docs/data/context7_docs_popular_top50.json`
-- `docs/data/context7_skills_ranked_min36.json`
+- `docs/data/context7_skills_ranked_all.json`
 
 The dataset is generated via:
 
@@ -117,9 +117,9 @@ python3 scripts/fetch_context7_docs_popular.py \
   --output-csv docs/data/context7_docs_popular_top50.csv
 
 python3 scripts/fetch_context7_skills_for_site.py \
-  --min-installs 36 \
-  --output-json docs/data/context7_skills_ranked_min36.json \
-  --output-csv docs/data/context7_skills_ranked_min36.csv
+  --min-installs 0 \
+  --output-json docs/data/context7_skills_ranked_all.json \
+  --output-csv docs/data/context7_skills_ranked_all.csv
 ```
 
 Automatic updates are handled by:

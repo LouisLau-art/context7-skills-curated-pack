@@ -1,0 +1,15 @@
+rank,name,source,installCount,trustScore,verified,benchmarkScore,inCurated,url
+351,implement-design,/figma/mcp-server-guide,25,,False,82,False,https://raw.githubusercontent.com/figma/mcp-server-guide/refs/heads/main/skills/implement-design/SKILL.md
+467,code-connect-components,/figma/mcp-server-guide,19,,False,82,False,https://raw.githubusercontent.com/figma/mcp-server-guide/refs/heads/main/skills/code-connect-components/SKILL.md
+484,figma-analyze-frame,/thebushidocollective/han,18,7.5,True,,False,https://raw.githubusercontent.com/thebushidocollective/han/refs/heads/main/plugins/services/figma/skills/figma-analyze-frame/SKILL.md
+691,figma-sync-design-system,/thebushidocollective/han,13,7.5,True,,False,https://raw.githubusercontent.com/thebushidocollective/han/refs/heads/main/plugins/services/figma/skills/figma-sync-design-system/SKILL.md
+750,figma-generate-component,/thebushidocollective/han,12,7.5,True,,False,https://raw.githubusercontent.com/thebushidocollective/han/refs/heads/main/plugins/services/figma/skills/figma-generate-component/SKILL.md
+798,Figma Developer,/daffy0208/ai-dev-standards,12,3.9,False,85,False,https://raw.githubusercontent.com/daffy0208/ai-dev-standards/refs/heads/main/skills/figma-developer/SKILL.md
+838,figma-extract-tokens,/thebushidocollective/han,11,7.5,True,,False,https://raw.githubusercontent.com/thebushidocollective/han/refs/heads/main/plugins/services/figma/skills/figma-extract-tokens/SKILL.md
+862,figma,/johnlindquist/claude,11,9,True,100,False,https://raw.githubusercontent.com/johnlindquist/claude/refs/heads/main/skills/figma/SKILL.md
+905,figma-mcp-downloader,/yuichiroharai/figma-mcp-downloader,10,,,,False,https://raw.githubusercontent.com/yuichiroharai/figma-mcp-downloader/refs/heads/main/skills/figma-mcp-downloader/SKILL.md
+1011,figma-design-sync,/udecode/better-convex,9,8.5,False,83,False,https://raw.githubusercontent.com/udecode/better-convex/refs/heads/main/.codex/skills/figma-design-sync/SKILL.md
+1491,figma-mcp,/DreamCats/my-skills,7,,False,,False,https://raw.githubusercontent.com/DreamCats/my-skills/refs/heads/main/figma-mcp/SKILL.md
+1668,create-design-system-rules,/figma/mcp-server-guide,6,,False,90,False,https://raw.githubusercontent.com/figma/mcp-server-guide/refs/heads/main/skills/create-design-system-rules/SKILL.md
+1779,figma,/vm0-ai/vm0-skills,5,7,,,False,https://raw.githubusercontent.com/vm0-ai/vm0-skills/refs/heads/main/figma/SKILL.md
+1962,figma-integration,/duongdev/ccpm,5,,False,62,False,https://raw.githubusercontent.com/duongdev/ccpm/refs/heads/main/skills/figma-integration/SKILL.md

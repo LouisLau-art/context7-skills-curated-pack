@@ -34,9 +34,18 @@ jobs:
       - name: Refresh skills ranked dataset
         run: |
           python3 scripts/fetch_context7_skills_for_site.py \
-            --min-installs 36 \
-            --output-json docs/data/context7_skills_ranked_min36.json \
-            --output-csv docs/data/context7_skills_ranked_min36.csv
+            --min-installs 0 \
+            --output-json docs/data/context7_skills_ranked_all.json \
+            --output-csv docs/data/context7_skills_ranked_all.csv
+
+      - name: Build Figma watchlist dataset
+        run: |
+          python3 scripts/build_figma_watchlist.py \
+            --input-json docs/data/context7_skills_ranked_all.json \
+            --selected-list skills_selected.txt \
+            --pattern figma \
+            --output-json docs/data/context7_figma_watchlist.json \
+            --output-csv docs/data/context7_figma_watchlist.csv
 
       - name: Commit and push if changed
         run: |
@@ -46,8 +55,10 @@ jobs:
             git add \
               docs/data/context7_docs_popular_top50.json \
               docs/data/context7_docs_popular_top50.csv \
-              docs/data/context7_skills_ranked_min36.json \
-              docs/data/context7_skills_ranked_min36.csv
+              docs/data/context7_skills_ranked_all.json \
+              docs/data/context7_skills_ranked_all.csv \
+              docs/data/context7_figma_watchlist.json \
+              docs/data/context7_figma_watchlist.csv
             git commit -m "chore: refresh Context7 docs+skills ranking data"
             git push
           else

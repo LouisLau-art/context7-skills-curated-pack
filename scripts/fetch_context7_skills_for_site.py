@@ -17,10 +17,10 @@ from urllib.request import urlopen
 
 DEFAULT_BASE_URL = "https://context7.com"
 DEFAULT_LIMIT = 100
-DEFAULT_MIN_INSTALLS = 36
+DEFAULT_MIN_INSTALLS = 0
 DEFAULT_MAX_PAGES = 500
-DEFAULT_OUT_JSON = "docs/data/context7_skills_ranked_min36.json"
-DEFAULT_OUT_CSV = "docs/data/context7_skills_ranked_min36.csv"
+DEFAULT_OUT_JSON = "docs/data/context7_skills_ranked_all.json"
+DEFAULT_OUT_CSV = "docs/data/context7_skills_ranked_all.csv"
 
 
 def fetch_json(url: str, timeout: int = 30) -> Any:

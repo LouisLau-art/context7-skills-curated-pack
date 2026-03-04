@@ -200,7 +200,8 @@
 
     <div class="tabs">
       <button class="tab active" data-mode="docs">Docs Popular</button>
-      <button class="tab" data-mode="skills">Skills (installs >= 36)</button>
+      <button class="tab" data-mode="skills">Skills (ranked, no installs threshold)</button>
+      <button class="tab" data-mode="figma">Figma Watchlist</button>
     </div>
 
     <div class="note" id="modeNote">Docs market-share ranking is currently limited by Context7 API to top 50 libraries.</div>
@@ -253,9 +254,9 @@
         ]
       },
       skills: {
-        label: "Skills (installs >= 36)",
-        dataUrl: "./data/context7_skills_ranked_min36.json",
-        note: "Skills list shows all ranked rows with installs >= 36, not just top 50.",
+        label: "Skills (ranked, no installs threshold)",
+        dataUrl: "./data/context7_skills_ranked_all.json",
+        note: "Skills list shows current ranked rows without an installs threshold (much larger than top 50).",
         topLabel: "Top Skill",
         metricLabel: "Top Installs",
         metricKey: "installCount",
@@ -268,6 +269,24 @@
           { key: "trustScore", label: "Trust", type: "num" },
           { key: "verified", label: "Verified", type: "bool" },
           { key: "benchmarkScore", label: "Benchmark", type: "num" }
+        ]
+      },
+      figma: {
+        label: "Figma Watchlist",
+        dataUrl: "./data/context7_figma_watchlist.json",
+        note: "Figma watchlist is keyword-matched from the full skills ranking (pattern: /figma/i), with curated-pack inclusion status.",
+        topLabel: "Top Figma Skill",
+        metricLabel: "Top Installs",
+        metricKey: "installCount",
+        metricFmt: (v) => (typeof v === "number" ? new Intl.NumberFormat("en-US").format(v) : "-"),
+        columns: [
+          { key: "rank", label: "Rank", type: "num" },
+          { key: "name", label: "Skill", type: "text" },
+          { key: "source", label: "Source", type: "mono" },
+          { key: "installCount", label: "Installs", type: "num" },
+          { key: "trustScore", label: "Trust", type: "num" },
+          { key: "verified", label: "Verified", type: "bool" },
+          { key: "inCurated", label: "In Curated", type: "bool" }
         ]
       }
     };
