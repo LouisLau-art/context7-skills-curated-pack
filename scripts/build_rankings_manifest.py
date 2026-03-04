@@ -13,6 +13,7 @@ from typing import Any
 
 DEFAULT_DOCS_JSON = "docs/data/context7_docs_popular_top50.json"
 DEFAULT_DOCS_EXTENDED_JSON = "docs/data/context7_docs_extended_top1000.json"
+DEFAULT_DOCS_EXTENDED_RUNTIME_JSON = "docs/data/context7_docs_extended_top100.runtime.json"
 DEFAULT_SKILLS_JSON = "docs/data/context7_skills_ranked_all.json"
 DEFAULT_OUTPUT_JSON = "docs/data/context7_rankings_manifest.json"
 DEFAULT_PUBLIC_BASE = "https://louislau-art.github.io/context7-skills-curated-pack"
@@ -46,6 +47,7 @@ def main() -> int:
     )
     parser.add_argument("--docs-json", default=DEFAULT_DOCS_JSON)
     parser.add_argument("--docs-extended-json", default=DEFAULT_DOCS_EXTENDED_JSON)
+    parser.add_argument("--docs-extended-runtime-json", default=DEFAULT_DOCS_EXTENDED_RUNTIME_JSON)
     parser.add_argument("--skills-json", default=DEFAULT_SKILLS_JSON)
     parser.add_argument("--public-base", default=DEFAULT_PUBLIC_BASE)
     parser.add_argument("--output-json", default=DEFAULT_OUTPUT_JSON)
@@ -53,6 +55,7 @@ def main() -> int:
 
     docs_path = Path(args.docs_json)
     docs_extended_path = Path(args.docs_extended_json)
+    docs_extended_runtime_path = Path(args.docs_extended_runtime_json)
     skills_path = Path(args.skills_json)
     out_path = Path(args.output_json)
 
@@ -60,13 +63,34 @@ def main() -> int:
     skills = load_payload(skills_path)
 
     docs_extended = load_payload(docs_extended_path) if docs_extended_path.exists() else None
+    docs_extended_runtime = (
+        load_payload(docs_extended_runtime_path) if docs_extended_runtime_path.exists() else None
+    )
 
     docs_rel = docs_path.as_posix()
     docs_ext_rel = docs_extended_path.as_posix()
+    docs_ext_runtime_rel = docs_extended_runtime_path.as_posix()
     skills_rel = skills_path.as_posix()
     manifest_rel = out_path.as_posix()
 
     now = datetime.now(timezone.utc).isoformat()
+    docs_extended_estimated_rows = (
+        docs_extended.get("estimatedRows")
+        if isinstance(docs_extended, dict)
+        else None
+    )
+    docs_runtime_estimated_rows = (
+        docs_extended_runtime.get("estimatedRows")
+        if isinstance(docs_extended_runtime, dict)
+        else None
+    )
+
+    preferred_docs_extended_dataset_id = "docs_extended_top1000"
+    if isinstance(docs_extended_estimated_rows, int) and docs_extended_estimated_rows > 0:
+        preferred_docs_extended_dataset_id = "docs_extended_top1000"
+    elif isinstance(docs_runtime_estimated_rows, int) and docs_runtime_estimated_rows > 0:
+        preferred_docs_extended_dataset_id = "docs_extended_top100_runtime"
+
     manifest: dict[str, Any] = {
         "generatedAtUtc": now,
         "project": "context7-skills-curated-pack",
@@ -130,6 +154,36 @@ def main() -> int:
                 "available": docs_extended is not None,
             },
             {
+                "id": "docs_extended_top100_runtime",
+                "title": "Context7 Docs Extended Runtime Snapshot (Top 100)",
+                "relativePath": docs_ext_runtime_rel,
+                "publicUrl": public_url(args.public_base, docs_ext_runtime_rel),
+                "generatedAtUtc": docs_extended_runtime.get("generatedAtUtc") if docs_extended_runtime else None,
+                "rows": docs_extended_runtime.get("rows") if docs_extended_runtime else None,
+                "officialRows": docs_extended_runtime.get("officialRows") if docs_extended_runtime else None,
+                "estimatedRows": docs_extended_runtime.get("estimatedRows") if docs_extended_runtime else None,
+                "notes": [
+                    "Temporary runtime snapshot generated from /api/rankings + /api/libraries/all.",
+                    "Use this when docs_extended_top1000 is official-only (estimatedRows=0).",
+                ],
+                "keyFields": [
+                    "rank",
+                    "rankType",
+                    "officialRank",
+                    "officialMarketShare",
+                    "estimatedScore",
+                    "title",
+                    "source",
+                    "popularityRank",
+                    "snippets",
+                    "tokens",
+                    "updateAgo",
+                    "trustScore",
+                    "verified",
+                ],
+                "available": docs_extended_runtime is not None,
+            },
+            {
                 "id": "skills_ranked_all",
                 "title": "Context7 Skills Ranking (No installs threshold)",
                 "relativePath": skills_rel,
@@ -159,7 +213,9 @@ def main() -> int:
                 "Fetch this manifest first.",
                 "Then fetch dataset publicUrl needed for your task.",
                 "Use generatedAtUtc and rows for freshness checks.",
+                "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime.",
             ],
+            "preferredDocsExtendedDatasetId": preferred_docs_extended_dataset_id,
             "manifestPublicUrl": public_url(args.public_base, manifest_rel),
         },
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-04T03:14:34.583513+00:00",
+  "generatedAtUtc": "2026-03-04T07:57:42.911150+00:00",
   "project": "context7-skills-curated-pack",
   "siteUrl": "https://louislau-art.github.io/context7-skills-curated-pack",
   "datasets": [
@@ -61,6 +61,36 @@
       "available": true
     },
     {
+      "id": "docs_extended_top100_runtime",
+      "title": "Context7 Docs Extended Runtime Snapshot (Top 100)",
+      "relativePath": "docs/data/context7_docs_extended_top100.runtime.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_extended_top100.runtime.json",
+      "generatedAtUtc": "2026-03-04T05:18:02.268154+00:00",
+      "rows": 100,
+      "officialRows": 50,
+      "estimatedRows": 50,
+      "notes": [
+        "Temporary runtime snapshot generated from /api/rankings + /api/libraries/all.",
+        "Use this when docs_extended_top1000 is official-only (estimatedRows=0)."
+      ],
+      "keyFields": [
+        "rank",
+        "rankType",
+        "officialRank",
+        "officialMarketShare",
+        "estimatedScore",
+        "title",
+        "source",
+        "popularityRank",
+        "snippets",
+        "tokens",
+        "updateAgo",
+        "trustScore",
+        "verified"
+      ],
+      "available": true
+    },
+    {
       "id": "skills_ranked_all",
       "title": "Context7 Skills Ranking (No installs threshold)",
       "relativePath": "docs/data/context7_skills_ranked_all.json",
@@ -89,8 +119,10 @@
     "readOrder": [
       "Fetch this manifest first.",
       "Then fetch dataset publicUrl needed for your task.",
-      "Use generatedAtUtc and rows for freshness checks."
+      "Use generatedAtUtc and rows for freshness checks.",
+      "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime."
     ],
+    "preferredDocsExtendedDatasetId": "docs_extended_top100_runtime",
     "manifestPublicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json"
   }
 }
