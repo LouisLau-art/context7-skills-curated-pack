@@ -29,6 +29,7 @@ DEFAULT_LIMIT = 50
 DEFAULT_OUTPUT_JSON = "docs/data/context7_docs_popular_top50.json"
 DEFAULT_OUTPUT_CSV = "docs/data/context7_docs_popular_top50.csv"
 DEFAULT_RETRIES = 6
+MAX_RETRY_AFTER_SECONDS = 120.0
 
 
 def build_request(url: str):
@@ -46,8 +47,15 @@ def fetch_json(url: str, timeout: int = 30, retries: int = DEFAULT_RETRIES) -> A
             last_err = exc
             if attempt < retries:
                 retry_after = exc.headers.get("Retry-After") if exc.headers else None
-                if retry_after and retry_after.isdigit():
-                    sleep_s = float(retry_after)
+                if retry_after and retry_after.strip().isdigit():
+                    retry_after_s = float(retry_after.strip())
+                    # Fail fast on long cooldown windows so refresh jobs don't appear hung.
+                    if retry_after_s > MAX_RETRY_AFTER_SECONDS:
+                        raise RuntimeError(
+                            f"HTTP {exc.code} for {url}: Retry-After={int(retry_after_s)}s "
+                            f"exceeds cap {int(MAX_RETRY_AFTER_SECONDS)}s"
+                        ) from exc
+                    sleep_s = retry_after_s
                 elif exc.code == 429:
                     sleep_s = min(60.0, 1.5 * (2 ** (attempt - 1)))
                 else:
