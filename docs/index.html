@@ -7,38 +7,46 @@
   <meta name="description" content="Auto-updated Context7 docs and skills rankings dashboard." />
   <style>
     :root {
-      --bg: #f4f6f8;
+      --bg-top: #e9f2ff;
+      --bg-bottom: #f8fbff;
       --panel: #ffffff;
-      --line: #dde3ea;
-      --text: #0f172a;
-      --muted: #516071;
+      --line: #d8e4ef;
+      --line-strong: #bfd0df;
+      --text: #0f1f32;
+      --muted: #4b6076;
       --accent: #0f766e;
-      --accent-soft: #e6f5f3;
+      --accent-soft: #e6f6f3;
+      --shadow: 0 14px 34px rgba(15, 31, 50, 0.08);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: radial-gradient(circle at top right, #eaf6ff 0, #f4f6f8 45%);
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 500px at 92% -8%, #d7f1ff 0%, transparent 50%),
+        radial-gradient(900px 420px at -8% -12%, #d8ecff 0%, transparent 52%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
       color: var(--text);
-      font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-family: "Avenir Next", "Manrope", "SF Pro Text", "Segoe UI", sans-serif;
     }
     .wrap {
-      max-width: 1260px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 24px 18px 40px;
+      padding: 28px 18px 44px;
     }
     h1 {
       margin: 0;
-      font-size: clamp(24px, 4vw, 36px);
-      letter-spacing: 0.02em;
+      font-size: clamp(28px, 4.5vw, 42px);
+      letter-spacing: 0.01em;
+      line-height: 1.08;
     }
     .sub {
-      margin-top: 8px;
+      margin-top: 10px;
       color: var(--muted);
       font-size: 15px;
     }
     .tabs {
-      margin-top: 14px;
+      margin-top: 16px;
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
@@ -47,48 +55,57 @@
       border: 1px solid var(--line);
       background: #fff;
       color: var(--muted);
-      padding: 8px 12px;
-      border-radius: 10px;
+      padding: 9px 13px;
+      border-radius: 999px;
       font-size: 13px;
       cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .tab:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-1px);
     }
     .tab.active {
-      color: var(--accent);
-      border-color: #9bd6d0;
+      color: #0a5f58;
+      border-color: #9cd6cf;
       background: var(--accent-soft);
-      font-weight: 600;
+      font-weight: 700;
     }
     .note {
-      margin-top: 10px;
-      color: #475569;
-      background: #f8fbfd;
-      border: 1px solid #dbe7f3;
-      border-radius: 10px;
+      margin-top: 12px;
+      color: #42556a;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 12px;
       padding: 10px 12px;
       font-size: 13px;
+      backdrop-filter: blur(5px);
     }
     .bar {
       margin-top: 14px;
       display: grid;
-      grid-template-columns: 1.1fr 1fr 1fr 1fr;
+      grid-template-columns: 1.15fr 1fr 1fr 1fr;
       gap: 10px;
     }
     .card {
-      background: var(--panel);
+      background: rgba(255, 255, 255, 0.86);
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 12px 14px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(5px);
     }
     .k {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      font-weight: 700;
     }
     .v {
-      margin-top: 6px;
-      font-size: 20px;
-      font-weight: 700;
+      margin-top: 7px;
+      font-size: 21px;
+      font-weight: 780;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -96,8 +113,19 @@
     .controls {
       margin-top: 14px;
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1.65fr auto;
       gap: 10px;
+      align-items: stretch;
+    }
+    .controls-main {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.86);
+      padding: 8px;
+      box-shadow: var(--shadow);
     }
     input[type="search"] {
       width: 100%;
@@ -106,6 +134,55 @@
       padding: 10px 12px;
       font-size: 14px;
       background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    input[type="search"]:focus {
+      border-color: #90b6d8;
+      box-shadow: 0 0 0 3px #dceeff;
+    }
+    .switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #395066;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 0 4px;
+    }
+    .switch input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .controls-side {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.86);
+      padding: 8px;
+      box-shadow: var(--shadow);
+    }
+    .field-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    select {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--text);
+      font-size: 13px;
+      padding: 8px 10px;
+      min-width: 88px;
     }
     .btn {
       border: 1px solid var(--line);
@@ -114,50 +191,93 @@
       padding: 10px 12px;
       font-size: 13px;
       cursor: pointer;
-      color: var(--muted);
+      color: #31475c;
+      transition: all 140ms ease;
+      white-space: nowrap;
+    }
+    .btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+    }
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .btn-small {
+      padding: 7px 11px;
+      font-size: 12px;
     }
     .table-shell {
       margin-top: 12px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       background: #fff;
+      box-shadow: var(--shadow);
     }
     .table-wrap {
       width: 100%;
       overflow: auto;
-      max-height: 70vh;
+      max-height: 66vh;
     }
     table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       min-width: 980px;
       font-size: 14px;
     }
     th, td {
-      border-bottom: 1px solid #edf1f5;
+      border-bottom: 1px solid #eaf0f6;
       padding: 10px 10px;
       text-align: left;
       vertical-align: middle;
       white-space: nowrap;
+      background: #fff;
     }
     thead th {
       position: sticky;
       top: 0;
-      background: #f8fbfd;
-      z-index: 1;
-      color: #334155;
+      background: #f4f8fd;
+      z-index: 5;
+      color: #344a5f;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       cursor: pointer;
       user-select: none;
     }
-    tr:hover td { background: #f8fbfd; }
-    .rank { font-variant-numeric: tabular-nums; font-weight: 700; width: 56px; }
+    tbody tr:nth-child(even) td {
+      background: #fbfdff;
+    }
+    tr:hover td {
+      background: #eef6ff;
+    }
+    th:first-child,
+    td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      min-width: 72px;
+    }
+    thead th:first-child {
+      z-index: 8;
+      background: #edf4fb;
+    }
+    tbody td:first-child {
+      font-weight: 700;
+      background: #fff;
+    }
+    tbody tr:nth-child(even) td:first-child {
+      background: #fbfdff;
+    }
+    tbody tr:hover td:first-child {
+      background: #eef6ff;
+    }
+    .rank { font-variant-numeric: tabular-nums; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: #334155; }
     .num { font-variant-numeric: tabular-nums; }
-    .pct { color: #0f766e; font-weight: 600; }
+    .pct { color: #0f766e; font-weight: 700; }
     .muted { color: var(--muted); }
     .badge {
       display: inline-flex;
@@ -166,19 +286,43 @@
       font-size: 11px;
       padding: 3px 8px;
       border: 1px solid transparent;
+      font-weight: 700;
     }
     .ok { background: #e8faf1; color: #11673d; border-color: #bce8d0; }
     .no { background: #f6f6f7; color: #65717f; border-color: #e2e8f0; }
     .cell-link {
-      color: #0369a1;
+      color: #055a93;
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
-      text-decoration-color: #94cce8;
+      text-decoration-color: #8cc7eb;
     }
     .cell-link:hover {
-      color: #0c4a6e;
+      color: #083c61;
       text-decoration-color: currentColor;
+    }
+    .pager {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pager-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #355069;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
     }
     .footer {
       margin-top: 12px;
@@ -198,9 +342,12 @@
       display: none;
       white-space: pre-wrap;
     }
-    @media (max-width: 860px) {
+    @media (max-width: 980px) {
       .bar { grid-template-columns: 1fr 1fr; }
       .controls { grid-template-columns: 1fr; }
+      .controls-main { flex-wrap: wrap; }
+      .controls-side { justify-content: space-between; }
+      table { min-width: 860px; }
     }
   </style>
 </head>
@@ -215,7 +362,7 @@
       <button class="tab" data-mode="skills">Skills (ranked, no installs threshold)</button>
     </div>
 
-    <div class="note" id="modeNote">Docs market-share ranking is currently limited by Context7 API to top 50 libraries. Search uses extended docs data when available.</div>
+    <div class="note" id="modeNote">Use search + verified filter + pagination to navigate large rankings quickly. Library/Skill and Source entries are clickable.</div>
 
     <div class="bar">
       <div class="card"><div class="k">Rows</div><div class="v num" id="rowsCount">-</div></div>
@@ -225,8 +372,24 @@
     </div>
 
     <div class="controls">
-      <input id="searchBox" type="search" placeholder="Filter by name/source..." />
-      <button id="resetBtn" class="btn" type="button">Reset Search/Sort</button>
+      <div class="controls-main">
+        <input id="searchBox" type="search" placeholder="Filter by name/source... (/ to focus)" />
+        <label class="switch" for="verifiedOnly">
+          <input id="verifiedOnly" type="checkbox" />
+          Verified only
+        </label>
+      </div>
+      <div class="controls-side">
+        <label class="field-label" for="pageSizeSelect">Rows/Page</label>
+        <select id="pageSizeSelect">
+          <option value="50">50</option>
+          <option value="100" selected>100</option>
+          <option value="250">250</option>
+          <option value="500">500</option>
+          <option value="-1">All</option>
+        </select>
+        <button id="resetBtn" class="btn" type="button">Reset Filters</button>
+      </div>
     </div>
 
     <div class="table-shell">
@@ -235,6 +398,17 @@
           <thead><tr id="theadRow"></tr></thead>
           <tbody id="tbody"></tbody>
         </table>
+      </div>
+    </div>
+
+    <div class="pager">
+      <div class="pager-group">
+        <button id="prevPageBtn" class="btn btn-small" type="button">Prev</button>
+        <button id="nextPageBtn" class="btn btn-small" type="button">Next</button>
+      </div>
+      <div class="pager-group">
+        <span class="pill" id="pageInfo">Page 1 / 1</span>
+        <span class="pill" id="rangeInfo">Showing 0-0 of 0</span>
       </div>
     </div>
 
@@ -247,7 +421,7 @@
       docs: {
         label: "Docs Popular",
         dataUrl: "./data/context7_docs_popular_top50.json",
-        note: "Docs market-share ranking is limited by Context7 API to top 50 libraries. Search will use Docs Extended data when available.",
+        note: "Docs market-share ranking is limited by Context7 API to top 50 libraries. Click Library to open Context7 docs page, click Source to open GitHub repo.",
         topLabel: "Top Library",
         metricLabel: "Top Market Share",
         metricKey: "marketShare",
@@ -267,7 +441,7 @@
       docsExtended: {
         label: "Docs Extended",
         dataUrl: "./data/context7_docs_extended_top1000.json",
-        note: "Rows 1-50 are official from Context7 /api/rankings. Rows after 50 are estimated (directional) from /api/libraries/all.",
+        note: "Rows 1-50 are official from Context7 /api/rankings. Rows after 50 are estimated (directional) from /api/libraries/all. Library/Source are clickable.",
         topLabel: "Top Library",
         metricLabel: "Top Market Share",
         metricKey: "officialMarketShare",
@@ -290,7 +464,7 @@
       skills: {
         label: "Skills (ranked, no installs threshold)",
         dataUrl: "./data/context7_skills_ranked_all.json",
-        note: "Skills list shows current ranked rows without an installs threshold (much larger than top 50).",
+        note: "Skills list shows current ranked rows without an installs threshold (much larger than top 50). Skill opens Context7 skill page; Source opens GitHub.",
         topLabel: "Top Skill",
         metricLabel: "Top Installs",
         metricKey: "installCount",
@@ -312,6 +486,9 @@
       datasets: {},
       rows: [],
       query: "",
+      verifiedOnly: false,
+      page: 1,
+      pageSize: 100,
       sortKey: "rank",
       sortDir: "asc"
     };
@@ -326,7 +503,13 @@
       topMetric: document.getElementById("topMetric"),
       generatedAt: document.getElementById("generatedAt"),
       searchBox: document.getElementById("searchBox"),
+      verifiedOnly: document.getElementById("verifiedOnly"),
+      pageSizeSelect: document.getElementById("pageSizeSelect"),
       resetBtn: document.getElementById("resetBtn"),
+      prevPageBtn: document.getElementById("prevPageBtn"),
+      nextPageBtn: document.getElementById("nextPageBtn"),
+      pageInfo: document.getElementById("pageInfo"),
+      rangeInfo: document.getElementById("rangeInfo"),
       theadRow: document.getElementById("theadRow"),
       tbody: document.getElementById("tbody"),
       footerInfo: document.getElementById("footerInfo"),
@@ -386,6 +569,16 @@
       return escapeHtml(v);
     }
 
+    function isVerifiedValue(v) {
+      if (typeof v === "boolean") return v;
+      if (typeof v === "number") return v === 1;
+      if (typeof v === "string") {
+        const s = v.trim().toLowerCase();
+        return s === "yes" || s === "true" || s === "1";
+      }
+      return false;
+    }
+
     function asComparable(row, key, mode) {
       const v = row[key];
       if (key === "updateAgo") return row.updateUtc || "";
@@ -421,10 +614,13 @@
       return state.rows;
     }
 
-    function getRenderedRows() {
+    function getFilteredSortedRows() {
       const q = state.query.trim().toLowerCase();
       const mode = state.mode;
-      const rows = getSearchBaseRows().filter((r) => rowMatches(r, q, mode));
+      let rows = getSearchBaseRows().filter((r) => rowMatches(r, q, mode));
+      if (state.verifiedOnly) {
+        rows = rows.filter((r) => isVerifiedValue(r.verified));
+      }
       rows.sort((a, b) => {
         const va = asComparable(a, state.sortKey, mode);
         const vb = asComparable(b, state.sortKey, mode);
@@ -433,6 +629,34 @@
         return 0;
       });
       return rows;
+    }
+
+    function getPagedRows(rows) {
+      if (state.pageSize === -1) {
+        state.page = 1;
+        return {
+          rows,
+          totalRows: rows.length,
+          totalPages: 1,
+          start: rows.length ? 1 : 0,
+          end: rows.length
+        };
+      }
+
+      const totalRows = rows.length;
+      const totalPages = Math.max(1, Math.ceil(totalRows / state.pageSize));
+      if (state.page > totalPages) state.page = totalPages;
+      if (state.page < 1) state.page = 1;
+
+      const startIdx = (state.page - 1) * state.pageSize;
+      const endIdx = Math.min(startIdx + state.pageSize, totalRows);
+      return {
+        rows: rows.slice(startIdx, endIdx),
+        totalRows,
+        totalPages,
+        start: totalRows ? startIdx + 1 : 0,
+        end: endIdx
+      };
     }
 
     function renderHeader() {
@@ -459,9 +683,8 @@
       });
     }
 
-    function renderRows() {
+    function renderRows(rows) {
       const cfg = MODES[state.mode];
-      const rows = getRenderedRows();
       el.tbody.innerHTML = rows
         .map((r) => {
           const tds = cfg.columns
@@ -503,7 +726,7 @@
               if (c.type === "pct") return `<td class="pct num">${typeof v === "number" ? v.toFixed(2) + "%" : "-"}</td>`;
               if (c.type === "mono") return `<td class="mono">${textCell(v)}</td>`;
               if (c.type === "bool") {
-                return `<td>${v ? '<span class="badge ok">yes</span>' : '<span class="badge no">no</span>'}</td>`;
+                return `<td>${isVerifiedValue(v) ? '<span class="badge ok">yes</span>' : '<span class="badge no">no</span>'}</td>`;
               }
               if (c.key === "rank") return `<td class="rank num">${fmtNum(v)}</td>`;
               return `<td>${textCell(v)}</td>`;
@@ -515,11 +738,16 @@
       return rows;
     }
 
-    function renderMeta(rows) {
+    function renderMeta(filteredRows, paged) {
       const cfg = MODES[state.mode];
       const ds = state.datasets[state.mode] || {};
       const baseRows = getSearchBaseRows();
-      const top = baseRows.find((x) => x.rank === 1) || baseRows[0] || null;
+      const top =
+        filteredRows.find((x) => x.rank === 1) ||
+        filteredRows[0] ||
+        baseRows.find((x) => x.rank === 1) ||
+        baseRows[0] ||
+        null;
       const docsGlobalSearchOn =
         state.mode === "docs" &&
         state.query.trim().length > 0 &&
@@ -527,7 +755,7 @@
         state.datasets.docsExtended.items.length > 0;
 
       el.modeNote.textContent = cfg.note;
-      el.rowsCount.textContent = fmtNum(rows.length);
+      el.rowsCount.textContent = fmtNum(filteredRows.length);
       el.topLabel.textContent = cfg.topLabel;
       el.metricLabel.textContent = cfg.metricLabel;
       el.topItem.textContent = top ? (top.title || top.name || "-") : "-";
@@ -537,20 +765,34 @@
       const footer = [
         `Mode: ${cfg.label}`,
         `Rows in dataset: ${fmtNum(baseRows.length)}`,
-        `Rows shown: ${fmtNum(rows.length)}`,
+        `Rows shown: ${fmtNum(paged.rows.length)}`,
+        `Page: ${state.page}/${paged.totalPages}`,
         `Source: ${cfg.dataUrl}`
       ];
+      if (state.verifiedOnly) {
+        footer.push("Filter: verified only");
+      }
       if (docsGlobalSearchOn) {
         footer.push("Search scope: Docs Extended dataset");
       }
       el.footerInfo.textContent = footer.join(" | ");
     }
 
+    function renderPager(paged) {
+      el.prevPageBtn.disabled = state.pageSize === -1 || state.page <= 1;
+      el.nextPageBtn.disabled = state.pageSize === -1 || state.page >= paged.totalPages;
+      el.pageInfo.textContent = `Page ${state.page}/${paged.totalPages}`;
+      el.rangeInfo.textContent = `Showing ${fmtNum(paged.start)}-${fmtNum(paged.end)} of ${fmtNum(paged.totalRows)}`;
+    }
+
     function render() {
       el.tabs.forEach((t) => t.classList.toggle("active", t.dataset.mode === state.mode));
       renderHeader();
-      const rows = renderRows();
-      renderMeta(rows);
+      const filteredRows = getFilteredSortedRows();
+      const paged = getPagedRows(filteredRows);
+      renderRows(paged.rows);
+      renderMeta(filteredRows, paged);
+      renderPager(paged);
     }
 
     async function loadMode(mode) {
@@ -559,6 +801,7 @@
         state.rows = state.datasets[mode].items || [];
         state.sortKey = "rank";
         state.sortDir = "asc";
+        state.page = 1;
         render();
         return;
       }
@@ -573,6 +816,7 @@
       state.rows = payload.items;
       state.sortKey = "rank";
       state.sortDir = "asc";
+      state.page = 1;
       render();
     }
 
@@ -591,15 +835,66 @@
 
     el.searchBox.addEventListener("input", (e) => {
       state.query = e.target.value || "";
+      state.page = 1;
+      render();
+    });
+
+    el.verifiedOnly.addEventListener("change", (e) => {
+      state.verifiedOnly = Boolean(e.target.checked);
+      state.page = 1;
+      render();
+    });
+
+    el.pageSizeSelect.addEventListener("change", (e) => {
+      const next = Number.parseInt(e.target.value, 10);
+      state.pageSize = Number.isFinite(next) ? next : 100;
+      state.page = 1;
+      render();
+    });
+
+    el.prevPageBtn.addEventListener("click", () => {
+      if (state.page <= 1) return;
+      state.page -= 1;
+      render();
+    });
+
+    el.nextPageBtn.addEventListener("click", () => {
+      state.page += 1;
       render();
     });
 
     el.resetBtn.addEventListener("click", () => {
       state.query = "";
+      state.verifiedOnly = false;
+      state.pageSize = 100;
+      state.page = 1;
       state.sortKey = "rank";
       state.sortDir = "asc";
       el.searchBox.value = "";
+      el.verifiedOnly.checked = false;
+      el.pageSizeSelect.value = "100";
       render();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      const target = e.target;
+      const isTyping = target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA");
+      if (
+        e.key === "/" &&
+        !e.metaKey &&
+        !e.ctrlKey &&
+        !e.altKey &&
+        !isTyping
+      ) {
+        e.preventDefault();
+        el.searchBox.focus();
+      }
+      if (e.key === "Escape" && document.activeElement === el.searchBox && el.searchBox.value) {
+        state.query = "";
+        state.page = 1;
+        el.searchBox.value = "";
+        render();
+      }
     });
 
     (async () => {
