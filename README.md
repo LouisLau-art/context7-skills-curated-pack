@@ -19,6 +19,7 @@ This repository intentionally contains:
 - `skills_selected.txt` (plain list)
 - `scripts/install_curated.py` (cross-platform one-click installer)
 - `scripts/install_curated.sh` (thin Unix wrapper around the Python installer)
+- `scripts/install_curated.ps1` (thin PowerShell wrapper around the Python installer)
 - docs for de-dup policy and stack classification
 
 It intentionally does **not** contain third-party `SKILL.md` contents.
@@ -45,8 +46,18 @@ python scripts/install_curated.py qwen
 # Unix convenience wrapper
 bash scripts/install_curated.sh all
 
+# Windows PowerShell wrapper
+powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all
+
 # dry-run first
 DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp
+```
+
+PowerShell dry-run example:
+
+```powershell
+$env:DRY_RUN = "1"
+.\scripts\install_curated.ps1 qwen
 ```
 
 Supported targets:
@@ -83,6 +94,7 @@ export AMP_SKILLS_DIR=/custom/amp/skills
 - `manifest_summary.json`: generation metadata
 - `scripts/install_curated.py`: cross-platform installer and sync entry point
 - `scripts/install_curated.sh`: Unix wrapper for the Python installer
+- `scripts/install_curated.ps1`: PowerShell wrapper for the Python installer
 - `scripts/fetch_context7_skill_rankings.py`: pull live ranked skills from Context7 API
 - `scripts/fetch_context7_library_rankings.py`: pull live docs library rankings (popular/trending/latest)
 - `scripts/rebuild_skills_by_stack_zh.py`: regenerate Chinese category doc from current `skills_selected.txt`

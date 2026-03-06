@@ -15,6 +15,7 @@ https://louislau-art.github.io/context7-skills-curated-pack/
 - `skills_selected.txt`：纯技能名列表
 - `scripts/install_curated.py`：跨平台一键安装器
 - `scripts/install_curated.sh`：对 Python 安装器的 Unix 薄封装
+- `scripts/install_curated.ps1`：对 Python 安装器的 PowerShell 薄封装
 - `scripts/fetch_context7_skill_rankings.py`：拉取 skills 动态排行榜
 - `scripts/fetch_context7_library_rankings.py`：拉取 docs 库排行榜（popular/trending/latest）
 - `scripts/fetch_context7_docs_popular.py`：拉取 docs popular 并生成站点数据
@@ -44,8 +45,18 @@ python scripts/install_curated.py qwen
 # Unix 便捷包装
 bash scripts/install_curated.sh all
 
+# Windows PowerShell 包装
+powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all
+
 # 先 dry-run
 DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp
+```
+
+PowerShell 的 dry-run 示例：
+
+```powershell
+$env:DRY_RUN = "1"
+.\scripts\install_curated.ps1 qwen
 ```
 
 支持目标：
