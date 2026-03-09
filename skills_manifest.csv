@@ -21,6 +21,7 @@ building-native-ui,building-native-ui,/expo/skills,121,10,0.610
 bun-next-js,Bun Next.js,/secondsky/claude-skills,84,6.5,0.495
 cache-components,cache-components,/vercel/next.js,264,10,0.668
 canvas-design,canvas-design,/anthropics/skills,568,8.5,0.688
+ceo-advisor,ceo-advisor,/alirezarezvani/claude-skills,61,8.9,0.681
 claude-automation-recommender,claude-automation-recommender,/anthropics/claude-plugins-official,132,8.5,0.579
 claude-opus-4-5-migration,claude-opus-4-5-migration,/anthropics/claude-code,50,8.8,0.515
 cloudflare-nextjs,cloudflare-nextjs,/secondsky/claude-skills,46,6.5,0.451
@@ -33,6 +34,7 @@ context7-docs-lookup,context7-docs-lookup,/upstash/context7,61,8.5,0.522
 context7-skills,context7-skills,/narumiruna/context7-skills-skill,91,8.8,0.559
 convex-best-practices,Convex Best Practices,/waynesutton/convexskills,61,9.6,0.549
 create-auth-skill,create-auth-skill,/better-auth/skills,125,7.8,0.557
+cto-advisor,cto-advisor,/alirezarezvani/claude-skills,60,8.9,0.680
 dispatching-parallel-agents,dispatching-parallel-agents,/obra/superpowers,37,9.5,0.510
 doc-coauthoring,doc-coauthoring,/anthropics/skills,453,8.5,0.671
 documentation-lookup,documentation-lookup,/upstash/context7,61,8.5,0.522
@@ -92,6 +94,7 @@ polars,polars,/davila7/claude-code-templates,44,10,0.535
 postgresql-table-design,postgresql-table-design,/wshobson/agents,135,9.5,0.606
 pptx,pptx,/anthropics/skills,474,8.5,0.674
 prisma,prisma,/blencorp/claude-code-kit,56,7.5,0.490
+product-manager-toolkit,product-manager-toolkit,/alirezarezvani/claude-skills,61,8.9,0.681
 python-performance-optimization,python-performance-optimization,/wshobson/agents,84,9.5,0.570
 rag-implementation,rag-implementation,/wshobson/agents,100,9.5,0.583
 react-19,react-19,/Gentleman-Programming/Gentleman-Skills,63,-,0.312

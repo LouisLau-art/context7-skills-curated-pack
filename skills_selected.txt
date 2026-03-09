@@ -20,6 +20,7 @@ building-native-ui
 bun-next-js
 cache-components
 canvas-design
+ceo-advisor
 claude-automation-recommender
 claude-opus-4-5-migration
 cloudflare-nextjs
@@ -32,6 +33,7 @@ context7-docs-lookup
 context7-skills
 convex-best-practices
 create-auth-skill
+cto-advisor
 dispatching-parallel-agents
 doc-coauthoring
 documentation-lookup
@@ -91,6 +93,7 @@ polars
 postgresql-table-design
 pptx
 prisma
+product-manager-toolkit
 python-performance-optimization
 rag-implementation
 react-19

@@ -95,6 +95,136 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(5px);
     }
+    .packs {
+      margin-top: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(241, 249, 255, 0.92)),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.08), transparent 36%);
+      box-shadow: var(--shadow);
+    }
+    .packs-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .packs-eyebrow {
+      color: #0a5f58;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+    }
+    .packs-title {
+      margin-top: 6px;
+      font-size: clamp(20px, 3vw, 28px);
+      line-height: 1.1;
+      font-weight: 780;
+    }
+    .packs-sub {
+      max-width: 720px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .pack-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .pack-group {
+      min-width: 0;
+    }
+    .pack-group-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .pack-group-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #36526a;
+    }
+    .pack-group-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .packs-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .pack-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 14px;
+    }
+    .pack-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: #eff8ff;
+      border: 1px solid #cfe6ff;
+      color: #26557a;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .pack-title {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 760;
+      line-height: 1.15;
+    }
+    .pack-copy {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .pack-skill-row {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pack-skill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid #d6e6f7;
+      background: #f8fbff;
+      color: #163047;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+    .pack-skill:hover {
+      transform: translateY(-1px);
+      border-color: #9ac6ea;
+      background: #eef7ff;
+    }
+    .pack-skill-rank {
+      color: #0f766e;
+      font-size: 11px;
+      font-weight: 800;
+    }
     .k {
       color: var(--muted);
       font-size: 11px;
@@ -344,6 +474,7 @@
     }
     @media (max-width: 980px) {
       .bar { grid-template-columns: 1fr 1fr; }
+      .pack-columns { grid-template-columns: 1fr; }
       .controls { grid-template-columns: 1fr; }
       .controls-main { flex-wrap: wrap; }
       .controls-side { justify-content: space-between; }
@@ -370,6 +501,32 @@
       <div class="card"><div class="k" id="metricLabel">Top Metric</div><div class="v num" id="topMetric">-</div></div>
       <div class="card"><div class="k">Last Updated (Local)</div><div class="v num" id="generatedAt">-</div></div>
     </div>
+
+    <section class="packs" aria-labelledby="packsTitle">
+      <div class="packs-head">
+        <div>
+          <div class="packs-eyebrow">Recommended Packs</div>
+          <div class="packs-title" id="packsTitle">Start from roles and real jobs, not raw rankings</div>
+          <div class="packs-sub">These are curated starter packs built from the installed skills set. Click any skill chip to jump straight into the Skills table and inspect the underlying ranking row.</div>
+        </div>
+      </div>
+      <div class="pack-columns">
+        <section class="pack-group" aria-labelledby="rolePacksTitle">
+          <div class="pack-group-head">
+            <div class="pack-group-title" id="rolePacksTitle">By Role</div>
+            <div class="pack-group-note">Who is using the agent</div>
+          </div>
+          <div id="rolePacks" class="packs-grid"></div>
+        </section>
+        <section class="pack-group" aria-labelledby="goalPacksTitle">
+          <div class="pack-group-head">
+            <div class="pack-group-title" id="goalPacksTitle">By Goal</div>
+            <div class="pack-group-note">What they need to get done</div>
+          </div>
+          <div id="goalPacks" class="packs-grid"></div>
+        </section>
+      </div>
+    </section>
 
     <div class="controls">
       <div class="controls-main">
@@ -481,6 +638,67 @@
       }
     };
 
+    const PACKS = {
+      role: [
+        {
+          title: "Developer Core",
+          label: "Role",
+          copy: "Daily baseline for coding, debugging, review, and shipping without extra ceremony.",
+          skills: ["senior-frontend", "senior-backend", "systematic-debugging", "code-reviewer", "webapp-testing"]
+        },
+        {
+          title: "Technical Lead / Architect",
+          label: "Role",
+          copy: "For system design, trade-off analysis, diagrams, and leadership-level technical framing.",
+          skills: ["senior-architect", "tech-stack-evaluator", "architecture-decision-records", "cto-advisor", "internal-comms"]
+        },
+        {
+          title: "PM / Product",
+          label: "Role",
+          copy: "Requirement shaping, prioritization, planning, and cross-functional alignment.",
+          skills: ["product-manager-toolkit", "brainstorming", "writing-plans", "doc-coauthoring", "internal-comms"]
+        },
+        {
+          title: "Founder / CEO / Boss Updates",
+          label: "Role",
+          copy: "Translate project progress into strategy, concise status, and presentation-ready materials.",
+          skills: ["ceo-advisor", "internal-comms", "doc-coauthoring", "pptx", "mermaid-diagrams"]
+        },
+        {
+          title: "Design / Research",
+          label: "Role",
+          copy: "High-quality UI direction, design systems, research synthesis, and handoff support.",
+          skills: ["frontend-design", "ui-design-system", "ux-researcher-designer", "figma-implement-design", "canvas-design"]
+        }
+      ],
+      goal: [
+        {
+          title: "Diagram & Architecture",
+          label: "Goal",
+          copy: "Flowcharts, state diagrams, system maps, and decision records that stay maintainable in text.",
+          skills: ["mermaid-diagrams", "senior-architect", "architecture-decision-records", "tech-stack-evaluator"]
+        },
+        {
+          title: "Weekly Status & Exec Updates",
+          label: "Goal",
+          copy: "Summaries that tell non-technical stakeholders what is done, what is blocked, and what remains.",
+          skills: ["internal-comms", "ceo-advisor", "cto-advisor", "doc-coauthoring", "pptx"]
+        },
+        {
+          title: "PRD & Planning",
+          label: "Goal",
+          copy: "Move from idea framing to implementation-ready breakdowns with explicit handoff points.",
+          skills: ["product-manager-toolkit", "brainstorming", "writing-plans", "executing-plans"]
+        },
+        {
+          title: "Deliverables",
+          label: "Goal",
+          copy: "Turn work into shareable docs, decks, PDFs, and clean source material for stakeholders.",
+          skills: ["docx", "pptx", "pdf", "markitdown"]
+        }
+      ]
+    };
+
     const state = {
       mode: "docs",
       datasets: {},
@@ -515,6 +733,9 @@
       footerInfo: document.getElementById("footerInfo"),
       errorBox: document.getElementById("errorBox")
     };
+
+    el.rolePacks = document.getElementById("rolePacks");
+    el.goalPacks = document.getElementById("goalPacks");
 
     function showError(msg) {
       el.errorBox.style.display = "block";
@@ -590,6 +811,15 @@
       };
     }
 
+    function getSkillsLookup() {
+      const lookup = new Map();
+      const rows = state.datasets.skills?.items || [];
+      for (const row of rows) {
+        if (!lookup.has(row.name)) lookup.set(row.name, row);
+      }
+      return lookup;
+    }
+
     function textCell(v) {
       if (v === null || v === undefined || v === "") return "-";
       return escapeHtml(v);
@@ -655,6 +885,55 @@
         return 0;
       });
       return rows;
+    }
+
+    async function focusSkill(skillName) {
+      await loadMode("skills");
+      state.query = skillName;
+      state.verifiedOnly = false;
+      state.page = 1;
+      state.pageSize = 100;
+      el.searchBox.value = skillName;
+      el.verifiedOnly.checked = false;
+      el.pageSizeSelect.value = "100";
+      render();
+      const top = document.querySelector(".controls");
+      if (top) {
+        top.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function renderPackCards(container, packs) {
+      if (!container) return;
+      const lookup = getSkillsLookup();
+      container.innerHTML = packs
+        .map((pack) => {
+          const chips = pack.skills
+            .map((skill) => {
+              const row = lookup.get(skill);
+              const rank = row?.rank ? `#${fmtNum(row.rank)}` : "";
+              return `<button class="pack-skill" type="button" data-skill="${escapeHtml(skill)}">${escapeHtml(skill)}${rank ? `<span class="pack-skill-rank">${rank}</span>` : ""}</button>`;
+            })
+            .join("");
+          return `<article class="pack-card"><div class="pack-label">${escapeHtml(pack.label)}</div><div class="pack-title">${escapeHtml(pack.title)}</div><div class="pack-copy">${escapeHtml(pack.copy)}</div><div class="pack-skill-row">${chips}</div></article>`;
+        })
+        .join("");
+
+      Array.from(container.querySelectorAll(".pack-skill")).forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          try {
+            await focusSkill(btn.dataset.skill || "");
+          } catch (err) {
+            showError(String(err));
+            console.error(err);
+          }
+        });
+      });
+    }
+
+    function renderPacks() {
+      renderPackCards(el.rolePacks, PACKS.role);
+      renderPackCards(el.goalPacks, PACKS.goal);
     }
 
     function getPagedRows(rows) {
@@ -815,6 +1094,7 @@
 
     function render() {
       el.tabs.forEach((t) => t.classList.toggle("active", t.dataset.mode === state.mode));
+      renderPacks();
       renderHeader();
       const filteredRows = getFilteredSortedRows();
       const paged = getPagedRows(filteredRows);

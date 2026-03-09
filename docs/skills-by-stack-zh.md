@@ -1,6 +1,6 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 173（仅当前已保留 skills）
+- 总计目录数: 176（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
 - 数据源: `skills_selected.txt`
 
@@ -16,7 +16,7 @@
 - 测试/质量保障: 11
 - 安全与架构: 6
 - 文档与办公自动化: 8
-- 工程流程与协作: 11
+- 工程流程与协作: 14
 - 其他/未分类: 7
 
 ## 前端与Web UI（46）
@@ -79,11 +79,11 @@
 
 `doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `update-docs`, `xlsx`
 
-## 工程流程与协作（11）
+## 工程流程与协作（14）
 
 主要是规划执行、规范、项目组织与工程协同。
 
-`app-store-optimization`, `brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`
+`app-store-optimization`, `brainstorming`, `ceo-advisor`, `coding-standards`, `convex-best-practices`, `cto-advisor`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`
 
 ## 其他/未分类（7）
 
