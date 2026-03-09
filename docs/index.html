@@ -736,6 +736,7 @@
 
     el.rolePacks = document.getElementById("rolePacks");
     el.goalPacks = document.getElementById("goalPacks");
+    el.packsSection = document.querySelector(".packs");
 
     function showError(msg) {
       el.errorBox.style.display = "block";
@@ -1094,7 +1095,12 @@
 
     function render() {
       el.tabs.forEach((t) => t.classList.toggle("active", t.dataset.mode === state.mode));
-      renderPacks();
+      if (el.packsSection) {
+        el.packsSection.style.display = state.mode === "skills" ? "block" : "none";
+      }
+      if (state.mode === "skills") {
+        renderPacks();
+      }
       renderHeader();
       const filteredRows = getFilteredSortedRows();
       const paged = getPagedRows(filteredRows);
