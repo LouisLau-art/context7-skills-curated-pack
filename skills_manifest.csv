@@ -70,6 +70,7 @@ markitdown,markitdown,/davila7/claude-code-templates,47,10,0.540
 mcp-builder,mcp-builder,/anthropics/skills,702,8.5,0.704
 mcp-integration,MCP Integration,/anthropics/claude-code,65,8.8,0.534
 memory-safety-patterns,memory-safety-patterns,/wshobson/agents,55,9.5,0.539
+mermaid-diagrams,mermaid-diagrams,/softaworks/agent-toolkit,22,6,0.535
 mobile-android-design,mobile-android-design,/wshobson/agents,61,9.5,0.547
 mobile-ios-design,mobile-ios-design,/wshobson/agents,82,9.5,0.569
 monorepo-management,monorepo-management,/wshobson/agents,72,9.5,0.559

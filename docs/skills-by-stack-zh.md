@@ -1,6 +1,6 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 172（仅当前已保留 skills）
+- 总计目录数: 173（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
 - 数据源: `skills_selected.txt`
 
@@ -14,7 +14,7 @@
 - 云与DevOps/基础设施: 7
 - LLM/Agent与提示工程: 28
 - 测试/质量保障: 11
-- 安全与架构: 5
+- 安全与架构: 6
 - 文档与办公自动化: 8
 - 工程流程与协作: 11
 - 其他/未分类: 7
@@ -67,11 +67,11 @@
 
 `code-review`, `code-reviewer`, `e2e-testing-patterns`, `frontend-testing`, `react-testing`, `senior-qa`, `systematic-debugging`, `tdd-guide`, `test-driven-development`, `vitest`, `webapp-testing`
 
-## 安全与架构（5）
+## 安全与架构（6）
 
 主要是架构决策、安全规范与技术选型。
 
-`architecture-decision-records`, `architecture-patterns`, `senior-architect`, `senior-security`, `tech-stack-evaluator`
+`architecture-decision-records`, `architecture-patterns`, `mermaid-diagrams`, `senior-architect`, `senior-security`, `tech-stack-evaluator`
 
 ## 文档与办公自动化（8）
 

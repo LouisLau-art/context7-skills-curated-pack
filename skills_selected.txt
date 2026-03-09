@@ -69,6 +69,7 @@ markitdown
 mcp-builder
 mcp-integration
 memory-safety-patterns
+mermaid-diagrams
 mobile-android-design
 mobile-ios-design
 monorepo-management

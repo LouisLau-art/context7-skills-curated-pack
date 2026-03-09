@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-07T11:58:26.490705+00:00",
+  "generatedAtUtc": "2026-03-09T09:29:33.071411+00:00",
   "project": "context7-skills-curated-pack",
   "siteUrl": "https://louislau-art.github.io/context7-skills-curated-pack",
   "datasets": [
@@ -95,8 +95,8 @@
       "title": "Context7 Skills Ranking (No installs threshold)",
       "relativePath": "docs/data/context7_skills_ranked_all.json",
       "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_skills_ranked_all.json",
-      "generatedAtUtc": "2026-03-07T11:49:06.202255+00:00",
-      "rows": 5147,
+      "generatedAtUtc": "2026-03-09T09:22:54.432726+00:00",
+      "rows": 5338,
       "baseUrl": "https://context7.com",
       "minInstalls": 0,
       "notes": [
