@@ -23,16 +23,18 @@ canvas-design
 claude-automation-recommender
 claude-opus-4-5-migration
 cloudflare-nextjs
+code-review
 code-reviewer
 coding-standards
 command-development
 context7
+context7-docs-lookup
 context7-skills
 convex-best-practices
 create-auth-skill
 dispatching-parallel-agents
 doc-coauthoring
-context7-docs-lookup
+documentation-lookup
 docx
 dotnet-backend-patterns
 e2e-testing-patterns
@@ -53,9 +55,11 @@ frontend-patterns
 frontend-testing
 gemini
 gemini-api-dev
+gh-cli
 github-actions-templates
 go-concurrency-patterns
 gsap
+hf-cli
 hook-development
 internal-comms
 langchain
@@ -89,6 +93,7 @@ prisma
 python-performance-optimization
 rag-implementation
 react-19
+react-best-practices
 react-components
 react-dev
 react-email
@@ -132,6 +137,7 @@ systematic-debugging
 tailwind-design-system
 tailwind-v4-shadcn
 tanstack-query
+tanstack-query-best-practices
 tanstack-table
 tdd-guide
 tech-stack-evaluator

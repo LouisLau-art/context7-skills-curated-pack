@@ -3,8 +3,8 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-166-blue)
-![Local Total](https://img.shields.io/badge/local_total_with__.system-167-6f42c1)
+![Installable Skills](https://img.shields.io/badge/installable_skills-172-blue)
+![Local Total](https://img.shields.io/badge/local_total_with__.system-173-6f42c1)
 ![Curation](https://img.shields.io/badge/curation-Installs%2BTrust%2BVerified-orange)
 ![Context7](https://img.shields.io/badge/source-Context7-black)
 
@@ -12,7 +12,7 @@ A curated, deduplicated Context7 skills pack for software development workflows.
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **166 installable skills** (plus internal `.system`, total local dirs = 167).
+Current snapshot: **172 installable skills** (plus internal `.system`, total local dirs = 173).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
@@ -217,24 +217,24 @@ If another model/agent needs these rankings, start here:
 - Raw GitHub fallback:
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 166 Skills Distribution (Current Pack)
+## 172 Skills Distribution (Current Pack)
 
-High-level stack distribution for the current curated 166 skills:
+High-level stack distribution for the current curated 172 skills:
 
 | Category | Count | Share |
 | --- | ---: | ---: |
-| Frontend & Web UI | 44 | 26.5% |
-| LLM / Agent / Prompting | 26 | 15.7% |
-| Mobile (RN / Expo / Flutter) | 18 | 10.8% |
-| Backend & Services | 16 | 9.6% |
-| Testing & QA | 10 | 6.0% |
-| Engineering Workflow | 10 | 6.0% |
-| Database & Data Engineering | 9 | 5.4% |
-| Docs & Office Automation | 8 | 4.8% |
-| Cloud & DevOps | 7 | 4.2% |
-| Other / Uncategorized | 7 | 4.2% |
-| Python / AI / Data Science | 6 | 3.6% |
-| Security & Architecture | 5 | 3.0% |
+| Frontend & Web UI | 46 | 26.7% |
+| LLM / Agent / Prompting | 28 | 16.3% |
+| Mobile (RN / Expo / Flutter) | 18 | 10.5% |
+| Backend & Services | 16 | 9.3% |
+| Testing & QA | 11 | 6.4% |
+| Engineering Workflow | 11 | 6.4% |
+| Database & Data Engineering | 9 | 5.2% |
+| Docs & Office Automation | 8 | 4.7% |
+| Cloud & DevOps | 7 | 4.1% |
+| Other / Uncategorized | 7 | 4.1% |
+| Python / AI / Data Science | 6 | 3.5% |
+| Security & Architecture | 5 | 2.9% |
 
 Detailed grouping: `docs/skills-by-stack-zh.md`
 
