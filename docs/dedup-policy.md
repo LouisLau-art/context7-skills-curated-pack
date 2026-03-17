@@ -1,43 +1,57 @@
 # De-dup Policy
 
-We de-duplicate only for high-overlap skills.
+This repo keeps manifests and installer scripts only. It does not vendor third-party
+`SKILL.md` contents, so de-dup decisions optimize for a stable, high-signal install set.
 
-## Stage 1: Objective pre-score
+## Stage 0: Source Priority
 
-For candidates that appear meaningfully overlapping, compute:
+When two skills materially overlap, prefer sources in this order:
 
-`0.60 * Installs(log-normalized) + 0.25 * TrustScore + 0.15 * Verified`
+1. Official product or platform repositories
+2. Well-known, consistently maintained skill packs
+3. Ordinary personal repositories
 
-Where:
+Personal or obscure sources stay only when they provide clearly unique value that the
+stronger source does not cover.
 
-- `Installs(log-normalized)` is the primary signal
-- `TrustScore` is normalized to the same 0-1 range
-- `Verified` is `1` for verified skills/libraries, otherwise `0`
+## Stage 1: Overlap Pruning
 
-This keeps installs as the dominant factor, but gives meaningful credit to
-Context7 trust and verification status.
+For each topic cluster, keep at most:
 
-## Stage 2: Content review for close calls
+- 1 general-purpose skill
+- 1-2 genuinely specialized skills
 
-Do a manual content review when any of these are true:
+Delete skills that are mostly wrappers, shallow aliases, or alternate phrasing for the
+same workflow.
 
-1. Pre-score gap is less than `0.12`
-2. Install ratio is less than `1.8x`
-3. Skills share the same source or near-identical descriptions
+## Stage 2: Content Review
 
-In close calls, prefer the skill with:
+Run a manual review when overlap is not obvious from source metadata alone.
 
-1. Clearer trigger description
-2. Better scope fit (general vs framework-specific)
-3. More useful bundled material (`references/`, `scripts/`, `assets/`)
-4. Better maintained or more canonical naming
+Prefer the skill with:
 
-## Stage 3: Final tie-break
+1. A clearer trigger description
+2. Better scope fit for the actual workflow
+3. More useful bundled material such as `scripts/`, `references/`, or templates
+4. More canonical naming and better maintenance signals
 
-If still tied, prefer:
+## Stage 3: User-Fit Overrides
 
-1. Official or maintained source
-2. Verified skill/library
-3. More canonical slug/name
+This pack is curated for a solo developer workflow that still includes:
 
-This repo keeps manifests and installer scripts only (no third-party SKILL content).
+- day-to-day web engineering
+- documentation and deck creation
+- client-facing and product-style communication
+
+De-prioritize clusters that are currently out of scope for this pack, such as:
+
+- skill/plugin/MCP authoring
+- mobile-specific workflows when there is no active mobile work
+- narrow agent wrappers that duplicate broader built-in workflows
+
+## Notes
+
+- Installs, trust, and verification remain useful signals, but they are tie-breakers,
+  not the primary decision rule.
+- A higher-scoring skill can still be removed if a stronger-source skill already
+  covers the same job with less noise.

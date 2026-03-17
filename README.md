@@ -3,16 +3,16 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-176-blue)
-![Local Total](https://img.shields.io/badge/local_total_with__.system-177-6f42c1)
-![Curation](https://img.shields.io/badge/curation-Installs%2BTrust%2BVerified-orange)
+![Installable Skills](https://img.shields.io/badge/installable_skills-114-blue)
+![Local Total](https://img.shields.io/badge/local_total_with__.system-115-6f42c1)
+![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
 ![Context7](https://img.shields.io/badge/source-Context7-black)
 
 A curated, deduplicated Context7 skills pack for software development workflows.
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **176 installable skills** (plus internal `.system`, total local dirs = 177).
+Current snapshot: **114 installable skills** (plus internal `.system`; a fresh local install yields 115 total dirs).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
@@ -21,6 +21,7 @@ This repository intentionally contains:
 - `scripts/install_curated.sh` (thin Unix wrapper around the Python installer)
 - `scripts/install_curated.ps1` (thin PowerShell wrapper around the Python installer)
 - `scripts/validate_skills_frontmatter.py` (post-install validator/sanitizer for `SKILL.md` frontmatter)
+- `global-context/` (tracked global agent context shared by Codex / Gemini / Claude)
 - docs for de-dup policy and stack classification
 
 It intentionally does **not** contain third-party `SKILL.md` contents.
@@ -217,35 +218,36 @@ If another model/agent needs these rankings, start here:
 - Raw GitHub fallback:
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 176 Skills Distribution (Current Pack)
+## 114 Skills Distribution (Current Pack)
 
-High-level stack distribution for the current curated 176 skills:
+High-level stack distribution for the current curated 114 skills:
 
 | Category | Count | Share |
 | --- | ---: | ---: |
-| Frontend & Web UI | 46 | 26.1% |
-| LLM / Agent / Prompting | 28 | 15.9% |
-| Mobile (RN / Expo / Flutter) | 18 | 10.2% |
-| Backend & Services | 16 | 9.1% |
-| Engineering Workflow | 14 | 8.0% |
-| Testing & QA | 11 | 6.3% |
-| Database & Data Engineering | 9 | 5.1% |
-| Docs & Office Automation | 8 | 4.5% |
-| Cloud & DevOps | 7 | 4.0% |
-| Other / Uncategorized | 7 | 4.0% |
-| Python / AI / Data Science | 6 | 3.4% |
-| Security & Architecture | 6 | 3.4% |
+| Frontend & Web UI | 32 | 28.1% |
+| LLM / Agent / Prompting | 13 | 11.4% |
+| Backend & Services | 12 | 10.5% |
+| Engineering Workflow | 12 | 10.5% |
+| Database & Data Engineering | 9 | 7.9% |
+| Testing & QA | 8 | 7.0% |
+| Docs & Office Automation | 8 | 7.0% |
+| Python / AI / Data Science | 6 | 5.3% |
+| Cloud & DevOps | 6 | 5.3% |
+| Security & Architecture | 6 | 5.3% |
+| Other / Uncategorized | 2 | 1.8% |
 
 Detailed grouping: `docs/skills-by-stack-zh.md`
 
 ## Selection Rule
 
-For high-overlap groups, use:
+For high-overlap groups, use this order:
 
-`0.60*Installs(log-normalized) + 0.25*Trust + 0.15*Verified`
+1. Prefer official or strong-maintainer sources
+2. Keep only `1` general skill plus `1-2` specialized skills per topic cluster
+3. Do a content review for close calls, favoring clearer triggers and better bundled material
+4. Use installs/trust/verification as tie-breakers, not as the primary rule
 
-Then do a content review when scores are close (`gap < 0.12` or installs ratio `< 1.8x`).
-Used for high-overlap groups only, not blanket deletion.
+Detailed policy: `docs/dedup-policy.md`
 
 ## License
 

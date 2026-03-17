@@ -7,7 +7,7 @@
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/context7-skills-curated-pack/
 
-当前快照：**176 个可安装 skills**（另含内部 `.system`，本地目录总数 177）。
+当前快照：**114 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 115）。
 
 ## 这个仓库包含什么
 
@@ -22,6 +22,7 @@ https://louislau-art.github.io/context7-skills-curated-pack/
 - `scripts/fetch_context7_docs_popular.py`：拉取 docs popular 并生成站点数据
 - `docs/index.html`：静态排行榜页面
 - `docs/troubleshooting.md`：常见安装/认证/frontmatter 排障
+- `global-context/`：同步到 GitHub 的全局 agent 上下文真源，供 Codex / Gemini / Claude 共用
 
 不包含第三方技能原始 `SKILL.md` 文件；仓库只保留清单、安装器与同步逻辑。
 
@@ -167,22 +168,32 @@ python3 scripts/fetch_context7_skills_for_site.py \
 - Raw GitHub 兜底地址：
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 当前 176 技能分布（摘要）
+## 当前 114 技能分布（摘要）
 
-- 前端与 Web UI: 46
-- LLM / Agent / Prompting: 28
-- 移动端: 18
-- 后端与服务端: 16
-- 测试与质量保障: 11
-- 工程流程与协作: 14
+- 前端与 Web UI: 32
+- LLM / Agent / Prompting: 13
+- 后端与服务端: 12
+- 测试与质量保障: 8
+- 工程流程与协作: 12
 - 数据库与数据工程: 9
 - 文档与办公自动化: 8
-- 云与 DevOps / 基础设施: 7
-- 其他 / 未分类: 7
+- 云与 DevOps / 基础设施: 6
+- 其他 / 未分类: 2
 - Python / AI / 数据科学: 6
 - 安全与架构: 6
 
 详细分类见：`docs/skills-by-stack-zh.md`
+
+## 当前裁剪规则
+
+对高重叠主题，按下面顺序裁剪：
+
+1. 优先官方来源和知名强仓库
+2. 每个主题只保留 `1` 个通用 skill，加 `1-2` 个真正专用 skill
+3. 接近的候选再做内容复核，优先触发描述更清晰、附带脚本/参考资料更多的项
+4. `installs/trust/verified` 只做辅助 tie-break，不再作为主规则
+
+详细规则见：`docs/dedup-policy.md`
 
 ## 许可
 
