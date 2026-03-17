@@ -170,6 +170,9 @@ def run_install(entry: SkillEntry, flag: str | None, dry_run: bool) -> None:
 
 
 def sync_dir(src: Path, dst: Path, dry_run: bool) -> None:
+    if src.resolve(strict=False) == dst.resolve(strict=False):
+        print(f"Skip sync (same real directory): {src} -> {dst}")
+        return
     if dry_run:
         print(f"DRY_RUN sync: {src} -> {dst}")
         return
