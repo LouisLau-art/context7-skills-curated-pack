@@ -1,4 +1,28 @@
-# AGENT Handoff - Context7 Docs Ranking (updated 2026-03-04)
+# AGENT Handoff - Context7 Docs Ranking (updated 2026-03-17)
+
+## 0) 2026-03-17 刷新结论
+- 已刷新站点榜单数据：
+  - `docs/data/context7_docs_popular_top50.json`
+  - `docs/data/context7_docs_extended_top1000.json`
+  - `docs/data/context7_docs_extended_top100.runtime.json`
+  - `docs/data/context7_skills_ranked_all.json`
+  - `docs/data/context7_rankings_manifest.json`
+- 当前快照时间：
+  - `docs_popular_top50`: `2026-03-17T08:33:45.777899+00:00`
+  - `docs_extended_top1000`: `2026-03-17T08:35:27.063543+00:00`
+  - `docs_extended_top100.runtime`: `2026-03-17T08:35:27.063543+00:00`
+  - `skills_ranked_all`: `2026-03-17T08:33:45.777651+00:00`
+  - `rankings_manifest`: `2026-03-17T08:41:02.331182+00:00`
+- `docs_extended_top1000` 本轮已成功生成完整结构：
+  - `rows=1000`
+  - `officialRows=50`
+  - `estimatedRows=950`
+  - `apiCalls=2868`
+  - `pageErrors=982`
+  - `durationSec=284.16`
+- 判断口径：
+  - 当前 Context7 `/api/libraries/all` 仍存在明显限流噪声，但只要最终产物仍达到目标行数且 `official/estimated` 结构完整，这类 `pageErrors` 先按 non-blocker 处理。
+  - `docs_extended_top100.runtime` 本轮直接由新鲜的 `top1000` 切出前 100 行，避免在限流窗口内再打一轮全页抓取。
 
 ## 1) 当前目标
 - 用户要的是 Context7 docs 排行榜从第 51 名开始，并希望继续扩展到 1000+。

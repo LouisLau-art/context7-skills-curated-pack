@@ -484,13 +484,14 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Context7 Rankings Dashboard</h1>
-    <div class="sub">Auto-updated ranking board for <b>docs libraries</b> and <b>skills</b>.</div>
+    <h1>Open Skills Rankings Dashboard</h1>
+    <div class="sub">Auto-updated ranking board for <b>skills.sh</b>, <b>Context7 skills</b>, and <b>docs libraries</b>.</div>
 
     <div class="tabs">
-      <button class="tab active" data-mode="docs">Docs Popular</button>
+      <button class="tab active" data-mode="skillsSh">Skills.sh All Time</button>
+      <button class="tab" data-mode="skills">Context7 Skills</button>
+      <button class="tab" data-mode="docs">Docs Popular</button>
       <button class="tab" data-mode="docsExtended">Docs Extended</button>
-      <button class="tab" data-mode="skills">Skills (ranked, no installs threshold)</button>
       <a href="https://github.com/LouisLau-Art/context7-skills-curated-pack" class="tab" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-color: #334155; color: #334155; margin-left: auto;">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
         GitHub Repo
@@ -511,7 +512,7 @@
         <div>
           <div class="packs-eyebrow">Recommended Packs</div>
           <div class="packs-title" id="packsTitle">Start from roles and real jobs, not raw rankings</div>
-          <div class="packs-sub">These are curated starter packs built from the installed skills set. Click any skill chip to jump straight into the Skills table and inspect the underlying ranking row.</div>
+          <div class="packs-sub">These are curated starter packs built from the installed skills set. Click any skill chip to jump into the best available skills leaderboard row.</div>
         </div>
       </div>
       <div class="pack-columns">
@@ -579,6 +580,22 @@
 
   <script>
     const MODES = {
+      skillsSh: {
+        label: "Skills.sh All Time",
+        dataUrl: "./data/skills_sh_all_time_top600.json",
+        note: "Primary skills leaderboard. This snapshot comes from the prerendered skills.sh all-time payload and currently keeps the first 600 rows exposed by the site.",
+        topLabel: "Top Skill",
+        metricLabel: "Top Installs",
+        metricKey: "installCount",
+        metricFmt: (v) => (typeof v === "number" ? new Intl.NumberFormat("en-US").format(v) : "-"),
+        hasVerifiedData: false,
+        columns: [
+          { key: "rank", label: "Rank", type: "num" },
+          { key: "name", label: "Skill", type: "text" },
+          { key: "source", label: "Source", type: "mono" },
+          { key: "installCount", label: "Installs", type: "num" }
+        ]
+      },
       docs: {
         label: "Docs Popular",
         dataUrl: "./data/context7_docs_popular_top50.json",
@@ -587,6 +604,7 @@
         metricLabel: "Top Market Share",
         metricKey: "marketShare",
         metricFmt: (v) => (typeof v === "number" ? v.toFixed(2) + "%" : "-"),
+        hasVerifiedData: true,
         columns: [
           { key: "rank", label: "Rank", type: "num" },
           { key: "title", label: "Library", type: "text" },
@@ -607,6 +625,7 @@
         metricLabel: "Top Market Share",
         metricKey: "officialMarketShare",
         metricFmt: (v) => (typeof v === "number" ? v.toFixed(2) + "%" : "-"),
+        hasVerifiedData: true,
         columns: [
           { key: "rank", label: "Rank", type: "num" },
           { key: "rankType", label: "Type", type: "text" },
@@ -623,13 +642,14 @@
         ]
       },
       skills: {
-        label: "Skills (ranked, no installs threshold)",
+        label: "Context7 Skills",
         dataUrl: "./data/context7_skills_ranked_all.json",
-        note: "Skills list shows current ranked rows without an installs threshold (much larger than top 50). Skill opens Context7 skill page; Source opens GitHub.",
+        note: "Secondary skills leaderboard for Context7-specific comparison and long-tail lookup. Skill opens Context7 skill page; Source opens GitHub.",
         topLabel: "Top Skill",
         metricLabel: "Top Installs",
         metricKey: "installCount",
         metricFmt: (v) => (typeof v === "number" ? new Intl.NumberFormat("en-US").format(v) : "-"),
+        hasVerifiedData: true,
         columns: [
           { key: "rank", label: "Rank", type: "num" },
           { key: "name", label: "Skill", type: "text" },
@@ -654,7 +674,7 @@
           title: "Technical Lead / Architect",
           label: "Role",
           copy: "For system design, trade-off analysis, diagrams, and leadership-level technical framing.",
-          skills: ["senior-architect", "tech-stack-evaluator", "architecture-decision-records", "cto-advisor", "internal-comms"]
+          skills: ["senior-architect", "tech-stack-evaluator", "architecture-decision-records", "architecture-patterns", "internal-comms"]
         },
         {
           title: "PM / Product",
@@ -666,13 +686,13 @@
           title: "Founder / CEO / Boss Updates",
           label: "Role",
           copy: "Translate project progress into strategy, concise status, and presentation-ready materials.",
-          skills: ["ceo-advisor", "internal-comms", "doc-coauthoring", "pptx", "mermaid-diagrams"]
+          skills: ["product-manager-toolkit", "internal-comms", "doc-coauthoring", "pptx", "mermaid-diagrams"]
         },
         {
           title: "Design / Research",
           label: "Role",
           copy: "High-quality UI direction, design systems, research synthesis, and handoff support.",
-          skills: ["frontend-design", "ui-design-system", "ux-researcher-designer", "figma-implement-design", "canvas-design"]
+          skills: ["frontend-design", "ui-design-system", "ux-researcher-designer", "implement-design", "canvas-design"]
         }
       ],
       goal: [
@@ -686,7 +706,7 @@
           title: "Weekly Status & Exec Updates",
           label: "Goal",
           copy: "Summaries that tell non-technical stakeholders what is done, what is blocked, and what remains.",
-          skills: ["internal-comms", "ceo-advisor", "cto-advisor", "doc-coauthoring", "pptx"]
+          skills: ["internal-comms", "product-manager-toolkit", "senior-architect", "doc-coauthoring", "pptx"]
         },
         {
           title: "PRD & Planning",
@@ -704,7 +724,7 @@
     };
 
     const state = {
-      mode: "docs",
+      mode: "skillsSh",
       datasets: {},
       rows: [],
       query: "",
@@ -806,19 +826,23 @@
 
     function getSkillsLinks(row) {
       const rawName = String(row?.name || "").trim();
+      const detailUrl = String(row?.detailUrl || "").trim();
       const links = getProjectLinks(row);
       const sourcePath = links.docsUrl.replace("https://context7.com/", "");
       return {
-        skillUrl: sourcePath && rawName
+        skillUrl: detailUrl || (sourcePath && rawName
           ? `https://context7.com/skills/${sourcePath}/${encodeURIComponent(rawName)}`
-          : "",
+          : ""),
         githubUrl: links.githubUrl
       };
     }
 
     function getSkillsLookup() {
       const lookup = new Map();
-      const rows = state.datasets.skills?.items || [];
+      const rows = [
+        ...(state.datasets.skillsSh?.items || []),
+        ...(state.datasets.skills?.items || [])
+      ];
       for (const row of rows) {
         if (!lookup.has(row.name)) lookup.set(row.name, row);
       }
@@ -879,7 +903,7 @@
       const q = state.query.trim().toLowerCase();
       const mode = state.mode;
       let rows = getSearchBaseRows().filter((r) => rowMatches(r, q, mode));
-      if (state.verifiedOnly) {
+      if (state.verifiedOnly && MODES[mode].hasVerifiedData) {
         rows = rows.filter((r) => isVerifiedValue(r.verified));
       }
       rows.sort((a, b) => {
@@ -893,7 +917,9 @@
     }
 
     async function focusSkill(skillName) {
-      await loadMode("skills");
+      const primaryRows = state.datasets.skillsSh?.items || [];
+      const hasPrimary = primaryRows.some((row) => row.name === skillName);
+      await loadMode(hasPrimary ? "skillsSh" : "skills");
       state.query = skillName;
       state.verifiedOnly = false;
       state.page = 1;
@@ -1016,7 +1042,7 @@
                 }
                 return `<td class="mono">${text}</td>`;
               }
-              if (state.mode === "skills" && c.key === "name") {
+              if ((state.mode === "skills" || state.mode === "skillsSh") && c.key === "name") {
                 const links = getSkillsLinks(r);
                 const text = textCell(v);
                 if (links.skillUrl) {
@@ -1024,7 +1050,7 @@
                 }
                 return `<td>${text}</td>`;
               }
-              if (state.mode === "skills" && c.key === "source") {
+              if ((state.mode === "skills" || state.mode === "skillsSh") && c.key === "source") {
                 const links = getSkillsLinks(r);
                 const text = textCell(v);
                 if (links.githubUrl) {
@@ -1081,8 +1107,11 @@
         `GeneratedAtUtc: ${formatUtcTime(ds.generatedAtUtc)}`,
         `Source: ${cfg.dataUrl}`
       ];
-      if (state.verifiedOnly) {
+      if (state.verifiedOnly && cfg.hasVerifiedData) {
         footer.push("Filter: verified only");
+      }
+      if (!cfg.hasVerifiedData) {
+        footer.push("Verified filter: unavailable for this dataset");
       }
       if (docsGlobalSearchOn) {
         footer.push("Search scope: Docs Extended dataset");
@@ -1100,9 +1129,10 @@
     function render() {
       el.tabs.forEach((t) => t.classList.toggle("active", t.dataset.mode === state.mode));
       if (el.packsSection) {
-        el.packsSection.style.display = state.mode === "skills" ? "block" : "none";
+        el.packsSection.style.display =
+          state.mode === "skills" || state.mode === "skillsSh" ? "block" : "none";
       }
-      if (state.mode === "skills") {
+      if (state.mode === "skills" || state.mode === "skillsSh") {
         renderPacks();
       }
       renderHeader();
@@ -1117,6 +1147,11 @@
       if (state.datasets[mode]) {
         state.mode = mode;
         state.rows = state.datasets[mode].items || [];
+        if (!MODES[mode].hasVerifiedData) {
+          state.verifiedOnly = false;
+          el.verifiedOnly.checked = false;
+        }
+        el.verifiedOnly.disabled = !MODES[mode].hasVerifiedData;
         state.sortKey = "rank";
         state.sortDir = "asc";
         state.page = 1;
@@ -1132,9 +1167,14 @@
       state.datasets[mode] = payload;
       state.mode = mode;
       state.rows = payload.items;
+      if (!cfg.hasVerifiedData) {
+        state.verifiedOnly = false;
+        el.verifiedOnly.checked = false;
+      }
       state.sortKey = "rank";
       state.sortDir = "asc";
       state.page = 1;
+      el.verifiedOnly.disabled = !cfg.hasVerifiedData;
       render();
     }
 
@@ -1158,6 +1198,12 @@
     });
 
     el.verifiedOnly.addEventListener("change", (e) => {
+      if (!MODES[state.mode].hasVerifiedData) {
+        e.target.checked = false;
+        state.verifiedOnly = false;
+        render();
+        return;
+      }
       state.verifiedOnly = Boolean(e.target.checked);
       state.page = 1;
       render();
@@ -1188,6 +1234,10 @@
       state.page = 1;
       state.sortKey = "rank";
       state.sortDir = "asc";
+      if (!MODES[state.mode].hasVerifiedData) {
+        state.verifiedOnly = false;
+        el.verifiedOnly.checked = false;
+      }
       el.searchBox.value = "";
       el.verifiedOnly.checked = false;
       el.pageSizeSelect.value = "100";
@@ -1217,14 +1267,16 @@
 
     (async () => {
       try {
+        await loadMode("skillsSh");
+        await loadMode("skills");
         await loadMode("docs");
         await loadMode("docsExtended");
-        await loadMode("skills");
-        // switch back to docs initial view
-        state.mode = "docs";
-        state.rows = state.datasets.docs.items;
+        // switch back to primary initial view
+        state.mode = "skillsSh";
+        state.rows = state.datasets.skillsSh.items;
         state.sortKey = "rank";
         state.sortDir = "asc";
+        el.verifiedOnly.disabled = !MODES[state.mode].hasVerifiedData;
         render();
       } catch (err) {
         showError("Failed to load ranking data files. Check GitHub Action outputs in docs/data.");

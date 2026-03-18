@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-10T09:12:41.734364+00:00",
+  "generatedAtUtc": "2026-03-18T00:41:45.211707+00:00",
   "project": "context7-skills-curated-pack",
   "siteUrl": "https://louislau-art.github.io/context7-skills-curated-pack",
   "datasets": [
@@ -8,7 +8,7 @@
       "title": "Context7 Docs Popular Ranking (Top 50)",
       "relativePath": "docs/data/context7_docs_popular_top50.json",
       "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_popular_top50.json",
-      "generatedAtUtc": "2026-03-10T09:07:24.649954+00:00",
+      "generatedAtUtc": "2026-03-17T08:33:45.777899+00:00",
       "rows": 50,
       "sourceEndpoint": "https://context7.com/api/rankings",
       "notes": [
@@ -35,7 +35,7 @@
       "title": "Context7 Docs Extended Ranking (Official Top 50 + Estimated)",
       "relativePath": "docs/data/context7_docs_extended_top1000.json",
       "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_extended_top1000.json",
-      "generatedAtUtc": "2026-03-10T09:08:28.210756+00:00",
+      "generatedAtUtc": "2026-03-17T08:35:27.063543+00:00",
       "rows": 1000,
       "officialRows": 50,
       "estimatedRows": 950,
@@ -65,7 +65,7 @@
       "title": "Context7 Docs Extended Runtime Snapshot (Top 100)",
       "relativePath": "docs/data/context7_docs_extended_top100.runtime.json",
       "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_docs_extended_top100.runtime.json",
-      "generatedAtUtc": "2026-03-04T05:18:02.268154+00:00",
+      "generatedAtUtc": "2026-03-17T08:35:27.063543+00:00",
       "rows": 100,
       "officialRows": 50,
       "estimatedRows": 50,
@@ -91,15 +91,41 @@
       "available": true
     },
     {
+      "id": "skills_sh_all_time_top600",
+      "title": "Skills.sh All-Time Ranking Snapshot (Top 600)",
+      "relativePath": "docs/data/skills_sh_all_time_top600.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/skills_sh_all_time_top600.json",
+      "generatedAtUtc": "2026-03-18T00:41:34.171570+00:00",
+      "rows": 600,
+      "sourceRows": 600,
+      "sourceUrl": "https://skills.sh/",
+      "totalSkills": 89096,
+      "allTimeTotal": 89096,
+      "notes": [
+        "Primary skills dataset for the site.",
+        "Derived from the prerendered skills.sh all-time leaderboard payload.",
+        "Current snapshot keeps the first 600 rows exposed in the site payload."
+      ],
+      "keyFields": [
+        "rank",
+        "name",
+        "skillId",
+        "source",
+        "installCount",
+        "detailUrl"
+      ]
+    },
+    {
       "id": "skills_ranked_all",
-      "title": "Context7 Skills Ranking (No installs threshold)",
+      "title": "Context7 Skills Ranking (Secondary, No installs threshold)",
       "relativePath": "docs/data/context7_skills_ranked_all.json",
       "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_skills_ranked_all.json",
-      "generatedAtUtc": "2026-03-09T09:22:54.432726+00:00",
-      "rows": 5338,
+      "generatedAtUtc": "2026-03-17T08:33:45.777651+00:00",
+      "rows": 5723,
       "baseUrl": "https://context7.com",
       "minInstalls": 0,
       "notes": [
+        "Secondary skills dataset for long-tail lookup and Context7-specific comparison.",
         "Rows are sorted by Context7 ranked endpoint order.",
         "Current site build keeps minInstalls=0 (full ranked snapshot)."
       ],
@@ -120,8 +146,10 @@
       "Fetch this manifest first.",
       "Then fetch dataset publicUrl needed for your task.",
       "Use generatedAtUtc and rows for freshness checks.",
+      "For skills, prefer skills_sh_all_time_top600 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
       "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime."
     ],
+    "preferredSkillsDatasetId": "skills_sh_all_time_top600",
     "preferredDocsExtendedDatasetId": "docs_extended_top1000",
     "manifestPublicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json"
   }

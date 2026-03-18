@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a machine-readable manifest for Context7 ranking datasets."""
+"""Build a machine-readable manifest for the public ranking datasets."""
 
 from __future__ import annotations
 
@@ -14,7 +14,8 @@ from typing import Any
 DEFAULT_DOCS_JSON = "docs/data/context7_docs_popular_top50.json"
 DEFAULT_DOCS_EXTENDED_JSON = "docs/data/context7_docs_extended_top1000.json"
 DEFAULT_DOCS_EXTENDED_RUNTIME_JSON = "docs/data/context7_docs_extended_top100.runtime.json"
-DEFAULT_SKILLS_JSON = "docs/data/context7_skills_ranked_all.json"
+DEFAULT_SKILLS_SH_JSON = "docs/data/skills_sh_all_time_top600.json"
+DEFAULT_CONTEXT7_SKILLS_JSON = "docs/data/context7_skills_ranked_all.json"
 DEFAULT_OUTPUT_JSON = "docs/data/context7_rankings_manifest.json"
 DEFAULT_PUBLIC_BASE = "https://louislau-art.github.io/context7-skills-curated-pack"
 
@@ -43,12 +44,13 @@ def public_url(base: str, relative_path: str) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Build machine-readable manifest for docs+skills ranking JSON files."
+        description="Build machine-readable manifest for docs + skills ranking JSON files."
     )
     parser.add_argument("--docs-json", default=DEFAULT_DOCS_JSON)
     parser.add_argument("--docs-extended-json", default=DEFAULT_DOCS_EXTENDED_JSON)
     parser.add_argument("--docs-extended-runtime-json", default=DEFAULT_DOCS_EXTENDED_RUNTIME_JSON)
-    parser.add_argument("--skills-json", default=DEFAULT_SKILLS_JSON)
+    parser.add_argument("--skills-sh-json", default=DEFAULT_SKILLS_SH_JSON)
+    parser.add_argument("--context7-skills-json", default=DEFAULT_CONTEXT7_SKILLS_JSON)
     parser.add_argument("--public-base", default=DEFAULT_PUBLIC_BASE)
     parser.add_argument("--output-json", default=DEFAULT_OUTPUT_JSON)
     args = parser.parse_args()
@@ -56,11 +58,13 @@ def main() -> int:
     docs_path = Path(args.docs_json)
     docs_extended_path = Path(args.docs_extended_json)
     docs_extended_runtime_path = Path(args.docs_extended_runtime_json)
-    skills_path = Path(args.skills_json)
+    skills_sh_path = Path(args.skills_sh_json)
+    context7_skills_path = Path(args.context7_skills_json)
     out_path = Path(args.output_json)
 
     docs = load_payload(docs_path)
-    skills = load_payload(skills_path)
+    skills_sh = load_payload(skills_sh_path)
+    context7_skills = load_payload(context7_skills_path)
 
     docs_extended = load_payload(docs_extended_path) if docs_extended_path.exists() else None
     docs_extended_runtime = (
@@ -70,7 +74,8 @@ def main() -> int:
     docs_rel = docs_path.as_posix()
     docs_ext_rel = docs_extended_path.as_posix()
     docs_ext_runtime_rel = docs_extended_runtime_path.as_posix()
-    skills_rel = skills_path.as_posix()
+    skills_sh_rel = skills_sh_path.as_posix()
+    context7_skills_rel = context7_skills_path.as_posix()
     manifest_rel = out_path.as_posix()
 
     now = datetime.now(timezone.utc).isoformat()
@@ -184,15 +189,41 @@ def main() -> int:
                 "available": docs_extended_runtime is not None,
             },
             {
-                "id": "skills_ranked_all",
-                "title": "Context7 Skills Ranking (No installs threshold)",
-                "relativePath": skills_rel,
-                "publicUrl": public_url(args.public_base, skills_rel),
-                "generatedAtUtc": skills.get("generatedAtUtc"),
-                "rows": skills.get("rows"),
-                "baseUrl": skills.get("baseUrl"),
-                "minInstalls": skills.get("minInstalls"),
+                "id": "skills_sh_all_time_top600",
+                "title": "Skills.sh All-Time Ranking Snapshot (Top 600)",
+                "relativePath": skills_sh_rel,
+                "publicUrl": public_url(args.public_base, skills_sh_rel),
+                "generatedAtUtc": skills_sh.get("generatedAtUtc"),
+                "rows": skills_sh.get("rows"),
+                "sourceRows": skills_sh.get("sourceRows"),
+                "sourceUrl": skills_sh.get("sourceUrl"),
+                "totalSkills": skills_sh.get("totalSkills"),
+                "allTimeTotal": skills_sh.get("allTimeTotal"),
                 "notes": [
+                    "Primary skills dataset for the site.",
+                    "Derived from the prerendered skills.sh all-time leaderboard payload.",
+                    "Current snapshot keeps the first 600 rows exposed in the site payload.",
+                ],
+                "keyFields": [
+                    "rank",
+                    "name",
+                    "skillId",
+                    "source",
+                    "installCount",
+                    "detailUrl",
+                ],
+            },
+            {
+                "id": "skills_ranked_all",
+                "title": "Context7 Skills Ranking (Secondary, No installs threshold)",
+                "relativePath": context7_skills_rel,
+                "publicUrl": public_url(args.public_base, context7_skills_rel),
+                "generatedAtUtc": context7_skills.get("generatedAtUtc"),
+                "rows": context7_skills.get("rows"),
+                "baseUrl": context7_skills.get("baseUrl"),
+                "minInstalls": context7_skills.get("minInstalls"),
+                "notes": [
+                    "Secondary skills dataset for long-tail lookup and Context7-specific comparison.",
                     "Rows are sorted by Context7 ranked endpoint order.",
                     "Current site build keeps minInstalls=0 (full ranked snapshot).",
                 ],
@@ -213,8 +244,10 @@ def main() -> int:
                 "Fetch this manifest first.",
                 "Then fetch dataset publicUrl needed for your task.",
                 "Use generatedAtUtc and rows for freshness checks.",
+                "For skills, prefer skills_sh_all_time_top600 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
                 "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime.",
             ],
+            "preferredSkillsDatasetId": "skills_sh_all_time_top600",
             "preferredDocsExtendedDatasetId": preferred_docs_extended_dataset_id,
             "manifestPublicUrl": public_url(args.public_base, manifest_rel),
         },

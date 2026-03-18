@@ -1,4 +1,4 @@
-name: Update Context7 Rankings Site
+name: Update Rankings Site
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-context7-rankings-site
+  group: update-rankings-site
   cancel-in-progress: false
 
 jobs:
@@ -42,6 +42,14 @@ jobs:
             --output-csv docs/data/context7_docs_extended_top1000.csv \
           || echo "WARN: docs extended fetch failed, keeping existing snapshot."
 
+      - name: Refresh skills.sh primary dataset
+        run: |
+          python3 scripts/fetch_skills_sh_rankings.py \
+            --view all-time \
+            --limit 600 \
+            --output-json docs/data/skills_sh_all_time_top600.json \
+            --output-csv docs/data/skills_sh_all_time_top600.csv
+
       - name: Refresh skills ranked dataset
         run: |
           python3 scripts/fetch_context7_skills_for_site.py \
@@ -54,7 +62,8 @@ jobs:
           python3 scripts/build_rankings_manifest.py \
             --docs-json docs/data/context7_docs_popular_top50.json \
             --docs-extended-json docs/data/context7_docs_extended_top1000.json \
-            --skills-json docs/data/context7_skills_ranked_all.json \
+            --skills-sh-json docs/data/skills_sh_all_time_top600.json \
+            --context7-skills-json docs/data/context7_skills_ranked_all.json \
             --output-json docs/data/context7_rankings_manifest.json
 
       - name: Commit and push if changed
@@ -67,10 +76,12 @@ jobs:
               docs/data/context7_docs_popular_top50.csv \
               docs/data/context7_docs_extended_top1000.json \
               docs/data/context7_docs_extended_top1000.csv \
+              docs/data/skills_sh_all_time_top600.json \
+              docs/data/skills_sh_all_time_top600.csv \
               docs/data/context7_skills_ranked_all.json \
               docs/data/context7_skills_ranked_all.csv \
               docs/data/context7_rankings_manifest.json
-            git commit -m "chore: refresh Context7 docs+skills ranking data"
+            git commit -m "chore: refresh docs and skills ranking data"
             git push
           else
             echo "No ranking data changes."

@@ -11,6 +11,7 @@ backtesting-frameworks
 better-auth-best-practices
 brainstorming
 cache-components
+canvas-design
 claude-automation-recommender
 claude-opus-4-5-migration
 code-reviewer
@@ -26,13 +27,14 @@ e2e-testing-patterns
 embedding-strategies
 executing-plans
 fastapi-templates
-figma-implement-design
+find-skills
 frontend-design
 gh-cli
 github-actions-templates
 go-concurrency-patterns
 gsap
 hf-cli
+implement-design
 internal-comms
 langchain
 langchain-architecture
@@ -62,6 +64,7 @@ react-modernization
 react-state-management
 redis-js
 remotion-best-practices
+resume-builder
 responsive-design
 rust-async-patterns
 send-email
@@ -77,10 +80,11 @@ senior-ml-engineer
 senior-prompt-engineer
 senior-qa
 senior-security
-shadcn-ui
+shadcn
 sql-optimization-patterns
 stripe-best-practices
 stripe-integration
+supabase-postgres-best-practices
 supabase-nextjs
 svelte-code-writer
 systematic-debugging

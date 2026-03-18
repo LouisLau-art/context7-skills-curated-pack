@@ -3,16 +3,16 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-114-blue)
-![Local Total](https://img.shields.io/badge/local_total_with__.system-115-6f42c1)
+![Installable Skills](https://img.shields.io/badge/installable_skills-118-blue)
+![Local Total](https://img.shields.io/badge/local_total_with__.system-119-6f42c1)
 ![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
-![Context7](https://img.shields.io/badge/source-Context7-black)
+![Rankings](https://img.shields.io/badge/rankings-skills.sh%20primary%20%7C%20Context7%20secondary-black)
 
-A curated, deduplicated Context7 skills pack for software development workflows.
+A curated, deduplicated skills pack for software development workflows, plus a public multi-source rankings dashboard.
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **114 installable skills** (plus internal `.system`; a fresh local install yields 115 total dirs).
+Current snapshot: **118 installable skills** (plus internal `.system`; a fresh local install yields 119 total dirs).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
@@ -98,6 +98,7 @@ export AMP_SKILLS_DIR=/custom/amp/skills
 - `scripts/install_curated.sh`: Unix wrapper for the Python installer
 - `scripts/install_curated.ps1`: PowerShell wrapper for the Python installer
 - `scripts/validate_skills_frontmatter.py`: validate and sanitize known frontmatter issues in installed skills
+- `scripts/fetch_skills_sh_rankings.py`: pull the prerendered `skills.sh` leaderboard for the static site
 - `scripts/fetch_context7_skill_rankings.py`: pull live ranked skills from Context7 API
 - `scripts/fetch_context7_library_rankings.py`: pull live docs library rankings (popular/trending/latest)
 - `scripts/rebuild_skills_by_stack_zh.py`: regenerate Chinese category doc from current `skills_selected.txt`
@@ -161,13 +162,15 @@ Endpoints used:
 
 ## Static Ranking Site (GitHub Pages)
 
-This repo now includes a static dashboard with three tabs:
+This repo now includes a static dashboard with four tabs:
+- `Skills.sh All Time` (primary skills leaderboard, current top 600 snapshot from the prerendered site payload)
+- `Context7 Skills` (secondary skills leaderboard for Context7-specific comparison and long-tail lookup)
 - `Docs Popular` (Context7 market-share list, currently top 50 from API)
 - `Docs Extended` (rows 1-50 official, rows >50 estimated from full libraries catalog)
-- `Skills Ranking` (current ranked list without installs threshold, currently thousands of rows)
 
 Files:
 - `docs/index.html`
+- `docs/data/skills_sh_all_time_top600.json`
 - `docs/data/context7_docs_popular_top50.json`
 - `docs/data/context7_docs_extended_top1000.json`
 - `docs/data/context7_skills_ranked_all.json`
@@ -175,6 +178,12 @@ Files:
 The dataset is generated via:
 
 ```bash
+python3 scripts/fetch_skills_sh_rankings.py \
+  --view all-time \
+  --limit 600 \
+  --output-json docs/data/skills_sh_all_time_top600.json \
+  --output-csv docs/data/skills_sh_all_time_top600.csv
+
 python3 scripts/fetch_context7_docs_popular.py \
   --limit 50 \
   --output-json docs/data/context7_docs_popular_top50.json \
@@ -218,23 +227,23 @@ If another model/agent needs these rankings, start here:
 - Raw GitHub fallback:
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 114 Skills Distribution (Current Pack)
+## 118 Skills Distribution (Current Pack)
 
-High-level stack distribution for the current curated 114 skills:
+High-level stack distribution for the current curated 118 skills:
 
 | Category | Count | Share |
 | --- | ---: | ---: |
-| Frontend & Web UI | 32 | 28.1% |
-| LLM / Agent / Prompting | 13 | 11.4% |
-| Backend & Services | 12 | 10.5% |
-| Engineering Workflow | 12 | 10.5% |
-| Database & Data Engineering | 9 | 7.9% |
-| Testing & QA | 8 | 7.0% |
-| Docs & Office Automation | 8 | 7.0% |
-| Python / AI / Data Science | 6 | 5.3% |
-| Cloud & DevOps | 6 | 5.3% |
-| Security & Architecture | 6 | 5.3% |
-| Other / Uncategorized | 2 | 1.8% |
+| Frontend & Web UI | 34 | 28.8% |
+| LLM / Agent / Prompting | 14 | 11.9% |
+| Backend & Services | 12 | 10.2% |
+| Engineering Workflow | 12 | 10.2% |
+| Database & Data Engineering | 10 | 8.5% |
+| Testing & QA | 8 | 6.8% |
+| Docs & Office Automation | 9 | 7.6% |
+| Python / AI / Data Science | 6 | 5.1% |
+| Cloud & DevOps | 6 | 5.1% |
+| Security & Architecture | 6 | 5.1% |
+| Other / Uncategorized | 1 | 0.8% |
 
 Detailed grouping: `docs/skills-by-stack-zh.md`
 

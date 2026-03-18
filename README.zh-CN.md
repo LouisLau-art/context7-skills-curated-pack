@@ -2,12 +2,12 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-一个面向开发流程的 Context7 skills 精选与去重仓库。
+一个面向开发流程的 skills 精选与去重仓库，同时附带多来源排行榜站点。
 
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/context7-skills-curated-pack/
 
-当前快照：**114 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 115）。
+当前快照：**118 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 119）。
 
 ## 这个仓库包含什么
 
@@ -17,6 +17,7 @@ https://louislau-art.github.io/context7-skills-curated-pack/
 - `scripts/install_curated.sh`：对 Python 安装器的 Unix 薄封装
 - `scripts/install_curated.ps1`：对 Python 安装器的 PowerShell 薄封装
 - `scripts/validate_skills_frontmatter.py`：安装后校验/修复 `SKILL.md` frontmatter
+- `scripts/fetch_skills_sh_rankings.py`：抓取 `skills.sh` 预渲染榜单并生成站点数据
 - `scripts/fetch_context7_skill_rankings.py`：拉取 skills 动态排行榜
 - `scripts/fetch_context7_library_rankings.py`：拉取 docs 库排行榜（popular/trending/latest）
 - `scripts/fetch_context7_docs_popular.py`：拉取 docs popular 并生成站点数据
@@ -122,13 +123,15 @@ export CONTEXT7_API_KEY='your_ctx7_key'
 
 ## 静态网站（GitHub Pages）
 
-页面已支持三榜单：
+页面已支持四榜单：
+- `Skills.sh All Time`（主技能榜，当前取预渲染 payload 暴露的前 600 条）
+- `Context7 Skills`（次技能榜，用于 Context7 专属字段和长尾补充）
 - `Docs Popular`（Context7 API 当前提供前 50 的市场份额榜）
 - `Docs Extended`（1-50 为官方榜，50 以后为基于全量库的估算扩展榜）
-- `Skills Ranking`（不设 installs 阈值的全量榜单，当前为数千条）
 
 页面与数据文件：
 - `docs/index.html`
+- `docs/data/skills_sh_all_time_top600.json`
 - `docs/data/context7_docs_popular_top50.json`
 - `docs/data/context7_docs_extended_top1000.json`
 - `docs/data/context7_skills_ranked_all.json`
@@ -136,6 +139,12 @@ export CONTEXT7_API_KEY='your_ctx7_key'
 数据生成命令：
 
 ```bash
+python3 scripts/fetch_skills_sh_rankings.py \
+  --view all-time \
+  --limit 600 \
+  --output-json docs/data/skills_sh_all_time_top600.json \
+  --output-csv docs/data/skills_sh_all_time_top600.csv
+
 python3 scripts/fetch_context7_docs_popular.py \
   --limit 50 \
   --output-json docs/data/context7_docs_popular_top50.json \
@@ -168,17 +177,17 @@ python3 scripts/fetch_context7_skills_for_site.py \
 - Raw GitHub 兜底地址：
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 当前 114 技能分布（摘要）
+## 当前 118 技能分布（摘要）
 
-- 前端与 Web UI: 32
-- LLM / Agent / Prompting: 13
+- 前端与 Web UI: 34
+- LLM / Agent / Prompting: 14
 - 后端与服务端: 12
 - 测试与质量保障: 8
 - 工程流程与协作: 12
-- 数据库与数据工程: 9
-- 文档与办公自动化: 8
+- 数据库与数据工程: 10
+- 文档与办公自动化: 9
 - 云与 DevOps / 基础设施: 6
-- 其他 / 未分类: 2
+- 其他 / 未分类: 1
 - Python / AI / 数据科学: 6
 - 安全与架构: 6
 

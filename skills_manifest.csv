@@ -12,6 +12,7 @@ backtesting-frameworks,backtesting-frameworks,/wshobson/agents,46,9.5,0.526
 better-auth-best-practices,better-auth-best-practices,/better-auth/skills,302,7.8,0.623
 brainstorming,brainstorming,/obra/superpowers,77,9.5,0.564
 cache-components,cache-components,/vercel/next.js,264,10,0.668
+canvas-design,canvas-design,/anthropics/skills,655,8.5,0.695
 claude-automation-recommender,claude-automation-recommender,/anthropics/claude-plugins-official,132,8.5,0.579
 claude-opus-4-5-migration,claude-opus-4-5-migration,/anthropics/claude-code,50,8.8,0.515
 code-reviewer,code-reviewer,/alirezarezvani/claude-skills,274,8.9,0.643
@@ -27,13 +28,14 @@ e2e-testing-patterns,e2e-testing-patterns,/wshobson/agents,72,9.5,0.559
 embedding-strategies,embedding-strategies,/wshobson/agents,49,9.5,0.531
 executing-plans,executing-plans,/obra/superpowers,43,9.5,0.521
 fastapi-templates,fastapi-templates,/wshobson/agents,117,9.5,0.595
-figma-implement-design,figma-implement-design,/figma/mcp-server-guide,0,-,0.000
+find-skills,find-skills,/vercel-labs/skills,125,9.6,0.602
 frontend-design,frontend-design,/anthropics/skills,3K,8.5,0.812
 gh-cli,gh-cli,/github/awesome-copilot,45,8.2,0.642
 github-actions-templates,github-actions-templates,/wshobson/agents,47,9.5,0.528
 go-concurrency-patterns,go-concurrency-patterns,/wshobson/agents,58,9.5,0.543
 gsap,gsap,/martinholovsky/claude-skills-generator,68,7.7,0.510
 hf-cli,hf-cli,/huggingface/skills,7,9,0.531
+implement-design,implement-design,/figma/mcp-server-guide,33,9.6,0.524
 internal-comms,internal-comms,/anthropics/skills,397,8.5,0.661
 langchain,langchain,/davila7/claude-code-templates,42,10,0.532
 langchain-architecture,langchain-architecture,/wshobson/agents,90,9.5,0.576
@@ -63,6 +65,7 @@ react-modernization,react-modernization,/wshobson/agents,117,9.5,0.595
 react-state-management,react-state-management,/wshobson/agents,196,9.5,0.633
 redis-js,redis-js,/upstash/redis-js,39,8.5,0.489
 remotion-best-practices,remotion-best-practices,/remotion-dev/skills,127,8.3,0.571
+resume-builder,resume-builder,/amruthpillai/reactive-resume,2,10,0.492
 responsive-design,responsive-design,/wshobson/agents,102,9.5,0.585
 rust-async-patterns,rust-async-patterns,/wshobson/agents,71,9.5,0.558
 send-email,send-email,/resend/resend-skills,10,9.5,0.417
@@ -78,10 +81,11 @@ senior-ml-engineer,senior-ml-engineer,/alirezarezvani/claude-skills,57,8.9,0.527
 senior-prompt-engineer,senior-prompt-engineer,/alirezarezvani/claude-skills,99,8.9,0.568
 senior-qa,senior-qa,/davila7/claude-code-templates,88,10,0.586
 senior-security,senior-security,/alirezarezvani/claude-skills,145,8.9,0.596
-shadcn-ui,shadcn-ui,/giuseppe-trisciuoglio/developer-kit,257,7.5,0.604
+shadcn,shadcn,/shadcn/ui,13,9.2,0.522
 sql-optimization-patterns,sql-optimization-patterns,/wshobson/agents,52,9.5,0.535
 stripe-best-practices,stripe-best-practices,/stripe/ai,53,9,0.524
 stripe-integration,stripe-integration,/wshobson/agents,82,9.5,0.569
+supabase-postgres-best-practices,supabase-postgres-best-practices,/supabase/agent-skills,37,10,0.540
 supabase-nextjs,supabase-nextjs,/alinaqi/claude-bootstrap,131,8.7,0.583
 svelte-code-writer,svelte-code-writer,/sveltejs/mcp,43,9.6,0.524
 systematic-debugging,systematic-debugging,/obra/superpowers,54,9.5,0.538
