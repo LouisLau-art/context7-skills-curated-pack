@@ -1,13 +1,11 @@
 slug,skill_name,source,installs,trust,score
 agent-browser,agent-browser,/vercel-labs/agent-browser,252,9.6,0.655
 ai-elements,ai-elements,/vercel/ai-elements,52,10,0.548
-ai-sdk-core,ai-sdk-core,/jezweb/claude-skills,42,9.7,0.524
 api-design-principles,api-design-principles,/wshobson/agents,110,9.5,0.590
 architecture-decision-records,architecture-decision-records,/wshobson/agents,43,9.5,0.521
 architecture-patterns,architecture-patterns,/wshobson/agents,146,9.5,0.611
 async-python-patterns,async-python-patterns,/wshobson/agents,76,9.5,0.563
 auth-implementation-patterns,auth-implementation-patterns,/wshobson/agents,87,9.5,0.573
-aws-solution-architect,aws-solution-architect,/alirezarezvani/claude-skills,102,8.9,0.570
 backtesting-frameworks,backtesting-frameworks,/wshobson/agents,46,9.5,0.526
 better-auth-best-practices,better-auth-best-practices,/better-auth/skills,302,7.8,0.623
 brainstorming,brainstorming,/obra/superpowers,77,9.5,0.564
@@ -31,7 +29,6 @@ fastapi-templates,fastapi-templates,/wshobson/agents,117,9.5,0.595
 find-skills,find-skills,/vercel-labs/skills,125,9.6,0.602
 frontend-design,frontend-design,/anthropics/skills,3K,8.5,0.812
 gh-cli,gh-cli,/github/awesome-copilot,45,8.2,0.642
-github-actions-templates,github-actions-templates,/wshobson/agents,47,9.5,0.528
 go-concurrency-patterns,go-concurrency-patterns,/wshobson/agents,58,9.5,0.543
 gsap,gsap,/martinholovsky/claude-skills-generator,68,7.7,0.510
 hf-cli,hf-cli,/huggingface/skills,7,9,0.531
@@ -75,7 +72,6 @@ senior-backend,senior-backend,/alirezarezvani/claude-skills,321,8.9,0.655
 senior-computer-vision,senior-computer-vision,/alirezarezvani/claude-skills,54,8.9,0.523
 senior-data-engineer,senior-data-engineer,/alirezarezvani/claude-skills,121,8.9,0.583
 senior-data-scientist,senior-data-scientist,/alirezarezvani/claude-skills,84,8.9,0.555
-senior-devops,senior-devops,/alirezarezvani/claude-skills,171,8.9,0.608
 senior-frontend,senior-frontend,/alirezarezvani/claude-skills,1.1K,8.9,0.747
 senior-ml-engineer,senior-ml-engineer,/alirezarezvani/claude-skills,57,8.9,0.527
 senior-prompt-engineer,senior-prompt-engineer,/alirezarezvani/claude-skills,99,8.9,0.568
@@ -95,7 +91,6 @@ tanstack-query,tanstack-query,/jezweb/claude-skills,74,9.7,0.566
 tanstack-table,TanStack Table,/jezweb/claude-skills,50,9.7,0.537
 tdd-guide,tdd-guide,/alirezarezvani/claude-skills,59,8.9,0.529
 tech-stack-evaluator,tech-stack-evaluator,/alirezarezvani/claude-skills,60,8.9,0.531
-terraform-module-library,terraform-module-library,/wshobson/agents,76,9.5,0.563
 test-driven-development,test-driven-development,/obra/superpowers,46,9.5,0.526
 typescript-advanced-types,typescript-advanced-types,/wshobson/agents,148,9.5,0.612
 ui-design-system,ui-design-system,/alirezarezvani/claude-skills,144,8.9,0.595
@@ -104,7 +99,6 @@ using-superpowers,using-superpowers,/obra/superpowers,41,9.5,0.518
 uv-package-manager,uv-package-manager,/wshobson/agents,71,9.5,0.558
 ux-researcher-designer,ux-researcher-designer,/alirezarezvani/claude-skills,79,8.9,0.551
 vercel-composition-patterns,vercel-composition-patterns,/vercel-labs/agent-skills,129,9.6,0.605
-vercel-deploy,vercel-deploy,/vercel-labs/agent-skills,163,9.6,0.622
 vercel-react-best-practices,vercel-react-best-practices,/vercel-labs/agent-skills,1.5K,9.6,0.788
 vite,vite,/antfu/skills,73,9.9,0.570
 vitest,vitest,/antfu/skills,60,9.9,0.556
@@ -114,6 +108,13 @@ web-component-design,web-component-design,/wshobson/agents,73,9.5,0.560
 web-design-guidelines,web-design-guidelines,/vercel-labs/agent-skills,753,9.6,0.736
 web-perf,web-perf,/cloudflare/skills,40,8.8,0.498
 webapp-testing,webapp-testing,/anthropics/skills,759,8.5,0.710
-wrangler,wrangler,/cloudflare/skills,47,8.8,0.510
 writing-plans,writing-plans,/obra/superpowers,47,9.5,0.528
+requesting-code-review,requesting-code-review,/obra/superpowers,25.5K,9.5,0.865
+receiving-code-review,receiving-code-review,/obra/superpowers,20.4K,9.5,0.852
+verification-before-completion,verification-before-completion,/obra/superpowers,20.2K,9.5,0.851
+using-git-worktrees,using-git-worktrees,/obra/superpowers,19.1K,9.5,0.845
+git-commit,git-commit,/github/awesome-copilot,15.0K,8.2,0.781
+finishing-a-development-branch,finishing-a-development-branch,/obra/superpowers,17.0K,9.5,0.837
+ai-sdk,ai-sdk,/vercel/ai,11.9K,10,0.757
+turborepo,turborepo,/vercel/turborepo,11.5K,10,0.748
 xlsx,xlsx,/anthropics/skills,530,8.5,0.683

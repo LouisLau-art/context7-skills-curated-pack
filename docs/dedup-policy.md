@@ -24,16 +24,21 @@ For each topic cluster, keep at most:
 Delete skills that are mostly wrappers, shallow aliases, or alternate phrasing for the
 same workflow.
 
+Name collisions are only a weak signal. Different names can still be duplicates when
+they trigger on the same workflow, while same-name skills can coexist if one is
+genuinely specialized and does not steal the same activation surface.
+
 ## Stage 2: Content Review
 
 Run a manual review when overlap is not obvious from source metadata alone.
 
 Prefer the skill with:
 
-1. A clearer trigger description
+1. Lower trigger-conflict risk with the rest of the curated pack
 2. Better scope fit for the actual workflow
-3. More useful bundled material such as `scripts/`, `references/`, or templates
-4. More canonical naming and better maintenance signals
+3. A clearer trigger description
+4. More useful bundled material such as `scripts/`, `references/`, or templates
+5. More canonical naming and better maintenance signals
 
 ## Stage 3: User-Fit Overrides
 

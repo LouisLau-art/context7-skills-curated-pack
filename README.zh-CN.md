@@ -7,7 +7,7 @@
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/context7-skills-curated-pack/
 
-当前快照：**118 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 119）。
+当前快照：**119 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 120）。
 
 ## 这个仓库包含什么
 
@@ -177,16 +177,15 @@ python3 scripts/fetch_context7_skills_for_site.py \
 - Raw GitHub 兜底地址：
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 当前 118 技能分布（摘要）
+## 当前 119 技能分布（摘要）
 
 - 前端与 Web UI: 34
 - LLM / Agent / Prompting: 14
 - 后端与服务端: 12
 - 测试与质量保障: 8
-- 工程流程与协作: 12
+- 工程流程与协作: 19
 - 数据库与数据工程: 10
 - 文档与办公自动化: 9
-- 云与 DevOps / 基础设施: 6
 - 其他 / 未分类: 1
 - Python / AI / 数据科学: 6
 - 安全与架构: 6
@@ -199,10 +198,31 @@ python3 scripts/fetch_context7_skills_for_site.py \
 
 1. 优先官方来源和知名强仓库
 2. 每个主题只保留 `1` 个通用 skill，加 `1-2` 个真正专用 skill
-3. 接近的候选再做内容复核，优先触发描述更清晰、附带脚本/参考资料更多的项
-4. `installs/trust/verified` 只做辅助 tie-break，不再作为主规则
+3. 优先处理触发条件冲突和工作流重叠，名字是否相同只是弱信号
+4. 接近的候选再做内容复核，优先触发描述更清晰、附带脚本/参考资料更多的项
+5. `installs/trust/verified` 只做辅助 tie-break，不再作为主规则
 
 详细规则见：`docs/dedup-policy.md`
+
+## SkillsBench 启发的补充规则
+
+本仓库会把 `skills.sh` 榜单当作发现入口，而不是“高下载量就自动入选”的白名单。
+下载量重要，但不能压过范围匹配和内容质量。
+
+选型时额外遵循下面几条：
+
+1. 优先人工编写、强调操作流程的 procedural skill，而不是泛提示词或模型临时自生成的 skill 内容
+2. 优先范围收敛、模块数少但有效的 focused skill，而不是“大而全”的泛文档型 skill
+3. 优先能帮助 agent 更稳定完成并校验任务的 skill，尤其是能减少 `quality below threshold` 这类失败的 skill
+4. 两个候选覆盖同一工作时，仍优先官方源或强维护者来源
+
+落地时意味着：
+
+- `skills.sh` 的安装量只作为热度信号，不能单独决定去留
+- 不符合当前工作流的云端、移动端技能，即使热门也可以移除
+- 下载量较低但更聚焦的简历、博客、代码审查类 skill，可以优先于高下载量的泛写作类 skill
+- 除非真有明确专长差异，否则不保留同工作流重复 skill
+- 同名 skill 不会自动判重；不同名字的 skill 只要会抢同一类触发词，也算冲突候选
 
 ## 许可
 

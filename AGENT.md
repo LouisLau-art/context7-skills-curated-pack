@@ -1,5 +1,17 @@
 # AGENT Handoff - Context7 Docs Ranking (updated 2026-03-17)
 
+## 0a) 2026-03-18 Skill Curation Guidance
+
+When refreshing or pruning the curated skills pack, use `skills.sh` as a discovery/ranking input, not as a sole decision rule.
+
+Apply these rules:
+- prefer human-authored procedural skills over broad prompt dumps or self-generated skill content
+- prefer focused skills with a narrow workflow and `2-3` useful modules over comprehensive but diffuse documentation
+- prefer skills that improve completion and verification quality, not just discovery or brainstorming
+- treat trigger conflicts and workflow overlap as stronger signals than naming collisions
+- use install count as a tie-breaker only after checking source reputation, scope fit, overlap, and bundled materials
+- remove cloud/mobile clusters when they do not match the current workflow, even if they rank highly on `skills.sh`
+
 ## 0) 2026-03-17 刷新结论
 - 已刷新站点榜单数据：
   - `docs/data/context7_docs_popular_top50.json`

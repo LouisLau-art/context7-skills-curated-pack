@@ -3,8 +3,8 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-118-blue)
-![Local Total](https://img.shields.io/badge/local_total_with__.system-119-6f42c1)
+![Installable Skills](https://img.shields.io/badge/installable_skills-119-blue)
+![Local Total](https://img.shields.io/badge/local_total_with__.system-120-6f42c1)
 ![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
 ![Rankings](https://img.shields.io/badge/rankings-skills.sh%20primary%20%7C%20Context7%20secondary-black)
 
@@ -12,7 +12,7 @@ A curated, deduplicated skills pack for software development workflows, plus a p
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **118 installable skills** (plus internal `.system`; a fresh local install yields 119 total dirs).
+Current snapshot: **119 installable skills** (plus internal `.system`; a fresh local install yields 120 total dirs).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
@@ -227,22 +227,21 @@ If another model/agent needs these rankings, start here:
 - Raw GitHub fallback:
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 118 Skills Distribution (Current Pack)
+## 119 Skills Distribution (Current Pack)
 
-High-level stack distribution for the current curated 118 skills:
+High-level stack distribution for the current curated 119 skills:
 
 | Category | Count | Share |
 | --- | ---: | ---: |
-| Frontend & Web UI | 34 | 28.8% |
-| LLM / Agent / Prompting | 14 | 11.9% |
-| Backend & Services | 12 | 10.2% |
-| Engineering Workflow | 12 | 10.2% |
-| Database & Data Engineering | 10 | 8.5% |
-| Testing & QA | 8 | 6.8% |
+| Frontend & Web UI | 34 | 28.6% |
+| LLM / Agent / Prompting | 14 | 11.8% |
+| Backend & Services | 12 | 10.1% |
+| Engineering Workflow | 19 | 16.0% |
+| Database & Data Engineering | 10 | 8.4% |
+| Testing & QA | 8 | 6.7% |
 | Docs & Office Automation | 9 | 7.6% |
-| Python / AI / Data Science | 6 | 5.1% |
-| Cloud & DevOps | 6 | 5.1% |
-| Security & Architecture | 6 | 5.1% |
+| Python / AI / Data Science | 6 | 5.0% |
+| Security & Architecture | 6 | 5.0% |
 | Other / Uncategorized | 1 | 0.8% |
 
 Detailed grouping: `docs/skills-by-stack-zh.md`
@@ -253,10 +252,31 @@ For high-overlap groups, use this order:
 
 1. Prefer official or strong-maintainer sources
 2. Keep only `1` general skill plus `1-2` specialized skills per topic cluster
-3. Do a content review for close calls, favoring clearer triggers and better bundled material
-4. Use installs/trust/verification as tie-breakers, not as the primary rule
+3. Treat trigger conflicts and workflow overlap as stronger signals than naming collisions
+4. Do a content review for close calls, favoring clearer triggers and better bundled material
+5. Use installs/trust/verification as tie-breakers, not as the primary rule
 
 Detailed policy: `docs/dedup-policy.md`
+
+## SkillsBench-Informed Curation Notes
+
+This pack uses the `skills.sh` leaderboard as a discovery surface, not as an auto-include list.
+Popularity matters, but it does **not** override scope fit or content quality.
+
+When deciding whether to keep or add a skill, prefer the following:
+
+1. Human-authored procedural skills over generic prompts or self-generated skill content
+2. Focused skills with a narrow workflow and `2-3` useful modules over broad "everything docs"
+3. Skills that help the agent finish and verify work reliably, especially ones that reduce "quality below threshold" style failures
+4. Official or strong-maintainer sources when two candidates cover the same job
+
+In practice, this means:
+
+- `skills.sh` install counts are a useful popularity signal, but not a sufficient reason to keep a skill
+- broad cloud/mobile clusters can still be removed if they do not match the current workflow
+- a lower-install but more focused resume/blog/review skill can beat a higher-install generic writing skill
+- we avoid duplicate workflow coverage unless the extra skill is truly specialized
+- same-name skills are not automatically duplicates, and different-name skills can still conflict if they trigger on the same work
 
 ## License
 

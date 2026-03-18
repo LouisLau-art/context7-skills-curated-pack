@@ -1,6 +1,6 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 118（仅当前已保留 skills）
+- 总计目录数: 119（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
 - 数据源: `skills_selected.txt`
 
@@ -10,12 +10,11 @@
 - 后端与服务端(Node/多语言): 12
 - Python/AI/数据科学: 6
 - 数据库与数据工程: 10
-- 云与DevOps/基础设施: 6
 - LLM/Agent与提示工程: 14
 - 测试/质量保障: 8
 - 安全与架构: 6
 - 文档与办公自动化: 9
-- 工程流程与协作: 12
+- 工程流程与协作: 19
 - 其他/未分类: 1
 
 ## 前端与Web UI（34）
@@ -42,17 +41,11 @@
 
 `backtesting-frameworks`, `polars`, `postgresql-table-design`, `prisma`, `redis-js`, `senior-data-engineer`, `senior-data-scientist`, `sql-optimization-patterns`, `supabase-postgres-best-practices`, `supabase-nextjs`
 
-## 云与DevOps/基础设施（6）
-
-主要是云部署、IaC、CI/CD、边缘/平台工程。
-
-`aws-solution-architect`, `github-actions-templates`, `senior-devops`, `terraform-module-library`, `vercel-deploy`, `wrangler`
-
 ## LLM/Agent与提示工程（14）
 
 主要是 Agent、MCP、RAG、提示工程、模型/文档接入。
 
-`agent-browser`, `ai-elements`, `ai-sdk-core`, `claude-automation-recommender`, `claude-opus-4-5-migration`, `context7-docs-lookup`, `context7-skills`, `embedding-strategies`, `find-skills`, `hf-cli`, `langchain`, `langchain-architecture`, `rag-implementation`, `senior-prompt-engineer`
+`agent-browser`, `ai-elements`, `claude-automation-recommender`, `claude-opus-4-5-migration`, `context7-docs-lookup`, `context7-skills`, `embedding-strategies`, `find-skills`, `hf-cli`, `langchain`, `langchain-architecture`, `rag-implementation`, `senior-prompt-engineer`, `ai-sdk`
 
 ## 测试/质量保障（8）
 
@@ -72,11 +65,11 @@
 
 `doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `resume-builder`, `update-docs`, `xlsx`
 
-## 工程流程与协作（12）
+## 工程流程与协作（19）
 
 主要是规划执行、规范、项目组织与工程协同。
 
-`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`
+`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`, `requesting-code-review`, `receiving-code-review`, `verification-before-completion`, `using-git-worktrees`, `git-commit`, `finishing-a-development-branch`, `turborepo`
 
 ## 其他/未分类（1）
 
