@@ -97,6 +97,11 @@ Installer aliases:
 - `public-default = core-meta + development-core`
 - `all-public = union of all public profiles`
 
+Context7 setup guide:
+
+- `docs/context7-agent-setup.md`
+- `docs/context7-agent-setup.zh-CN.md`
+
 Supported targets:
 - `claude` (default)
 - `codex` (install via Claude-compatible target, then sync to `~/.codex/skills`)

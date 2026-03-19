@@ -98,6 +98,11 @@ $env:DRY_RUN = "1"
 - `public-default = core-meta + development-core`
 - `all-public = 所有公开 profiles 的并集`
 
+Context7 接法文档：
+
+- `docs/context7-agent-setup.md`
+- `docs/context7-agent-setup.zh-CN.md`
+
 支持目标：
 - `claude`（默认）
 - `codex`：通过 Claude 兼容目录安装，再同步到 `~/.codex/skills`
