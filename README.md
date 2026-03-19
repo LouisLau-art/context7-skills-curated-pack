@@ -3,7 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-123-blue)
+![Installable Skills](https://img.shields.io/badge/installable_skills-125-blue)
 ![Local Total](https://img.shields.io/badge/local_total_with__.system-121-6f42c1)
 ![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
 ![Rankings](https://img.shields.io/badge/rankings-skills.sh%20primary%20%7C%20Context7%20secondary-black)
@@ -12,7 +12,7 @@ A curated, deduplicated public skills catalog for multi-agent software workflows
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **123 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **78 skills**. A full `all-public` install yields the complete 123-skill public catalog (plus internal `.system`).
+Current snapshot: **125 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **78 skills**. A full `all-public` install yields the complete 125-skill public catalog (plus internal `.system`).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
@@ -84,6 +84,7 @@ Current public profiles:
 
 - `core-meta` — discovery, verification, review, planning, session continuity
 - `development-core` — software development starter pack
+- `context7-integration` — Context7 MCP plus reusable docs lookup workflow
 - `writing-blog` — public writing/blogging starter
 - `resume-job-search` — resume and job-search starter
 - `docs-office` — PDF/DOCX/PPTX/office workflows
@@ -281,9 +282,9 @@ If another model/agent needs these rankings, start here:
 - Raw GitHub fallback:
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 123 Skills Distribution (Current Pack)
+## 125 Skills Distribution (Current Pack)
 
-High-level stack distribution for the current curated 123 skills:
+High-level stack distribution for the current curated 125 skills:
 
 | Category | Count | Share |
 | --- | ---: | ---: |

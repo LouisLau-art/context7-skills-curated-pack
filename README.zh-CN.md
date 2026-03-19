@@ -7,7 +7,7 @@
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/context7-skills-curated-pack/
 
-当前快照：**123 个公开可安装 skills**。默认公开安装档 `public-default` 当前会安装 **78 个 skills**；`all-public` 会安装完整的 123 个公开 catalog skills（另含内部 `.system`）。
+当前快照：**125 个公开可安装 skills**。默认公开安装档 `public-default` 当前会安装 **78 个 skills**；`all-public` 会安装完整的 125 个公开 catalog skills（另含内部 `.system`）。
 
 ## 这个仓库包含什么
 
@@ -85,6 +85,7 @@ $env:DRY_RUN = "1"
 
 - `core-meta`：发现、验证、review、规划、会话衔接
 - `development-core`：开发主流程 starter
+- `context7-integration`：Context7 MCP + 文档查询工作流
 - `writing-blog`：写作/博客 starter
 - `resume-job-search`：简历/求职 starter
 - `docs-office`：PDF / DOCX / PPTX / 办公文档处理
@@ -230,7 +231,7 @@ python3 scripts/fetch_context7_skills_for_site.py \
 - Raw GitHub 兜底地址：
   `https://raw.githubusercontent.com/LouisLau-art/context7-skills-curated-pack/main/docs/data/context7_rankings_manifest.json`
 
-## 当前 123 技能分布（摘要）
+## 当前 125 技能分布（摘要）
 
 - 前端与 Web UI: 34
 - LLM / Agent / Prompting: 13

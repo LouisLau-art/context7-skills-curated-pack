@@ -15,6 +15,7 @@ claude-opus-4-5-migration
 code-reviewer
 coding-standards
 context7-docs-lookup
+context7-mcp
 convex-best-practices
 create-auth-skill
 doc-coauthoring
@@ -24,6 +25,7 @@ e2e-testing-patterns
 embedding-strategies
 executing-plans
 fastapi-templates
+find-docs
 find-skills
 frontend-design
 gh-cli

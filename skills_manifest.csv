@@ -16,6 +16,7 @@ claude-opus-4-5-migration,claude-opus-4-5-migration,/anthropics/claude-code,50,8
 code-reviewer,code-reviewer,/alirezarezvani/claude-skills,274,8.9,0.643
 coding-standards,coding-standards,/affaan-m/everything-claude-code,85,9.4,0.569
 context7-docs-lookup,context7-docs-lookup,/upstash/context7,61,8.5,0.522
+context7-mcp,context7-mcp,/upstash/context7,4.7K,9.5,0.775
 convex-best-practices,Convex Best Practices,/waynesutton/convexskills,61,9.6,0.549
 create-auth-skill,create-auth-skill,/better-auth/skills,125,7.8,0.557
 doc-coauthoring,doc-coauthoring,/anthropics/skills,453,8.5,0.671
@@ -25,6 +26,7 @@ e2e-testing-patterns,e2e-testing-patterns,/wshobson/agents,72,9.5,0.559
 embedding-strategies,embedding-strategies,/wshobson/agents,49,9.5,0.531
 executing-plans,executing-plans,/obra/superpowers,43,9.5,0.521
 fastapi-templates,fastapi-templates,/wshobson/agents,117,9.5,0.595
+find-docs,find-docs,/upstash/context7,8.0K,9.5,0.806
 find-skills,find-skills,/vercel-labs/skills,125,9.6,0.602
 frontend-design,frontend-design,/anthropics/skills,3K,8.5,0.812
 gh-cli,gh-cli,/github/awesome-copilot,45,8.2,0.642

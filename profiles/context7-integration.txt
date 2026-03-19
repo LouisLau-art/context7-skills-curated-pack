@@ -1,0 +1,5 @@
+# Optional Context7 integration profile: MCP-first plus thin skill layer
+
+context7-docs-lookup
+context7-mcp
+find-docs
