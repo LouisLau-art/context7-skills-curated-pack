@@ -1,0 +1,18 @@
+# Public baseline: discovery, review, verification, planning, continuity
+
+brainstorming
+claude-automation-recommender
+context7-docs-lookup
+executing-plans
+find-skills
+finishing-a-development-branch
+gh-cli
+git-commit
+receiving-code-review
+requesting-code-review
+session-handoff
+systematic-debugging
+using-git-worktrees
+using-superpowers
+verification-before-completion
+writing-plans

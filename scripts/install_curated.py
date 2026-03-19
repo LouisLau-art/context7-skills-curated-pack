@@ -23,6 +23,9 @@ SYNC_ALIAS = {
     "ampcode": "amp",
     "qwen": "gemini",
 }
+PROFILE_ALIASES = {
+    "public-default": ("core-meta", "development-core"),
+}
 
 
 @dataclass(frozen=True)
@@ -40,6 +43,7 @@ def env_truthy(name: str, default: bool = False) -> bool:
 
 
 def parse_args() -> argparse.Namespace:
+    repo_root = Path(__file__).resolve().parent.parent
     parser = argparse.ArgumentParser(
         description="Install the curated Context7 skills pack and sync it to compatible agent directories."
     )
@@ -54,8 +58,26 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--manifest",
-        default=str(Path(__file__).resolve().parent.parent / "skills_manifest.csv"),
+        default=str(repo_root / "skills_manifest.csv"),
         help="Path to skills_manifest.csv",
+    )
+    parser.add_argument(
+        "--profiles",
+        default=os.getenv("SKILL_PROFILES", "public-default"),
+        help=(
+            "Profile selection. Examples: public-default, all-public, core-meta+development-core, "
+            "public-default+writing-blog"
+        ),
+    )
+    parser.add_argument(
+        "--profiles-dir",
+        default=str(repo_root / "profiles"),
+        help="Directory containing public profile manifests",
+    )
+    parser.add_argument(
+        "--list-profiles",
+        action="store_true",
+        help="Print available profiles and exit",
     )
     parser.add_argument(
         "--dry-run",
@@ -152,6 +174,86 @@ def load_manifest(manifest_path: Path) -> list[SkillEntry]:
     return entries
 
 
+def parse_compound(value: str) -> list[str]:
+    normalized = value.replace(",", "+").strip()
+    return [token.strip() for token in normalized.split("+") if token.strip()]
+
+
+def load_profile_manifests(profiles_dir: Path) -> dict[str, list[str]]:
+    if not profiles_dir.is_dir():
+        raise SystemExit(f"Profiles directory not found: {profiles_dir}")
+
+    profiles: dict[str, list[str]] = {}
+    for path in sorted(profiles_dir.glob("*.txt")):
+        slugs: list[str] = []
+        seen: set[str] = set()
+        for raw_line in path.read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line in seen:
+                continue
+            seen.add(line)
+            slugs.append(line)
+        profiles[path.stem] = slugs
+
+    if not profiles:
+        raise SystemExit(f"No profile manifests found in: {profiles_dir}")
+    return profiles
+
+
+def resolve_profiles(raw: str, profiles: dict[str, list[str]]) -> tuple[list[str], list[str]]:
+    requested = parse_compound(raw or "public-default")
+    if not requested:
+        requested = ["public-default"]
+
+    selected_profiles: list[str] = []
+    seen_profiles: set[str] = set()
+
+    def add_profile(token: str) -> None:
+        if token == "all-public":
+            for profile_name in profiles:
+                add_profile(profile_name)
+            return
+        if token in PROFILE_ALIASES:
+            for profile_name in PROFILE_ALIASES[token]:
+                add_profile(profile_name)
+            return
+        if token not in profiles:
+            known = ", ".join(["all-public", *PROFILE_ALIASES.keys(), *profiles.keys()])
+            raise SystemExit(f"Unknown profile '{token}'. Known profiles: {known}")
+        if token in seen_profiles:
+            return
+        seen_profiles.add(token)
+        selected_profiles.append(token)
+
+    for token in requested:
+        add_profile(token)
+
+    selected_slugs: list[str] = []
+    seen_slugs: set[str] = set()
+    for profile_name in selected_profiles:
+        for slug in profiles[profile_name]:
+            if slug in seen_slugs:
+                continue
+            seen_slugs.add(slug)
+            selected_slugs.append(slug)
+
+    return selected_profiles, selected_slugs
+
+
+def filter_manifest(entries: list[SkillEntry], selected_slugs: list[str]) -> list[SkillEntry]:
+    selected_set = set(selected_slugs)
+    filtered = [entry for entry in entries if entry.slug in selected_set]
+    missing = sorted(selected_set - {entry.slug for entry in filtered})
+    if missing:
+        raise SystemExit(
+            "Selected profiles reference slugs missing from skills_manifest.csv: "
+            + ", ".join(missing)
+        )
+    return filtered
+
+
 def ensure_command(name: str) -> None:
     if shutil.which(name) is None:
         raise SystemExit(f"Required command not found in PATH: {name}")
@@ -223,8 +325,23 @@ def run_post_install_validation(base_dir: Path, entries: list[SkillEntry], dry_r
 def main() -> int:
     args = parse_args()
     manifest_path = Path(args.manifest).resolve()
+    profiles_dir = Path(args.profiles_dir).resolve()
     base_target, sync_targets = parse_target(args.target)
-    entries = load_manifest(manifest_path)
+    catalog_entries = load_manifest(manifest_path)
+    profiles = load_profile_manifests(profiles_dir)
+
+    if args.list_profiles:
+        print(f"Profiles directory: {profiles_dir}")
+        print("Aliases:")
+        print("  public-default = core-meta + development-core")
+        print(f"  all-public = {len(profiles)} profile files")
+        print("Profiles:")
+        for name, slugs in profiles.items():
+            print(f"  {name} ({len(slugs)} skills)")
+        return 0
+
+    selected_profiles, selected_slugs = resolve_profiles(args.profiles, profiles)
+    entries = filter_manifest(catalog_entries, selected_slugs)
     paths = platform_skill_dirs()
 
     ensure_command("npx")
@@ -233,6 +350,9 @@ def main() -> int:
         f"Installing curated skills (target={args.target}, base={base_target}, count={len(entries)})..."
     )
     print(f"Manifest: {manifest_path}")
+    print(f"Profiles dir: {profiles_dir}")
+    print(f"Requested profiles: {args.profiles}")
+    print(f"Resolved profiles: {', '.join(selected_profiles)}")
 
     install_flag = BASE_TARGET_FLAGS[base_target]
     for index, entry in enumerate(entries, start=1):

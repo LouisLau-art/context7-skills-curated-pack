@@ -8,15 +8,16 @@
 ![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
 ![Rankings](https://img.shields.io/badge/rankings-skills.sh%20primary%20%7C%20Context7%20secondary-black)
 
-A curated, deduplicated skills pack for software development workflows, plus a public multi-source rankings dashboard.
+A curated, deduplicated public skills catalog for multi-agent software workflows, plus profile-based installers and a public multi-source rankings dashboard.
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **120 installable skills** (plus internal `.system`; a fresh local install yields 121 total dirs).
+Current snapshot: **120 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **78 skills**. A full `all-public` install yields the complete 120-skill public catalog (plus internal `.system`).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)
 - `skills_selected.txt` (plain list)
+- `profiles/` (public install bundles such as `core-meta`, `development-core`, `writing-blog`)
 - `scripts/install_curated.py` (cross-platform one-click installer)
 - `scripts/install_curated.sh` (thin Unix wrapper around the Python installer)
 - `scripts/install_curated.ps1` (thin PowerShell wrapper around the Python installer)
@@ -36,31 +37,64 @@ It intentionally does **not** contain third-party `SKILL.md` contents.
 ## Quick Start
 
 ```bash
-# cross-platform install to the Claude-compatible base target
-python scripts/install_curated.py claude
+# install the default public profile to the Claude-compatible base target
+python scripts/install_curated.py claude --profiles public-default
 
-# install once, then sync to Codex + Gemini + OpenCode + Amp
-python scripts/install_curated.py all
+# install the full public catalog
+python scripts/install_curated.py claude --profiles all-public
 
-# Qwen-compatible flow (shares Gemini skills directory)
-python scripts/install_curated.py qwen
+# install once, then sync to Codex + Gemini + OpenCode + Amp + CodeBuddy
+python scripts/install_curated.py all --profiles public-default
+
+# add writing/blog support on top of the default profile
+python scripts/install_curated.py claude --profiles public-default+writing-blog
+
+# job-search/resume focused install
+python scripts/install_curated.py codex --profiles resume-job-search
 
 # Unix convenience wrapper
-bash scripts/install_curated.sh all
+bash scripts/install_curated.sh all --profiles public-default
 
 # Windows PowerShell wrapper
-powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all
+powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all --profiles public-default
+
+# inspect available public profiles
+python scripts/install_curated.py --list-profiles
 
 # dry-run first
-DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp
+DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp --profiles public-default+cloud-platform
 ```
 
 PowerShell dry-run example:
 
 ```powershell
 $env:DRY_RUN = "1"
-.\scripts\install_curated.ps1 qwen
+.\scripts\install_curated.ps1 qwen --profiles public-default
 ```
+
+## Public Profiles
+
+This repo now distinguishes:
+
+- **public catalog**: all rows in `skills_manifest.csv`
+- **public profiles**: install bundles under `profiles/`
+- **private local overlay**: local-only additions kept outside the public product surface
+
+Current public profiles:
+
+- `core-meta` — discovery, verification, review, planning, session continuity
+- `development-core` — software development starter pack
+- `writing-blog` — public writing/blogging starter
+- `resume-job-search` — resume and job-search starter
+- `docs-office` — PDF/DOCX/PPTX/office workflows
+- `cloud-platform` — Vercel/Supabase/Hugging Face/platform workflows
+- `design-ui` — design and frontend-heavy work
+- `database-data` — database, RAG, and data workflows
+
+Installer aliases:
+
+- `public-default = core-meta + development-core`
+- `all-public = union of all public profiles`
 
 Supported targets:
 - `claude` (default)
@@ -74,7 +108,7 @@ Supported targets:
 - custom combos such as `claude+codex+opencode`, `claude+gemini+amp+codebuddy`, `claude+qwen`
 - `universal`, `global`, `cursor`, `auto` (install-only targets; no post-install sync)
 
-The installer reads `skills_manifest.csv` directly, installs from upstream Context7 sources, validates/sanitizes known `SKILL.md` frontmatter issues in the Claude-compatible base install, then copies the resulting local skill tree into compatible agent directories. It does **not** vendor third-party `SKILL.md` files into this repo.
+The installer reads `skills_manifest.csv` as the public catalog, resolves one or more profile files from `profiles/`, installs the matching upstream skills, validates/sanitizes known `SKILL.md` frontmatter issues in the Claude-compatible base install, then copies the resulting local skill tree into compatible agent directories. It does **not** vendor third-party `SKILL.md` files into this repo.
 
 ### Directory Overrides
 
@@ -111,7 +145,8 @@ This script syncs user skill directories only and leaves target-side `.system` f
 ## Files
 
 - `skills_manifest.csv`: `slug, skill_name, source, installs, trust, score`
-- `skills_selected.txt`: current selected slugs
+- `skills_selected.txt`: compatibility export of the current public catalog
+- `profiles/*.txt`: public install profiles
 - `manifest_summary.json`: generation metadata
 - `scripts/install_curated.py`: cross-platform installer and sync entry point
 - `scripts/install_curated.sh`: Unix wrapper for the Python installer

@@ -1,0 +1,11 @@
+# Public document handling and deliverables
+
+doc-coauthoring
+docx
+internal-comms
+markitdown
+mermaid-diagrams
+pdf
+pptx
+session-handoff
+xlsx

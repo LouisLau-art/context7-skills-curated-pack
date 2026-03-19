@@ -1,0 +1,10 @@
+# Public cloud/platform starter based on current public catalog
+
+ai-sdk
+deploy-to-vercel
+github-actions-templates
+hf-cli
+supabase-nextjs
+supabase-postgres-best-practices
+vercel-composition-patterns
+vercel-react-best-practices

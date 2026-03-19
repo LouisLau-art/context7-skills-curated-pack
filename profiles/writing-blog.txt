@@ -1,0 +1,11 @@
+# Public writing/blog starter based on current public catalog
+
+brainstorming
+doc-coauthoring
+internal-comms
+markitdown
+mermaid-diagrams
+react-email
+send-email
+session-handoff
+writing-plans

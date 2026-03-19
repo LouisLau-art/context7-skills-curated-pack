@@ -1,0 +1,17 @@
+# Public UI/design starter
+
+ai-elements
+canvas-design
+frontend-design
+gsap
+implement-design
+motion
+react-best-practices
+remotion-best-practices
+responsive-design
+shadcn
+ui-design-system
+ux-researcher-designer
+web-artifacts-builder
+web-component-design
+web-design-guidelines

@@ -2,17 +2,18 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-一个面向开发流程的 skills 精选与去重仓库，同时附带多来源排行榜站点。
+一个面向多 agent 软件工作流的公开 skills catalog 与 profile 安装仓库，同时附带多来源排行榜站点。
 
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/context7-skills-curated-pack/
 
-当前快照：**120 个可安装 skills**（另含内部 `.system`；重新安装后本地目录总数为 121）。
+当前快照：**120 个公开可安装 skills**。默认公开安装档 `public-default` 当前会安装 **78 个 skills**；`all-public` 会安装完整的 120 个公开 catalog skills（另含内部 `.system`）。
 
 ## 这个仓库包含什么
 
 - `skills_manifest.csv`：已选技能清单（含 source/installs/trust/score）
-- `skills_selected.txt`：纯技能名列表
+- `skills_selected.txt`：公开 catalog 的兼容导出列表
+- `profiles/`：公开安装档，例如 `core-meta`、`development-core`、`writing-blog`
 - `scripts/install_curated.py`：跨平台一键安装器
 - `scripts/install_curated.sh`：对 Python 安装器的 Unix 薄封装
 - `scripts/install_curated.ps1`：对 Python 安装器的 PowerShell 薄封装
@@ -37,31 +38,64 @@ https://louislau-art.github.io/context7-skills-curated-pack/
 ## 快速开始
 
 ```bash
-# 跨平台：安装到 Claude 兼容基准目录
-python scripts/install_curated.py claude
+# 安装默认公开 profile 到 Claude 兼容基准目录
+python scripts/install_curated.py claude --profiles public-default
 
-# 一次安装，并同步到 Codex + Gemini + OpenCode + Amp
-python scripts/install_curated.py all
+# 安装完整公开 catalog
+python scripts/install_curated.py claude --profiles all-public
 
-# Qwen 兼容用法（复用 Gemini skills 目录）
-python scripts/install_curated.py qwen
+# 一次安装，并同步到 Codex + Gemini + OpenCode + Amp + CodeBuddy
+python scripts/install_curated.py all --profiles public-default
+
+# 在默认 profile 基础上叠加写作/博客 profile
+python scripts/install_curated.py claude --profiles public-default+writing-blog
+
+# 求职/简历导向安装
+python scripts/install_curated.py codex --profiles resume-job-search
 
 # Unix 便捷包装
-bash scripts/install_curated.sh all
+bash scripts/install_curated.sh all --profiles public-default
 
 # Windows PowerShell 包装
-powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all
+powershell -ExecutionPolicy Bypass -File .\scripts\install_curated.ps1 all --profiles public-default
+
+# 查看当前公开 profiles
+python scripts/install_curated.py --list-profiles
 
 # 先 dry-run
-DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp
+DRY_RUN=1 python scripts/install_curated.py claude+opencode+amp --profiles public-default+cloud-platform
 ```
 
 PowerShell 的 dry-run 示例：
 
 ```powershell
 $env:DRY_RUN = "1"
-.\scripts\install_curated.ps1 qwen
+.\scripts\install_curated.ps1 qwen --profiles public-default
 ```
+
+## 公开 Profiles
+
+这个 repo 现在区分三层：
+
+- **public catalog**：`skills_manifest.csv` 里的全部公开技能
+- **public profiles**：`profiles/` 下的场景化安装档
+- **private local overlay**：维护者本地私有扩展，不直接当作公开产品一部分
+
+当前公开 profiles：
+
+- `core-meta`：发现、验证、review、规划、会话衔接
+- `development-core`：开发主流程 starter
+- `writing-blog`：写作/博客 starter
+- `resume-job-search`：简历/求职 starter
+- `docs-office`：PDF / DOCX / PPTX / 办公文档处理
+- `cloud-platform`：Vercel / Supabase / Hugging Face / 平台相关
+- `design-ui`：设计与前端 UI
+- `database-data`：数据库、RAG、数据工作流
+
+安装器内置别名：
+
+- `public-default = core-meta + development-core`
+- `all-public = 所有公开 profiles 的并集`
 
 支持目标：
 - `claude`（默认）
@@ -75,7 +109,7 @@ $env:DRY_RUN = "1"
 - 自定义组合，例如 `claude+codex+opencode`、`claude+gemini+amp+codebuddy`、`claude+qwen`
 - `universal`、`global`、`cursor`、`auto`（仅安装，不做后续同步）
 
-安装器会直接读取 `skills_manifest.csv`，从上游 Context7 来源安装，在 Claude 兼容基准目录里校验并修复已知 `SKILL.md` frontmatter 问题，然后再把本地生成的 skills 目录同步到兼容 agent 的目录中；并不会把第三方 `SKILL.md` vendoring 到本仓库。
+安装器会把 `skills_manifest.csv` 当作公开 catalog，再从 `profiles/` 解析一个或多个安装档，只安装匹配到的 skills；随后在 Claude 兼容基准目录里校验并修复已知 `SKILL.md` frontmatter 问题，再把本地生成的 skills 目录同步到兼容 agent 的目录中；并不会把第三方 `SKILL.md` vendoring 到本仓库。
 
 ### 目录覆盖
 

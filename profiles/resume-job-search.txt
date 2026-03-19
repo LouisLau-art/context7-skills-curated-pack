@@ -1,0 +1,9 @@
+# Public resume/job-search starter based on current public catalog
+
+brainstorming
+docx
+internal-comms
+markitdown
+pdf
+resume-builder
+session-handoff
