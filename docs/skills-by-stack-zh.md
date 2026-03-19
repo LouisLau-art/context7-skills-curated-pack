@@ -1,27 +1,27 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 125（仅当前已保留 skills）
+- 总计目录数: 123（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
 - 数据源: `skills_selected.txt`
 
 ## 分类总览
 
-- 前端与Web UI: 34
+- 前端与Web UI: 31
 - 后端与服务端(Node/多语言): 12
 - Python/AI/数据科学: 6
 - 数据库与数据工程: 10
 - LLM/Agent与提示工程: 14
-- 测试/质量保障: 8
+- 测试/质量保障: 7
 - 安全与架构: 6
 - 文档与办公自动化: 11
-- 工程流程与协作: 22
-- 其他/未分类: 2
+- 工程流程与协作: 20
+- 其他/未分类: 6
 
-## 前端与Web UI（34）
+## 前端与Web UI（31）
 
 主要是 React/Next/Vue/Nuxt/Svelte、Tailwind/shadcn、动画与性能优化相关能力。
 
-`cache-components`, `canvas-design`, `frontend-design`, `gsap`, `implement-design`, `motion`, `next-best-practices`, `nextjs-app-router-patterns`, `nuxt`, `nuxt-better-auth`, `nuxt-ui`, `react-best-practices`, `react-email`, `react-modernization`, `react-state-management`, `remotion-best-practices`, `responsive-design`, `senior-frontend`, `shadcn`, `svelte-code-writer`, `tailwind-design-system`, `tailwind-v4-shadcn`, `tanstack-query`, `tanstack-table`, `ui-design-system`, `ux-researcher-designer`, `vercel-composition-patterns`, `vercel-react-best-practices`, `vite`, `vue`, `web-artifacts-builder`, `web-component-design`, `web-design-guidelines`, `web-perf`
+`cache-components`, `canvas-design`, `frontend-design`, `gsap`, `implement-design`, `motion`, `next-best-practices`, `nextjs-app-router-patterns`, `nuxt`, `nuxt-better-auth`, `nuxt-ui`, `react-email`, `react-modernization`, `remotion-best-practices`, `responsive-design`, `shadcn`, `svelte-code-writer`, `tailwind-design-system`, `tailwind-v4-shadcn`, `tanstack-query`, `tanstack-table`, `ui-design-system`, `ux-researcher-designer`, `vercel-composition-patterns`, `vercel-react-best-practices`, `vite`, `vue`, `web-artifacts-builder`, `web-component-design`, `web-design-guidelines`, `web-perf`
 
 ## 后端与服务端(Node/多语言)（12）
 
@@ -47,11 +47,11 @@
 
 `agent-browser`, `ai-elements`, `claude-opus-4-5-migration`, `context7-docs-lookup`, `context7-mcp`, `embedding-strategies`, `find-docs`, `find-skills`, `hf-cli`, `langchain`, `langchain-architecture`, `rag-implementation`, `senior-prompt-engineer`, `ai-sdk`
 
-## 测试/质量保障（8）
+## 测试/质量保障（7）
 
 主要是单测/E2E、代码审查、调试与 TDD 工作流。
 
-`code-reviewer`, `e2e-testing-patterns`, `senior-qa`, `systematic-debugging`, `tdd-guide`, `test-driven-development`, `vitest`, `webapp-testing`
+`code-reviewer`, `e2e-testing-patterns`, `systematic-debugging`, `tdd-guide`, `test-driven-development`, `vitest`, `webapp-testing`
 
 ## 安全与架构（6）
 
@@ -63,14 +63,14 @@
 
 主要是 doc/pdf/ppt/xlsx 处理与文档协作。
 
-`doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `resume-builder`, `tailored-resume-generator`, `content-strategy`, `update-docs`, `xlsx`
+`doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `resume-builder`, `update-docs`, `xlsx`, `tailored-resume-generator`, `content-strategy`
 
-## 工程流程与协作（22）
+## 工程流程与协作（20）
 
 主要是规划执行、规范、项目组织与工程协同。
 
-`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`, `requesting-code-review`, `receiving-code-review`, `verification-before-completion`, `using-git-worktrees`, `git-commit`, `finishing-a-development-branch`, `turborepo`, `github-actions-templates`, `deploy-to-vercel`, `wrangler`
+`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `writing-plans`, `requesting-code-review`, `receiving-code-review`, `verification-before-completion`, `using-git-worktrees`, `git-commit`, `finishing-a-development-branch`, `turborepo`, `github-actions-templates`, `deploy-to-vercel`, `wrangler`
 
-## 其他/未分类（2）
+## 其他/未分类（6）
 
-`send-email`, `claude-automation-recommender`
+`claude-automation-recommender`, `send-email`, `backend-patterns`, `frontend-testing`, `frontend-patterns`, `react-dev`

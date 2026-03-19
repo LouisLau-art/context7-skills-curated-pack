@@ -97,6 +97,9 @@ def sync_target(source_root: Path, target_root: Path, mode: str, prune: bool, dr
             remove_path(target_root / stale, dry_run)
 
     for slug, src in sorted(source_skills.items()):
+        if not src.exists() and not src.is_symlink():
+            print(f"WARN skipping missing source skill: {src}")
+            continue
         dst = target_root / slug
         if mode == "symlink":
             desired = src.resolve(strict=False)

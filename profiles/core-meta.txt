@@ -13,6 +13,5 @@ requesting-code-review
 session-handoff
 systematic-debugging
 using-git-worktrees
-using-superpowers
 verification-before-completion
 writing-plans

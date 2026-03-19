@@ -3,8 +3,8 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Installable Skills](https://img.shields.io/badge/installable_skills-125-blue)
-![Local Total](https://img.shields.io/badge/local_total_with__.system-121-6f42c1)
+![Installable Skills](https://img.shields.io/badge/installable_skills-123-blue)
+![Local Total](https://img.shields.io/badge/local_total_with__.system-124-6f42c1)
 ![Curation](https://img.shields.io/badge/curation-Source%2BOverlap%2BContent-orange)
 ![Rankings](https://img.shields.io/badge/rankings-skills.sh%20primary%20%7C%20Context7%20secondary-black)
 
@@ -12,7 +12,7 @@ A curated, deduplicated public skills catalog for multi-agent software workflows
 
 Live site (GitHub Pages): https://louislau-art.github.io/context7-skills-curated-pack/
 
-Current snapshot: **125 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **78 skills**. A full `all-public` install yields the complete 125-skill public catalog (plus internal `.system`).
+Current snapshot: **123 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **77 skills**. A full `all-public` install yields the complete 123-skill public catalog (plus internal `.system`).
 
 This repository intentionally contains:
 - `skills_manifest.csv` (selected skills with source/score)

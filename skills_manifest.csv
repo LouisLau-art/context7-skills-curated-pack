@@ -6,6 +6,7 @@ architecture-decision-records,architecture-decision-records,/wshobson/agents,43,
 architecture-patterns,architecture-patterns,/wshobson/agents,146,9.5,0.611
 async-python-patterns,async-python-patterns,/wshobson/agents,76,9.5,0.563
 auth-implementation-patterns,auth-implementation-patterns,/wshobson/agents,87,9.5,0.573
+backend-patterns,backend-patterns,/affaan-m/everything-claude-code,62,9.4,
 backtesting-frameworks,backtesting-frameworks,/wshobson/agents,46,9.5,0.526
 better-auth-best-practices,better-auth-best-practices,/better-auth/skills,302,7.8,0.623
 brainstorming,brainstorming,/obra/superpowers,77,9.5,0.564
@@ -23,12 +24,14 @@ doc-coauthoring,doc-coauthoring,/anthropics/skills,453,8.5,0.671
 docx,docx,/anthropics/skills,539,8.5,0.684
 dotnet-backend-patterns,dotnet-backend-patterns,/wshobson/agents,128,9.5,0.602
 e2e-testing-patterns,e2e-testing-patterns,/wshobson/agents,72,9.5,0.559
+frontend-testing,frontend-testing,/langgenius/dify,79,8.9,
 embedding-strategies,embedding-strategies,/wshobson/agents,49,9.5,0.531
 executing-plans,executing-plans,/obra/superpowers,43,9.5,0.521
 fastapi-templates,fastapi-templates,/wshobson/agents,117,9.5,0.595
 find-docs,find-docs,/upstash/context7,8.0K,9.5,0.806
 find-skills,find-skills,/vercel-labs/skills,125,9.6,0.602
 frontend-design,frontend-design,/anthropics/skills,3K,8.5,0.812
+frontend-patterns,frontend-patterns,/affaan-m/everything-claude-code,146,9.4,
 gh-cli,gh-cli,/github/awesome-copilot,45,8.2,0.642
 go-concurrency-patterns,go-concurrency-patterns,/wshobson/agents,58,9.5,0.543
 gsap,gsap,/martinholovsky/claude-skills-generator,68,7.7,0.510
@@ -41,7 +44,6 @@ laravel,laravel,/rawveg/skillsforge-marketplace,109,9,0.577
 markitdown,markitdown,/davila7/claude-code-templates,47,10,0.540
 memory-safety-patterns,memory-safety-patterns,/wshobson/agents,55,9.5,0.539
 mermaid-diagrams,mermaid-diagrams,/softaworks/agent-toolkit,22,6,0.535
-monorepo-management,monorepo-management,/wshobson/agents,72,9.5,0.559
 motion,motion,/jezweb/claude-skills,43,9.7,0.526
 next-best-practices,next-best-practices,/vercel-labs/next-skills,121,9.6,0.600
 nextjs-app-router-patterns,nextjs-app-router-patterns,/wshobson/agents,254,9.5,0.653
@@ -57,10 +59,9 @@ prisma,prisma,/blencorp/claude-code-kit,56,7.5,0.490
 product-manager-toolkit,product-manager-toolkit,/alirezarezvani/claude-skills,61,8.9,0.681
 python-performance-optimization,python-performance-optimization,/wshobson/agents,84,9.5,0.570
 rag-implementation,rag-implementation,/wshobson/agents,100,9.5,0.583
-react-best-practices,react-best-practices,/davila7/claude-code-templates,255,10,0.816
 react-email,react-email,/resend/react-email,45,9.5,0.524
+react-dev,react-dev,/softaworks/agent-toolkit,84,6,
 react-modernization,react-modernization,/wshobson/agents,117,9.5,0.595
-react-state-management,react-state-management,/wshobson/agents,196,9.5,0.633
 redis-js,redis-js,/upstash/redis-js,39,8.5,0.489
 remotion-best-practices,remotion-best-practices,/remotion-dev/skills,127,8.3,0.571
 resume-builder,resume-builder,/amruthpillai/reactive-resume,2,10,0.492
@@ -73,10 +74,8 @@ senior-backend,senior-backend,/alirezarezvani/claude-skills,321,8.9,0.655
 senior-computer-vision,senior-computer-vision,/alirezarezvani/claude-skills,54,8.9,0.523
 senior-data-engineer,senior-data-engineer,/alirezarezvani/claude-skills,121,8.9,0.583
 senior-data-scientist,senior-data-scientist,/alirezarezvani/claude-skills,84,8.9,0.555
-senior-frontend,senior-frontend,/alirezarezvani/claude-skills,1.1K,8.9,0.747
 senior-ml-engineer,senior-ml-engineer,/alirezarezvani/claude-skills,57,8.9,0.527
 senior-prompt-engineer,senior-prompt-engineer,/alirezarezvani/claude-skills,99,8.9,0.568
-senior-qa,senior-qa,/davila7/claude-code-templates,88,10,0.586
 senior-security,senior-security,/alirezarezvani/claude-skills,145,8.9,0.596
 shadcn,shadcn,/shadcn/ui,13,9.2,0.522
 sql-optimization-patterns,sql-optimization-patterns,/wshobson/agents,52,9.5,0.535
@@ -96,7 +95,6 @@ test-driven-development,test-driven-development,/obra/superpowers,46,9.5,0.526
 typescript-advanced-types,typescript-advanced-types,/wshobson/agents,148,9.5,0.612
 ui-design-system,ui-design-system,/alirezarezvani/claude-skills,144,8.9,0.595
 update-docs,update-docs,/vercel/next.js,159,10,0.630
-using-superpowers,using-superpowers,/obra/superpowers,41,9.5,0.518
 uv-package-manager,uv-package-manager,/wshobson/agents,71,9.5,0.558
 ux-researcher-designer,ux-researcher-designer,/alirezarezvani/claude-skills,79,8.9,0.551
 vercel-composition-patterns,vercel-composition-patterns,/vercel-labs/agent-skills,129,9.6,0.605

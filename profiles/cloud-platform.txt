@@ -7,5 +7,4 @@ hf-cli
 supabase-nextjs
 supabase-postgres-best-practices
 vercel-composition-patterns
-vercel-react-best-practices
 wrangler

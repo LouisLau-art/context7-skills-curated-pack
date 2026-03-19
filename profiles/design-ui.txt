@@ -6,7 +6,6 @@ frontend-design
 gsap
 implement-design
 motion
-react-best-practices
 remotion-best-practices
 responsive-design
 shadcn

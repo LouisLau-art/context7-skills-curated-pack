@@ -5,6 +5,7 @@ architecture-decision-records
 architecture-patterns
 async-python-patterns
 auth-implementation-patterns
+backend-patterns
 backtesting-frameworks
 better-auth-best-practices
 brainstorming
@@ -22,12 +23,14 @@ doc-coauthoring
 docx
 dotnet-backend-patterns
 e2e-testing-patterns
+frontend-testing
 embedding-strategies
 executing-plans
 fastapi-templates
 find-docs
 find-skills
 frontend-design
+frontend-patterns
 gh-cli
 go-concurrency-patterns
 gsap
@@ -40,7 +43,6 @@ laravel
 markitdown
 memory-safety-patterns
 mermaid-diagrams
-monorepo-management
 motion
 next-best-practices
 nextjs-app-router-patterns
@@ -56,10 +58,9 @@ prisma
 product-manager-toolkit
 python-performance-optimization
 rag-implementation
-react-best-practices
 react-email
+react-dev
 react-modernization
-react-state-management
 redis-js
 remotion-best-practices
 resume-builder
@@ -72,10 +73,8 @@ senior-backend
 senior-computer-vision
 senior-data-engineer
 senior-data-scientist
-senior-frontend
 senior-ml-engineer
 senior-prompt-engineer
-senior-qa
 senior-security
 shadcn
 sql-optimization-patterns
@@ -95,7 +94,6 @@ test-driven-development
 typescript-advanced-types
 ui-design-system
 update-docs
-using-superpowers
 uv-package-manager
 ux-researcher-designer
 vercel-composition-patterns

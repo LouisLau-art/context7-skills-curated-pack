@@ -7,6 +7,7 @@ architecture-decision-records
 architecture-patterns
 async-python-patterns
 auth-implementation-patterns
+backend-patterns
 backtesting-frameworks
 better-auth-best-practices
 cache-components
@@ -19,12 +20,13 @@ dotnet-backend-patterns
 e2e-testing-patterns
 fastapi-templates
 frontend-design
+frontend-patterns
+frontend-testing
 go-concurrency-patterns
 langchain
 langchain-architecture
 laravel
 memory-safety-patterns
-monorepo-management
 next-best-practices
 nextjs-app-router-patterns
 nodejs-backend-patterns
@@ -33,15 +35,12 @@ nuxt-better-auth
 nuxt-ui
 product-manager-toolkit
 python-performance-optimization
-react-best-practices
+react-dev
 react-modernization
-react-state-management
 rust-async-patterns
 senior-architect
 senior-backend
-senior-frontend
 senior-prompt-engineer
-senior-qa
 senior-security
 stripe-best-practices
 stripe-integration
@@ -57,6 +56,7 @@ turborepo
 typescript-advanced-types
 update-docs
 uv-package-manager
+vercel-react-best-practices
 vite
 vitest
 vue
