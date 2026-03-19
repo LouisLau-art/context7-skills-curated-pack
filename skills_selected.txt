@@ -116,3 +116,5 @@ finishing-a-development-branch
 ai-sdk
 turborepo
 xlsx
+github-actions-templates
+deploy-to-vercel

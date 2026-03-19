@@ -1,6 +1,6 @@
 # 当前 Skills 按技术栈/语言分类
 
-- 总计目录数: 118（仅当前已保留 skills）
+- 总计目录数: 120（仅当前已保留 skills）
 - 说明: 按“主要用途”进行单标签归类，便于快速筛选。
 - 数据源: `skills_selected.txt`
 
@@ -14,7 +14,7 @@
 - 测试/质量保障: 8
 - 安全与架构: 6
 - 文档与办公自动化: 9
-- 工程流程与协作: 19
+- 工程流程与协作: 21
 - 其他/未分类: 2
 
 ## 前端与Web UI（34）
@@ -65,11 +65,11 @@
 
 `doc-coauthoring`, `docx`, `internal-comms`, `markitdown`, `pdf`, `pptx`, `resume-builder`, `update-docs`, `xlsx`
 
-## 工程流程与协作（19）
+## 工程流程与协作（21）
 
 主要是规划执行、规范、项目组织与工程协同。
 
-`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`, `requesting-code-review`, `receiving-code-review`, `verification-before-completion`, `using-git-worktrees`, `git-commit`, `finishing-a-development-branch`, `turborepo`
+`brainstorming`, `coding-standards`, `convex-best-practices`, `executing-plans`, `gh-cli`, `monorepo-management`, `product-manager-toolkit`, `session-handoff`, `stripe-best-practices`, `stripe-integration`, `using-superpowers`, `writing-plans`, `requesting-code-review`, `receiving-code-review`, `verification-before-completion`, `using-git-worktrees`, `git-commit`, `finishing-a-development-branch`, `turborepo`, `github-actions-templates`, `deploy-to-vercel`
 
 ## 其他/未分类（2）
 

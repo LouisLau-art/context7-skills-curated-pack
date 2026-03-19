@@ -117,3 +117,5 @@ finishing-a-development-branch,finishing-a-development-branch,/obra/superpowers,
 ai-sdk,ai-sdk,/vercel/ai,11.9K,10,0.757
 turborepo,turborepo,/vercel/turborepo,11.5K,10,0.748
 xlsx,xlsx,/anthropics/skills,530,8.5,0.683
+github-actions-templates,github-actions-templates,/wshobson/agents,5.3K,9.5,0.728
+deploy-to-vercel,deploy-to-vercel,/vercel-labs/agent-skills,9.5K,9.6,0.809

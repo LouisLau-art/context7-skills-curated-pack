@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-18T00:41:45.211707+00:00",
+  "generatedAtUtc": "2026-03-18T15:58:35.969143+00:00",
   "project": "context7-skills-curated-pack",
   "siteUrl": "https://louislau-art.github.io/context7-skills-curated-pack",
   "datasets": [
@@ -91,20 +91,20 @@
       "available": true
     },
     {
-      "id": "skills_sh_all_time_top600",
-      "title": "Skills.sh All-Time Ranking Snapshot (Top 600)",
-      "relativePath": "docs/data/skills_sh_all_time_top600.json",
-      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/skills_sh_all_time_top600.json",
-      "generatedAtUtc": "2026-03-18T00:41:34.171570+00:00",
-      "rows": 600,
-      "sourceRows": 600,
+      "id": "skills_sh_all_time_top2000",
+      "title": "Skills.sh All-Time Ranking Snapshot (Top 2000)",
+      "relativePath": "docs/data/skills_sh_all_time_top2000.json",
+      "publicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/skills_sh_all_time_top2000.json",
+      "generatedAtUtc": "2026-03-18T15:58:11.308928+00:00",
+      "rows": 2000,
+      "sourceRows": 2000,
       "sourceUrl": "https://skills.sh/",
-      "totalSkills": 89096,
-      "allTimeTotal": 89096,
+      "totalSkills": 89190,
+      "allTimeTotal": 89190,
       "notes": [
         "Primary skills dataset for the site.",
-        "Derived from the prerendered skills.sh all-time leaderboard payload.",
-        "Current snapshot keeps the first 600 rows exposed in the site payload."
+        "Starts from the prerendered skills.sh payload, then continues with the public pagination API.",
+        "Current snapshot keeps the first 2000 rows."
       ],
       "keyFields": [
         "rank",
@@ -146,10 +146,10 @@
       "Fetch this manifest first.",
       "Then fetch dataset publicUrl needed for your task.",
       "Use generatedAtUtc and rows for freshness checks.",
-      "For skills, prefer skills_sh_all_time_top600 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
+      "For skills, prefer skills_sh_all_time_top2000 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
       "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime."
     ],
-    "preferredSkillsDatasetId": "skills_sh_all_time_top600",
+    "preferredSkillsDatasetId": "skills_sh_all_time_top2000",
     "preferredDocsExtendedDatasetId": "docs_extended_top1000",
     "manifestPublicUrl": "https://louislau-art.github.io/context7-skills-curated-pack/data/context7_rankings_manifest.json"
   }

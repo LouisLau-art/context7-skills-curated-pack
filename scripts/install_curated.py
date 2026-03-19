@@ -18,7 +18,7 @@ BASE_TARGET_FLAGS = {
     "cursor": "--cursor",
     "auto": None,
 }
-SYNC_TARGETS = ("codex", "gemini", "opencode", "amp")
+SYNC_TARGETS = ("codex", "gemini", "opencode", "amp", "codebuddy")
 SYNC_ALIAS = {
     "ampcode": "amp",
     "qwen": "gemini",
@@ -48,8 +48,8 @@ def parse_args() -> argparse.Namespace:
         nargs="?",
         default="claude",
         help=(
-            "Install target. Examples: claude, codex, gemini, opencode, amp, qwen, all, "
-            "claude+codex+gemini+opencode+amp+qwen, universal, global, cursor, auto"
+            "Install target. Examples: claude, codex, gemini, opencode, amp, codebuddy, qwen, all, "
+            "claude+codex+gemini+opencode+amp+codebuddy+qwen, universal, global, cursor, auto"
         ),
     )
     parser.add_argument(
@@ -81,6 +81,7 @@ def platform_skill_dirs() -> dict[str, Path]:
         "gemini": Path(os.getenv("GEMINI_SKILLS_DIR", str(home / ".gemini" / "skills"))).expanduser(),
         "opencode": Path(os.getenv("OPENCODE_SKILLS_DIR", str(opencode_default))).expanduser(),
         "amp": Path(os.getenv("AMP_SKILLS_DIR", str(amp_default))).expanduser(),
+        "codebuddy": Path(os.getenv("CODEBUDDY_SKILLS_DIR", str(home / ".codebuddy" / "skills"))).expanduser(),
     }
 
 
@@ -121,7 +122,7 @@ def parse_target(raw_target: str) -> tuple[str, list[str]]:
     if base_target != "claude" and sync_targets:
         raise SystemExit(
             "Sync targets require the Claude-compatible base install. "
-            "Use 'claude+codex+gemini+opencode+amp' style targets for multi-agent sync."
+            "Use 'claude+codex+gemini+opencode+amp+codebuddy' style targets for multi-agent sync."
         )
 
     return base_target, sync_targets

@@ -46,9 +46,9 @@ jobs:
         run: |
           python3 scripts/fetch_skills_sh_rankings.py \
             --view all-time \
-            --limit 600 \
-            --output-json docs/data/skills_sh_all_time_top600.json \
-            --output-csv docs/data/skills_sh_all_time_top600.csv
+            --limit 2000 \
+            --output-json docs/data/skills_sh_all_time_top2000.json \
+            --output-csv docs/data/skills_sh_all_time_top2000.csv
 
       - name: Refresh skills ranked dataset
         run: |
@@ -62,7 +62,7 @@ jobs:
           python3 scripts/build_rankings_manifest.py \
             --docs-json docs/data/context7_docs_popular_top50.json \
             --docs-extended-json docs/data/context7_docs_extended_top1000.json \
-            --skills-sh-json docs/data/skills_sh_all_time_top600.json \
+            --skills-sh-json docs/data/skills_sh_all_time_top2000.json \
             --context7-skills-json docs/data/context7_skills_ranked_all.json \
             --output-json docs/data/context7_rankings_manifest.json
 
@@ -76,8 +76,8 @@ jobs:
               docs/data/context7_docs_popular_top50.csv \
               docs/data/context7_docs_extended_top1000.json \
               docs/data/context7_docs_extended_top1000.csv \
-              docs/data/skills_sh_all_time_top600.json \
-              docs/data/skills_sh_all_time_top600.csv \
+              docs/data/skills_sh_all_time_top2000.json \
+              docs/data/skills_sh_all_time_top2000.csv \
               docs/data/context7_skills_ranked_all.json \
               docs/data/context7_skills_ranked_all.csv \
               docs/data/context7_rankings_manifest.json

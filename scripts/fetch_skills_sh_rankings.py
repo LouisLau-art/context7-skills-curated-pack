@@ -15,9 +15,9 @@ from urllib.request import Request, urlopen
 
 DEFAULT_BASE_URL = "https://skills.sh"
 DEFAULT_VIEW = "all-time"
-DEFAULT_LIMIT = 600
-DEFAULT_OUT_JSON = "docs/data/skills_sh_all_time_top600.json"
-DEFAULT_OUT_CSV = "docs/data/skills_sh_all_time_top600.csv"
+DEFAULT_LIMIT = 2000
+DEFAULT_OUT_JSON = "docs/data/skills_sh_all_time_top2000.json"
+DEFAULT_OUT_CSV = "docs/data/skills_sh_all_time_top2000.csv"
 
 VIEW_PATHS = {
     "all-time": "/",
@@ -30,6 +30,16 @@ def fetch_html(url: str, timeout: int = 30) -> str:
     req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urlopen(req, timeout=timeout) as resp:  # nosec B310 (trusted host input)
         return resp.read().decode("utf-8", "ignore")
+
+
+def fetch_api_page(base_url: str, view: str, page: int, timeout: int = 30) -> dict:
+    url = f"{base_url.rstrip('/')}/api/skills/{view}/{page}"
+    req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urlopen(req, timeout=timeout) as resp:  # nosec B310 (trusted host input)
+        payload = json.loads(resp.read().decode("utf-8", "ignore"))
+    if not isinstance(payload, dict):
+        raise RuntimeError(f"skills.sh API page {page} returned unexpected payload")
+    return payload
 
 
 def extract_initial_skills(html: str) -> tuple[list[dict], dict[str, int | str | None]]:
@@ -66,6 +76,12 @@ def normalize_source(value: str) -> str:
     return f"/{value}" if value else ""
 
 
+def unique_skill_key(item: dict) -> tuple[str, str]:
+    source = normalize_source(str(item.get("source") or ""))
+    skill_id = str(item.get("skillId") or item.get("name") or "").strip()
+    return source, skill_id
+
+
 def build_view_url(base_url: str, view: str) -> str:
     path = VIEW_PATHS[view]
     return f"{base_url.rstrip('/')}{path}"
@@ -94,9 +110,45 @@ def main() -> int:
     html = fetch_html(source_url)
     raw_items, meta = extract_initial_skills(html)
     keep = max(1, int(args.limit))
+    page_size = 200
+    prerender_rows = len(raw_items)
+    collected: list[dict] = []
+    seen_keys: set[tuple[str, str]] = set()
+    for item in raw_items:
+        if not isinstance(item, dict):
+            continue
+        key = unique_skill_key(item)
+        if not key[1] or key in seen_keys:
+            continue
+        seen_keys.add(key)
+        collected.append(item)
+        if len(collected) >= keep:
+            break
+    api_pages_fetched = 0
+    has_more = prerender_rows < int(meta.get("totalSkills") or prerender_rows)
+    next_page = (prerender_rows + page_size - 1) // page_size
+
+    while len(collected) < keep and has_more:
+        payload = fetch_api_page(args.base_url, args.view, next_page)
+        api_pages_fetched += 1
+        page_items = payload.get("skills")
+        if not isinstance(page_items, list) or not page_items:
+            break
+        for item in page_items:
+            if not isinstance(item, dict):
+                continue
+            key = unique_skill_key(item)
+            if not key[1] or key in seen_keys:
+                continue
+            seen_keys.add(key)
+            collected.append(item)
+            if len(collected) >= keep:
+                break
+        has_more = bool(payload.get("hasMore"))
+        next_page += 1
 
     rows: list[dict[str, object]] = []
-    for idx, item in enumerate(raw_items[:keep], start=1):
+    for idx, item in enumerate(collected[:keep], start=1):
         if not isinstance(item, dict):
             continue
         name = str(item.get("name") or item.get("skillId") or "").strip()
@@ -132,7 +184,9 @@ def main() -> int:
         "sourceUrl": source_url,
         "view": meta.get("view") or args.view,
         "rows": len(rows),
-        "sourceRows": len(raw_items),
+        "sourceRows": len(collected[:keep]),
+        "prerenderRows": prerender_rows,
+        "apiPagesFetched": api_pages_fetched,
         "totalSkills": meta.get("totalSkills"),
         "allTimeTotal": meta.get("allTimeTotal"),
         "items": rows,

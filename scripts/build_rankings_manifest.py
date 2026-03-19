@@ -14,7 +14,7 @@ from typing import Any
 DEFAULT_DOCS_JSON = "docs/data/context7_docs_popular_top50.json"
 DEFAULT_DOCS_EXTENDED_JSON = "docs/data/context7_docs_extended_top1000.json"
 DEFAULT_DOCS_EXTENDED_RUNTIME_JSON = "docs/data/context7_docs_extended_top100.runtime.json"
-DEFAULT_SKILLS_SH_JSON = "docs/data/skills_sh_all_time_top600.json"
+DEFAULT_SKILLS_SH_JSON = "docs/data/skills_sh_all_time_top2000.json"
 DEFAULT_CONTEXT7_SKILLS_JSON = "docs/data/context7_skills_ranked_all.json"
 DEFAULT_OUTPUT_JSON = "docs/data/context7_rankings_manifest.json"
 DEFAULT_PUBLIC_BASE = "https://louislau-art.github.io/context7-skills-curated-pack"
@@ -189,8 +189,8 @@ def main() -> int:
                 "available": docs_extended_runtime is not None,
             },
             {
-                "id": "skills_sh_all_time_top600",
-                "title": "Skills.sh All-Time Ranking Snapshot (Top 600)",
+                "id": "skills_sh_all_time_top2000",
+                "title": "Skills.sh All-Time Ranking Snapshot (Top 2000)",
                 "relativePath": skills_sh_rel,
                 "publicUrl": public_url(args.public_base, skills_sh_rel),
                 "generatedAtUtc": skills_sh.get("generatedAtUtc"),
@@ -201,8 +201,8 @@ def main() -> int:
                 "allTimeTotal": skills_sh.get("allTimeTotal"),
                 "notes": [
                     "Primary skills dataset for the site.",
-                    "Derived from the prerendered skills.sh all-time leaderboard payload.",
-                    "Current snapshot keeps the first 600 rows exposed in the site payload.",
+                    "Starts from the prerendered skills.sh payload, then continues with the public pagination API.",
+                    "Current snapshot keeps the first 2000 rows.",
                 ],
                 "keyFields": [
                     "rank",
@@ -244,10 +244,10 @@ def main() -> int:
                 "Fetch this manifest first.",
                 "Then fetch dataset publicUrl needed for your task.",
                 "Use generatedAtUtc and rows for freshness checks.",
-                "For skills, prefer skills_sh_all_time_top600 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
+                "For skills, prefer skills_sh_all_time_top2000 first, then fall back to skills_ranked_all for Context7-specific or long-tail lookups.",
                 "For docs 51+, if docs_extended_top1000.estimatedRows=0, use docs_extended_top100_runtime.",
             ],
-            "preferredSkillsDatasetId": "skills_sh_all_time_top600",
+            "preferredSkillsDatasetId": "skills_sh_all_time_top2000",
             "preferredDocsExtendedDatasetId": preferred_docs_extended_dataset_id,
             "manifestPublicUrl": public_url(args.public_base, manifest_rel),
         },
