@@ -43,6 +43,10 @@ A high-confidence Round C cleanup has also now been applied:
 - `claude-automation-recommender` was removed from the public catalog and `core-meta`
 - `claude-opus-4-5-migration` was removed from the public catalog and `development-core`
 
+A follow-up Figma review also clarified one duplication boundary:
+
+- `figma-implement-design` remains non-public for now because the public catalog already includes `implement-design` as the active Figma-to-code on-demand entrypoint
+
 ## Bucket A: Keep Pruned
 
 These deletions still look sound even after broadening the lens. They are mostly true overlap, environment conflict, or overly narrow vendor/tool wrappers that do not deserve default residency.
@@ -92,7 +96,7 @@ These are the deletions that most likely suffered from a coding-first or overly 
 | Skill | Wave | Current Public State | Recommended Action | Why |
 |---|---:|---|---|---|
 | `figma` | 22 | public (`design-ui`) | keep public/on-demand | Design-token extraction and design-to-code are real agent workflows, not fluff. |
-| `figma-implement-design` | 22 | not public | consider public promotion | Figma-to-code is a valid implementation surface if MCP/connector support exists. |
+| `figma-implement-design` | 22 | not public | keep non-public for now | Figma-to-code is a valid implementation surface, but the public catalog already exposes the overlapping `implement-design` skill with stronger current public signal. |
 | `send-email` | 22 | public (`cloud-platform`) | keep public | Transactional email is core solo-founder/business capability, not a minor SaaS edge case. |
 | `stripe-integration` | 21 | public (`cloud-platform`) | keep public | Payments are central business infrastructure, not just an occasional API wrapper. |
 | `blog-post` | 29 | not public | rewrite before restore or public promotion | High-value long-form content pipeline, but written against unavailable `task` + `generate_cover` contracts. |
@@ -124,8 +128,8 @@ If a follow-up public-catalog pass happens, the best Round B candidates are:
 
 1. Re-evaluate whether `blog-post` and `technical-blog-writing` deserve public inclusion after adapting them to the current environment.
 2. Re-check profile placement for `send-email` and `stripe-integration`.
-3. Consider whether `figma` / `figma-implement-design` should exist as public on-demand skills.
-4. Decide whether `figma-implement-design` deserves public on-demand promotion once connector assumptions are clearer.
+3. Revisit whether `figma-implement-design` offers enough differentiated value beyond the already-public `implement-design` skill.
+4. If Figma on-demand coverage expands, decide whether `code-connect-components` or another Figma MCP specialist should be promoted instead of duplicating the existing implement-design slot.
 
 ## Draft Round B Actions
 
