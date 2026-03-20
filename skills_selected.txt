@@ -88,6 +88,7 @@ tanstack-query
 tanstack-table
 tdd-guide
 tech-stack-evaluator
+technical-blog-writing
 test-driven-development
 typescript-advanced-types
 ui-design-system

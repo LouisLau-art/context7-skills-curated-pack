@@ -89,6 +89,7 @@ tanstack-query,tanstack-query,/jezweb/claude-skills,74,9.7,0.566
 tanstack-table,TanStack Table,/jezweb/claude-skills,50,9.7,0.537
 tdd-guide,tdd-guide,/alirezarezvani/claude-skills,59,8.9,0.529
 tech-stack-evaluator,tech-stack-evaluator,/alirezarezvani/claude-skills,60,8.9,0.531
+technical-blog-writing,technical-blog-writing,/inferen-sh/skills,4439,,
 test-driven-development,test-driven-development,/obra/superpowers,46,9.5,0.526
 typescript-advanced-types,typescript-advanced-types,/wshobson/agents,148,9.5,0.612
 ui-design-system,ui-design-system,/alirezarezvani/claude-skills,144,8.9,0.595

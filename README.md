@@ -12,7 +12,7 @@ A curated distribution layer for multi-agent skills: use `find-skills` for open-
 
 Live site (GitHub Pages): https://louislau-art.github.io/multi-agent-skills-catalog/
 
-Current snapshot: **121 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **71 skills**. A full `all-public` install yields the complete 121-skill public catalog (plus internal `.system`).
+Current snapshot: **122 installable public skills** in the catalog. The default public install profile (`public-default`) currently resolves to **71 skills**. A full `all-public` install yields the complete 122-skill public catalog (plus internal `.system`).
 
 ## Positioning
 

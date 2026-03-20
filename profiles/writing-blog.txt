@@ -7,4 +7,5 @@ markitdown
 mermaid-diagrams
 react-email
 session-handoff
+technical-blog-writing
 writing-plans

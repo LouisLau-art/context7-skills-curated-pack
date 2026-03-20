@@ -33,6 +33,11 @@ A first Round B subset has now been applied:
 - `stripe-integration` moved from `development-core` to `cloud-platform`
 - `figma` was promoted into the public catalog and added to `design-ui`
 
+A follow-up content-workflow update has also now been applied:
+
+- `technical-blog-writing` was promoted into the public catalog and added to `writing-blog`
+- local `infsh` CLI installation has been verified, though real execution still requires an authenticated inference.sh account
+
 ## Bucket A: Keep Pruned
 
 These deletions still look sound even after broadening the lens. They are mostly true overlap, environment conflict, or overly narrow vendor/tool wrappers that do not deserve default residency.
@@ -86,7 +91,7 @@ These are the deletions that most likely suffered from a coding-first or overly 
 | `send-email` | 22 | public (`writing-blog`) | keep public, consider better profile placement | Transactional email is core solo-founder/business capability, not a minor SaaS edge case. |
 | `stripe-integration` | 21 | public (`development-core`) | keep public, consider narrower profile placement | Payments are central business infrastructure, not just an occasional API wrapper. |
 | `blog-post` | 29 | not public | rewrite before restore or public promotion | High-value long-form content pipeline, but written against unavailable `task` + `generate_cover` contracts. |
-| `technical-blog-writing` | 29 | not public | rewrite before restore or public promotion | Valuable technical content workflow, but tightly bound to unavailable `infsh`. |
+| `technical-blog-writing` | 29 | public (`writing-blog`) | keep public/on-demand, consider future rewrite | Valuable technical content workflow; `infsh` is now installable locally, but the workflow still depends on authenticated inference.sh access. |
 | `ai-elements` | 31 | public (`design-ui`) | keep public, consider optional local restore for AI-product work | Strong AI-native UI surface, not mere cosmetic library noise. |
 | `web-artifacts-builder` | 31 | public (`design-ui`) | keep public, consider optional local restore for artifact-heavy work | Artifact/demo delivery is a legitimate agent output surface, especially for prototypes and rich deliverables. |
 
@@ -124,11 +129,11 @@ This is the most concrete next-pass proposal for the seven highest-priority skil
 | Skill | Draft Action | Target Profile | Notes |
 |---|---|---|---|
 | `blog-post` | rewrite before public | `writing-blog` | High-value long-form pipeline, but current `task researcher` + `generate_cover` contract must be rewritten first. |
-| `technical-blog-writing` | rewrite before public | `writing-blog` | Better fit than `blog-post` for the repo's technical audience, but must be detached from `infsh` first. |
+| `technical-blog-writing` | keep public/on-demand, future rewrite optional | `writing-blog` | Better fit than `blog-post` for the repo's technical audience; public inclusion is now reasonable, but removing the hard `infsh` dependency would make it more portable. |
 | `send-email` | keep public but move profile | `cloud-platform` | Business infrastructure skill; current placement under `writing-blog` is misleading. |
 | `stripe-integration` | keep public but move profile | `cloud-platform` | Business infrastructure, not a default core-development skill. |
 | `ai-elements` | keep public as-is | `design-ui` | Strong AI-native UI capability; current public placement is reasonable. |
 | `web-artifacts-builder` | keep public as-is | `design-ui` | Legitimate artifact/prototype output surface; keep until/unless a dedicated artifact profile exists. |
 | `figma` | promote to public | `design-ui` | Design-token extraction and design-to-code are real agent workflows; best Round B promotion candidate. |
 
-If only one of the two blog skills gets adapted first, `technical-blog-writing` is the better initial rewrite candidate because it aligns more directly with technical/developer content.
+If only one of the two blog skills gets adapted first, `blog-post` is now the clearer rewrite target because `technical-blog-writing` has already been promoted for on-demand public use.

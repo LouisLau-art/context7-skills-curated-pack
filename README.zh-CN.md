@@ -7,7 +7,7 @@
 在线页面（GitHub Pages）：
 https://louislau-art.github.io/multi-agent-skills-catalog/
 
-当前快照：**121 个公开可安装 skills**。默认公开安装档 `public-default` 当前会安装 **71 个 skills**；`all-public` 会安装完整的 121 个公开 catalog skills（另含内部 `.system`）。
+当前快照：**122 个公开可安装 skills**。默认公开安装档 `public-default` 当前会安装 **71 个 skills**；`all-public` 会安装完整的 122 个公开 catalog skills（另含内部 `.system`）。
 
 ## 项目定位
 
