@@ -5,8 +5,8 @@
 1. 始终使用中文沟通。
 2. Python 包与环境管理优先使用 `uv`，除非仓库已经明确固定其他工作流。
 3. JavaScript 工具安装与运行优先使用 `bun`，除非仓库已经固定使用其他包管理器或锁文件。
-4. 每个非平凡任务一开始都先用 `find-skills`。
-   先检查是否存在匹配的已安装 skill 或可安装 skill；如果用户点名某个 skill，或者任务明显匹配某个已安装 skill，先打开对应的 `SKILL.md` 并按其流程执行。在去网络上下载或寻找新的 skill 之前，**必须先去 `~/.<agent>/skills_backup` 目录里看看是否已经被我们备份和隐藏过**，如果有，优先恢复或查阅它，不要盲目去外网重新下载。
+4. 每个非平凡任务一开始都先用 `find-skills` 或 Context7 搜索。
+   由于部分顶级技能只存在于 Context7 库中而不在 skills.sh 中，在寻找技能时不仅要查阅 `skills.sh` 的全网排行榜，也要用 Context7 进行检索。先检查是否存在匹配的已安装 skill 或可安装 skill；如果用户点名某个 skill，或者任务明显匹配某个已安装 skill，先打开对应的 `SKILL.md` 并按其流程执行。在去网络上下载或寻找新的 skill 之前，**必须先去 `~/.<agent>/skills_backup` 目录里看看是否已经被我们备份和隐藏过**，如果有，优先恢复或查阅它，不要盲目去外网重新下载。
 5. 优先使用 MCP，而不是普通 web search。
    文档、框架、API、SDK、CLI 工具和配置说明优先用 Context7；GitHub 相关信息默认优先用 GitHub MCP 的只读搜索/发现能力；只有当 Context7、GitHub MCP、`gh` 和本地文档都不够时，才回退到 web search。
 6. 如果用户直接给的是 GitHub 仓库 URL，优先用 `gh` 或 GitHub MCP 去看仓库信息、README、目录、issue、pull request、release，不要先用普通 web search。
