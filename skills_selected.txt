@@ -117,3 +117,4 @@ wrangler
 tailored-resume-generator
 content-strategy
 claude-automation-recommender
+using-superpowers
