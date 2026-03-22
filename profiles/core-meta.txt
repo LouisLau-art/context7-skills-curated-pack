@@ -15,3 +15,4 @@ using-git-worktrees
 verification-before-completion
 writing-plans
 claude-automation-recommender
+claude-md-improver
