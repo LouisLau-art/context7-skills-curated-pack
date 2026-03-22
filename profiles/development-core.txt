@@ -2,7 +2,6 @@
 
 agent-browser
 ai-sdk
-better-auth
 cache-components
 convex-best-practices
 frontend-design
@@ -38,3 +37,5 @@ using-superpowers
 github-actions-templates
 python-performance-optimization
 uv-package-manager
+prisma-database-setup
+better-auth-best-practices

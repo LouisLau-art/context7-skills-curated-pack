@@ -1,7 +1,6 @@
 slug,skill_name,source,installs,trust,score
 agent-browser,agent-browser,/vercel-labs/agent-browser,252,9.6,0.655
 ai-elements,ai-elements,/vercel/ai-elements,52,10,0.548
-better-auth,better-auth,/jezweb/claude-skills,50,9.7,
 brainstorming,brainstorming,/obra/superpowers,77,9.5,0.564
 cache-components,cache-components,/vercel/next.js,264,10,0.668
 canvas-design,canvas-design,/anthropics/skills,655,8.5,0.695
@@ -30,7 +29,6 @@ nuxt-ui,nuxt-ui,/onmax/nuxt-skills,87,9.6,0.576
 pdf,pdf,/anthropics/skills,1K,8.5,0.730
 polars,polars,/davila7/claude-code-templates,44,10,0.535
 pptx,pptx,/anthropics/skills,474,8.5,0.674
-prisma,prisma,/blencorp/claude-code-kit,56,7.5,0.490
 product-manager-toolkit,product-manager-toolkit,/alirezarezvani/claude-skills,61,8.9,0.681
 react-email,react-email,/resend/react-email,45,9.5,0.524
 react-dev,react-dev,/softaworks/agent-toolkit,84,6,
@@ -95,3 +93,5 @@ impeccable,impeccable,/pbakaus/impeccable,repo,9.0,0.850
 github-actions-templates,github-actions-templates,/wshobson/agents,5.6K,9.5,0.728
 python-performance-optimization,python-performance-optimization,/wshobson/agents,11.7K,9.5,0.570
 uv-package-manager,uv-package-manager,/wshobson/agents,4.4K,9.5,0.558
+prisma-database-setup,prisma-database-setup,/prisma/skills,2.8K,10,0.850
+better-auth-best-practices,better-auth-best-practices,/better-auth/skills,26.1K,10,0.850

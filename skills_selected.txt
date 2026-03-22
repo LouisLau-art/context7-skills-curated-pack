@@ -1,6 +1,5 @@
 agent-browser
 ai-elements
-better-auth
 brainstorming
 cache-components
 canvas-design
@@ -29,7 +28,6 @@ nuxt-ui
 pdf
 polars
 pptx
-prisma
 product-manager-toolkit
 react-email
 react-dev
@@ -94,3 +92,5 @@ impeccable
 github-actions-templates
 python-performance-optimization
 uv-package-manager
+prisma-database-setup
+better-auth-best-practices
