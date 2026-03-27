@@ -93,3 +93,6 @@ wrangler
 writing-plans
 writing-skills
 xlsx
+assignment-helper
+study-guide-gen
+uow-assignment
