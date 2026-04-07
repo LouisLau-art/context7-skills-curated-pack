@@ -47,6 +47,7 @@ jobs:
           python3 scripts/fetch_skills_sh_rankings.py \
             --view all-time \
             --limit 2000 \
+            --keep-stale-on-error \
             --output-json docs/data/skills_sh_all_time_top2000.json \
             --output-csv docs/data/skills_sh_all_time_top2000.csv
 
