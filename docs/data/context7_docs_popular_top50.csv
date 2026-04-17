@@ -1,51 +1,51 @@
 rank,title,source,marketShare,tokens,snippets,updateUtc,updateAgo,trustScore,verified,benchmarkScore,type,popularityRank,docsRepoUrl,docsSiteUrl,libraryId
-1,Next.js,/vercel/next.js,11.161281567388816,581676,2115,2026-04-13T16:38:38.051000Z,2d,10,True,89.6,repo,1,https://github.com/vercel/next.js,,/vercel/next.js
-2,Better Auth,/better-auth/better-auth,4.708925079452734,474794,2410,2026-04-13T19:15:21.414000Z,2d,7.6,True,82,repo,5,https://github.com/better-auth/better-auth,,/better-auth/better-auth
-3,Vercel AI SDK,/vercel/ai,3.5090128962509715,1001443,3800,2026-04-13T16:47:01.588000Z,2d,10,True,93.3,repo,4,https://github.com/vercel/ai,,/vercel/ai
-4,Claude Code,/anthropics/claude-code,2.852627773519788,212273,761,2026-04-13T16:32:58.697000Z,2d,8.8,True,83.7,repo,2,https://github.com/anthropics/claude-code,,/anthropics/claude-code
-5,Shadcn UI,/shadcn-ui/ui,2.531667091595083,197673,1087,2026-04-13T18:31:30.278000Z,2d,10,True,76,repo,13,https://github.com/shadcn-ui/ui,,/shadcn-ui/ui
-6,React,/reactjs/react.dev,2.3994952884658027,799742,2866,2026-04-13T19:39:28.989000Z,2d,10,True,79.5,repo,9,https://github.com/reactjs/react.dev,,/reactjs/react.dev
-7,Supabase,/supabase/supabase,2.331650386972149,1764081,5351,2026-04-13T06:54:42.485000Z,2d,10,True,73.8,repo,7,https://github.com/supabase/supabase,,/supabase/supabase
-8,OpenClaw,/openclaw/openclaw,2.0009113891837096,944177,4166,2026-04-11T21:27:51.347000Z,4d,7.8,True,76.9,repo,3,https://github.com/openclaw/openclaw,,/openclaw/openclaw
-9,n8n,/n8n-io/n8n-docs,1.907327891846812,585683,1091,2026-04-13T21:28:25.969000Z,2d,9.7,True,86.7,repo,26,https://github.com/n8n-io/n8n-docs,,/n8n-io/n8n-docs
-10,Tailwind CSS,/tailwindlabs/tailwindcss.com,1.855333577686761,472910,1817,2026-04-13T16:47:47.044000Z,2d,10,True,80.9,repo,8,https://github.com/tailwindlabs/tailwindcss.com,,/tailwindlabs/tailwindcss.com
-11,Vercel,/websites/vercel,1.8257714096147484,1843259,5762,2026-04-15T00:54:03.215000Z,1d,10,True,84.9,website,76,https://github.com/context7/vercel,https://vercel.com/docs,/websites/vercel
-12,LangGraph,/langchain-ai/langgraph,1.8186257172527884,65045,227,2026-04-14T02:49:48.121000Z,2d,9.2,True,80.4,repo,62,https://github.com/langchain-ai/langgraph,,/langchain-ai/langgraph
-13,React,/websites/react_dev,1.6406180585122512,768377,2743,2026-04-13T22:17:11.037000Z,2d,10,True,91.3,website,66,https://github.com/context7/react_dev,https://react.dev/,/websites/react_dev
-14,Tailwind CSS,/websites/tailwindcss,1.553647460685764,350075,2239,2026-04-15T23:15:16.546000Z,5h,9.9,True,80.9,website,172,https://github.com/context7/tailwindcss,https://tailwindcss.com/docs,/websites/tailwindcss
-15,MongoDB,/mongodb/docs,1.5532478660471016,2263736,10088,2026-04-14T00:13:56.117000Z,2d,9.1,True,82.1,repo,55,https://github.com/mongodb/docs,,/mongodb/docs
-16,Expo,/expo/expo,1.3468768231505388,1866578,7127,2026-04-13T16:56:13.887000Z,2d,10,True,86.3,repo,11,https://github.com/expo/expo,,/expo/expo
-17,Prisma,/prisma/docs,1.2975464732482358,1398867,5275,2026-03-12T22:30:38.548000Z,1mo,10,True,82.6,repo,1717,https://github.com/prisma/docs,,/prisma/docs
-18,TanStack Query,/tanstack/query,1.2392056560035491,264966,1128,2026-04-13T20:55:31.221000Z,2d,8,True,92.8,repo,15,https://github.com/tanstack/query,,/tanstack/query
-19,Drizzle ORM,/drizzle-team/drizzle-orm-docs,1.12515664501595,432522,1954,2026-04-13T17:32:17.384000Z,2d,7.6,True,84.7,repo,16,https://github.com/drizzle-team/drizzle-orm-docs,,/drizzle-team/drizzle-orm-docs
-20,shadcn/ui,/websites/ui_shadcn,1.1117741422152616,421613,1473,2026-04-13T21:46:00.608000Z,2d,8.8,True,76.2,website,53,https://github.com/context7/ui_shadcn,https://ui.shadcn.com/docs,/websites/ui_shadcn
-21,FastAPI,/fastapi/fastapi,1.1034375011263085,212622,706,2026-04-13T07:04:20.870000Z,2d,9.9,True,83.5,repo,23,https://github.com/fastapi/fastapi,,/fastapi/fastapi
-22,AI SDK,/websites/ai-sdk_dev,1.0800259564140973,786287,3102,2026-04-13T23:37:20.634000Z,2d,9.6,True,91.6,website,42,https://github.com/context7/ai-sdk_dev,https://ai-sdk.dev/,/websites/ai-sdk_dev
-23,Claude Agent SDK,/websites/platform_claude_en_agent-sdk,1.0474158998236611,159206,651,2026-04-05T04:24:48.464000Z,11d,9.7,True,86.3,website,27,https://github.com/context7/platform_claude_en_agent-sdk,https://platform.claude.com/docs/en/agent-sdk,/websites/platform_claude_en_agent-sdk
-24,Payload,/payloadcms/payload,1.031565312490059,640762,2380,2026-04-13T19:24:39.677000Z,2d,9.4,True,91.3,repo,29,https://github.com/payloadcms/payload,,/payloadcms/payload
-25,Gemini API,/websites/ai_google_dev_gemini-api,0.9988612336317025,830204,2237,2026-04-13T18:54:08.074000Z,2d,9,True,86.7,website,22,https://github.com/context7/ai_google_dev_gemini-api,https://ai.google.dev/gemini-api/docs,/websites/ai_google_dev_gemini-api
-26,Playwright,/microsoft/playwright,0.9960797415390537,734301,3497,2026-04-13T19:09:37.532000Z,2d,9.9,True,94.9,repo,24,https://github.com/microsoft/playwright,,/microsoft/playwright
-27,OpenCode,/anomalyco/opencode,0.9912454299301399,196750,853,2026-04-13T16:37:07.158000Z,2d,9.6,True,89.8,repo,10,https://github.com/anomalyco/opencode,,/anomalyco/opencode
-28,SwiftUI,/websites/developer_apple_swiftui,0.9907283074565769,2523762,13907,2026-04-14T14:07:24.893000Z,1d,10,True,81.5,website,35,https://github.com/context7/developer_apple_swiftui,https://developer.apple.com/documentation/SwiftUI,/websites/developer_apple_swiftui
-29,Model Context Protocol Typescript SDK,/modelcontextprotocol/typescript-sdk,0.9727778894727498,55936,223,2026-04-13T17:16:49.158000Z,2d,7.8,True,76.1,repo,20,https://github.com/modelcontextprotocol/typescript-sdk,,/modelcontextprotocol/typescript-sdk
-30,OpenAI Platform,/websites/platform_openai,0.9632267940898229,2425139,4705,2026-03-06T03:49:04.319000Z,1mo,9.4,True,70.3,website,7116,https://github.com/context7/platform_openai,https://platform.openai.com/docs,/websites/platform_openai
-31,LangGraph,/websites/langchain_oss_python_langgraph,0.9439678995441018,135243,538,2026-04-13T17:34:24.051000Z,2d,10,True,89,website,14,https://github.com/context7/langchain_oss_python_langgraph,https://docs.langchain.com/oss/python/langgraph/,/websites/langchain_oss_python_langgraph
-32,Vitest,/vitest-dev/vitest,0.9167171122251356,421870,2091,2026-04-13T17:12:20.290000Z,2d,8.3,True,93.6,repo,17,https://github.com/vitest-dev/vitest,,/vitest-dev/vitest
-33,Pydantic AI,/pydantic/pydantic-ai,0.8819210379055473,306978,1059,2026-04-13T20:38:58.911000Z,2d,9.6,True,0,repo,43,https://github.com/pydantic/pydantic-ai,,/pydantic/pydantic-ai
-34,Vite,/vitejs/vite,0.8672849048659188,161013,678,2026-04-13T16:38:33.016000Z,2d,8.3,True,88.6,repo,30,https://github.com/vitejs/vite,,/vitejs/vite
-35,FastMCP,/jlowin/fastmcp,0.832935436318953,57671,214,2026-03-15T09:51:02.904000Z,1mo,9.3,True,66.3,repo,6536,https://github.com/jlowin/fastmcp,,/jlowin/fastmcp
-36,Supabase JS Client,/supabase/supabase-js,0.8221228755080924,63656,324,2026-04-13T16:47:19.106000Z,2d,9.5,True,85,repo,95,https://github.com/supabase/supabase-js,,/supabase/supabase-js
-37,Spring Boot,/spring-projects/spring-boot,0.8147264570983442,270379,827,2026-04-13T19:02:48.200000Z,2d,7.5,True,87.2,repo,37,https://github.com/spring-projects/spring-boot,,/spring-projects/spring-boot
-38,Google Gen AI Python SDK,/googleapis/python-genai,0.8042899853591658,146240,968,2026-04-14T03:03:06.444000Z,2d,8.5,True,81.4,repo,67,https://github.com/googleapis/python-genai,,/googleapis/python-genai
-39,NestJS,/nestjs/docs.nestjs.com,0.7995653663961594,284331,1649,2026-04-13T22:45:19.615000Z,2d,9.5,True,93.5,repo,32,https://github.com/nestjs/docs.nestjs.com,,/nestjs/docs.nestjs.com
-40,OpenAI Python,/openai/openai-python,0.7827902267613387,56136,341,2026-04-14T17:28:37.436000Z,1d,9.1,True,84.9,repo,60,https://github.com/openai/openai-python,,/openai/openai-python
-41,Clerk,/clerk/clerk-docs,0.7710374432712729,1115432,3907,2026-04-13T17:11:46.930000Z,2d,8.4,True,90.9,repo,33,https://github.com/clerk/clerk-docs,,/clerk/clerk-docs
-42,Model Context Protocol Python SDK,/modelcontextprotocol/python-sdk,0.7362570393296713,61666,253,2026-04-13T19:00:21.637000Z,2d,7.8,True,92.6,repo,77,https://github.com/modelcontextprotocol/python-sdk,,/modelcontextprotocol/python-sdk
-43,TanStack Router,/tanstack/router,0.7290251598887842,569506,2220,2026-04-14T00:56:56.431000Z,2d,8,True,93.3,repo,40,https://github.com/tanstack/router,,/tanstack/router
-44,Vue 3,/vuejs/docs,0.7279282334297114,281103,1254,2026-04-07T01:57:45.605000Z,9d,9.7,True,73.8,repo,91,https://github.com/vuejs/docs,,/vuejs/docs
-45,Mastra,/mastra-ai/mastra,0.7258597435354598,1289541,5407,2026-04-13T18:46:02.343000Z,2d,7.5,True,89.5,repo,34,https://github.com/mastra-ai/mastra,,/mastra-ai/mastra
-46,Supabase,/websites/supabase,0.703764510574136,7428656,25132,2026-04-14T07:13:39.918000Z,1d,10,True,73,website,41,https://github.com/context7/supabase,https://supabase.com/docs,/websites/supabase
-47,TypeScript,/microsoft/typescript,0.6988048359413283,2842471,18571,2026-04-13T21:04:10.516000Z,2d,9.9,True,69.9,repo,71,https://github.com/microsoft/typescript,,/microsoft/typescript
-48,Next.js,/websites/nextjs,0.6945973394518846,657703,2658,2026-04-13T17:41:41.474000Z,2d,10,True,87.1,website,143,https://github.com/context7/nextjs,https://nextjs.org/docs,/websites/nextjs
-49,Astro,/withastro/docs,0.6940332058443615,614963,2748,2026-04-13T17:33:07.633000Z,2d,8.5,True,87.1,repo,21,https://github.com/withastro/docs,,/withastro/docs
-50,FastAPI,/websites/fastapi_tiangolo,0.6937433038516065,1003080,3528,2026-04-13T17:42:08.615000Z,2d,9,True,97.3,website,51,https://github.com/context7/fastapi_tiangolo,https://fastapi.tiangolo.com/,/websites/fastapi_tiangolo
+1,Next.js,/vercel/next.js,11.149928556888062,581676,2115,2026-04-13T16:38:38.051000Z,3d,10,True,89.6,repo,1,https://github.com/vercel/next.js,,/vercel/next.js
+2,Better Auth,/better-auth/better-auth,4.70891651295337,474794,2410,2026-04-13T19:15:21.414000Z,3d,7.6,True,82,repo,5,https://github.com/better-auth/better-auth,,/better-auth/better-auth
+3,Vercel AI SDK,/vercel/ai,3.503114032236782,1001443,3800,2026-04-13T16:47:01.588000Z,3d,10,True,93.3,repo,4,https://github.com/vercel/ai,,/vercel/ai
+4,Claude Code,/anthropics/claude-code,2.8502512672346048,212273,761,2026-04-13T16:32:58.697000Z,3d,8.8,True,83.7,repo,2,https://github.com/anthropics/claude-code,,/anthropics/claude-code
+5,Shadcn UI,/shadcn-ui/ui,2.5303433745514616,197673,1087,2026-04-13T18:31:30.278000Z,3d,10,True,76,repo,13,https://github.com/shadcn-ui/ui,,/shadcn-ui/ui
+6,React,/reactjs/react.dev,2.4021778180327784,799742,2866,2026-04-13T19:39:28.989000Z,3d,10,True,79.5,repo,9,https://github.com/reactjs/react.dev,,/reactjs/react.dev
+7,Supabase,/supabase/supabase,2.3299445697980325,1764081,5351,2026-04-13T06:54:42.485000Z,3d,10,True,73.8,repo,7,https://github.com/supabase/supabase,,/supabase/supabase
+8,OpenClaw,/openclaw/openclaw,2.0041515240094396,944177,4166,2026-04-11T21:27:51.347000Z,5d,7.8,True,76.9,repo,3,https://github.com/openclaw/openclaw,,/openclaw/openclaw
+9,n8n,/n8n-io/n8n-docs,1.9015817127430303,585683,1091,2026-04-13T21:28:25.969000Z,3d,9.7,True,86.7,repo,26,https://github.com/n8n-io/n8n-docs,,/n8n-io/n8n-docs
+10,Tailwind CSS,/tailwindlabs/tailwindcss.com,1.8548196562556802,472910,1817,2026-04-13T16:47:47.044000Z,3d,10,True,80.9,repo,8,https://github.com/tailwindlabs/tailwindcss.com,,/tailwindlabs/tailwindcss.com
+11,Vercel,/websites/vercel,1.8413912315111025,1843259,5762,2026-04-15T00:54:03.215000Z,2d,10,True,84.9,website,76,https://github.com/context7/vercel,https://vercel.com/docs,/websites/vercel
+12,LangGraph,/langchain-ai/langgraph,1.810424116360998,65045,227,2026-04-14T02:49:48.121000Z,3d,9.2,True,80.4,repo,62,https://github.com/langchain-ai/langgraph,,/langchain-ai/langgraph
+13,React,/websites/react_dev,1.6319389438719092,768377,2743,2026-04-13T22:17:11.037000Z,3d,10,True,91.3,website,66,https://github.com/context7/react_dev,https://react.dev/,/websites/react_dev
+14,Tailwind CSS,/websites/tailwindcss,1.55058993599896,350075,2239,2026-04-15T23:15:16.546000Z,1d,9.9,True,80.9,website,172,https://github.com/context7/tailwindcss,https://tailwindcss.com/docs,/websites/tailwindcss
+15,MongoDB,/mongodb/docs,1.548184496436018,2263736,10088,2026-04-14T00:13:56.117000Z,3d,9.1,True,82.1,repo,55,https://github.com/mongodb/docs,,/mongodb/docs
+16,Expo,/expo/expo,1.3525965708084728,1866578,7127,2026-04-13T16:56:13.887000Z,3d,10,True,86.3,repo,11,https://github.com/expo/expo,,/expo/expo
+17,Prisma,/prisma/docs,1.289619204904917,1398867,5275,2026-03-12T22:30:38.548000Z,1mo,10,True,82.6,repo,1717,https://github.com/prisma/docs,,/prisma/docs
+18,TanStack Query,/tanstack/query,1.2415960441806853,264966,1128,2026-04-13T20:55:31.221000Z,3d,8,True,92.8,repo,15,https://github.com/tanstack/query,,/tanstack/query
+19,Drizzle ORM,/drizzle-team/drizzle-orm-docs,1.1311326545426805,432522,1954,2026-04-13T17:32:17.384000Z,3d,7.6,True,84.7,repo,16,https://github.com/drizzle-team/drizzle-orm-docs,,/drizzle-team/drizzle-orm-docs
+20,shadcn/ui,/websites/ui_shadcn,1.1055135555082425,421613,1473,2026-04-13T21:46:00.608000Z,3d,8.8,True,76.2,website,53,https://github.com/context7/ui_shadcn,https://ui.shadcn.com/docs,/websites/ui_shadcn
+21,FastAPI,/fastapi/fastapi,1.1049141417660209,212622,706,2026-04-13T07:04:20.870000Z,3d,9.9,True,83.5,repo,23,https://github.com/fastapi/fastapi,,/fastapi/fastapi
+22,AI SDK,/websites/ai-sdk_dev,1.0810232226117547,786287,3102,2026-04-13T23:37:20.634000Z,3d,9.6,True,91.6,website,42,https://github.com/context7/ai-sdk_dev,https://ai-sdk.dev/,/websites/ai-sdk_dev
+23,Claude Agent SDK,/websites/platform_claude_en_agent-sdk,1.0407924405364053,159206,651,2026-04-05T04:24:48.464000Z,12d,9.7,True,86.3,website,27,https://github.com/context7/platform_claude_en_agent-sdk,https://platform.claude.com/docs/en/agent-sdk,/websites/platform_claude_en_agent-sdk
+24,Payload,/payloadcms/payload,1.0312563128192413,640762,2380,2026-04-13T19:24:39.677000Z,3d,9.4,True,91.3,repo,29,https://github.com/payloadcms/payload,,/payloadcms/payload
+25,Gemini API,/websites/ai_google_dev_gemini-api,1.001005380322181,830204,2237,2026-04-13T18:54:08.074000Z,3d,9,True,86.7,website,22,https://github.com/context7/ai_google_dev_gemini-api,https://ai.google.dev/gemini-api/docs,/websites/ai_google_dev_gemini-api
+26,Playwright,/microsoft/playwright,0.9976424356904955,734301,3497,2026-04-13T19:09:37.532000Z,3d,9.9,True,94.9,repo,24,https://github.com/microsoft/playwright,,/microsoft/playwright
+27,OpenCode,/anomalyco/opencode,0.9960621630973655,196750,853,2026-04-13T16:37:07.158000Z,3d,9.6,True,89.8,repo,10,https://github.com/anomalyco/opencode,,/anomalyco/opencode
+28,SwiftUI,/websites/developer_apple_swiftui,0.9895464578734747,2523762,13907,2026-04-14T14:07:24.893000Z,2d,10,True,81.5,website,35,https://github.com/context7/developer_apple_swiftui,https://developer.apple.com/documentation/SwiftUI,/websites/developer_apple_swiftui
+29,Model Context Protocol Typescript SDK,/modelcontextprotocol/typescript-sdk,0.9730976106356238,55936,223,2026-04-13T17:16:49.158000Z,3d,7.8,True,76.1,repo,20,https://github.com/modelcontextprotocol/typescript-sdk,,/modelcontextprotocol/typescript-sdk
+30,OpenAI Platform,/websites/platform_openai,0.9571236236351174,2425139,4705,2026-03-06T03:49:04.319000Z,1mo,9.4,True,70.3,website,7116,https://github.com/context7/platform_openai,https://platform.openai.com/docs,/websites/platform_openai
+31,LangGraph,/websites/langchain_oss_python_langgraph,0.9510127173020777,135243,538,2026-04-13T17:34:24.051000Z,3d,10,True,89,website,14,https://github.com/context7/langchain_oss_python_langgraph,https://docs.langchain.com/oss/python/langgraph/,/websites/langchain_oss_python_langgraph
+32,Vitest,/vitest-dev/vitest,0.9213300601710198,421870,2091,2026-04-13T17:12:20.290000Z,3d,8.3,True,93.6,repo,17,https://github.com/vitest-dev/vitest,,/vitest-dev/vitest
+33,Pydantic AI,/pydantic/pydantic-ai,0.8809825091848479,306978,1059,2026-04-13T20:38:58.911000Z,3d,9.6,True,0,repo,43,https://github.com/pydantic/pydantic-ai,,/pydantic/pydantic-ai
+34,Vite,/vitejs/vite,0.8686672813901106,161013,678,2026-04-13T16:38:33.016000Z,3d,8.3,True,88.6,repo,30,https://github.com/vitejs/vite,,/vitejs/vite
+35,FastMCP,/jlowin/fastmcp,0.8276346861271138,57671,214,2026-03-15T09:51:02.904000Z,1mo,9.3,True,66.3,repo,6536,https://github.com/jlowin/fastmcp,,/jlowin/fastmcp
+36,Supabase JS Client,/supabase/supabase-js,0.8194219393992708,63656,324,2026-04-13T16:47:19.106000Z,3d,9.5,True,85,repo,95,https://github.com/supabase/supabase-js,,/supabase/supabase-js
+37,Spring Boot,/spring-projects/spring-boot,0.8163236709654492,270379,827,2026-04-13T19:02:48.200000Z,3d,7.5,True,87.2,repo,37,https://github.com/spring-projects/spring-boot,,/spring-projects/spring-boot
+38,Google Gen AI Python SDK,/googleapis/python-genai,0.8028874616268167,146240,968,2026-04-14T03:03:06.444000Z,3d,8.5,True,81.4,repo,67,https://github.com/googleapis/python-genai,,/googleapis/python-genai
+39,NestJS,/nestjs/docs.nestjs.com,0.8028174002803232,284331,1649,2026-04-13T22:45:19.615000Z,3d,9.5,True,93.5,repo,32,https://github.com/nestjs/docs.nestjs.com,,/nestjs/docs.nestjs.com
+40,OpenAI Python,/openai/openai-python,0.7816277352630824,56136,341,2026-04-14T17:28:37.436000Z,2d,9.1,True,84.9,repo,60,https://github.com/openai/openai-python,,/openai/openai-python
+41,Clerk,/clerk/clerk-docs,0.7735006190698422,1115432,3907,2026-04-13T17:11:46.930000Z,3d,8.4,True,90.9,repo,33,https://github.com/clerk/clerk-docs,,/clerk/clerk-docs
+42,Model Context Protocol Python SDK,/modelcontextprotocol/python-sdk,0.7353327544190221,61666,253,2026-04-13T19:00:21.637000Z,3d,7.8,True,92.6,repo,77,https://github.com/modelcontextprotocol/python-sdk,,/modelcontextprotocol/python-sdk
+43,TanStack Router,/tanstack/router,0.7305919366396321,569506,2220,2026-04-14T00:56:56.431000Z,3d,8,True,93.3,repo,40,https://github.com/tanstack/router,,/tanstack/router
+44,Mastra,/mastra-ai/mastra,0.7278439749382779,1289541,5407,2026-04-13T18:46:02.343000Z,3d,7.5,True,89.5,repo,34,https://github.com/mastra-ai/mastra,,/mastra-ai/mastra
+45,Vue 3,/vuejs/docs,0.7259133956126806,281103,1254,2026-04-07T01:57:45.605000Z,10d,9.7,True,73.8,repo,91,https://github.com/vuejs/docs,,/vuejs/docs
+46,Supabase,/websites/supabase,0.7060471115847604,7428656,25132,2026-04-14T07:13:39.918000Z,2d,10,True,73,website,41,https://github.com/context7/supabase,https://supabase.com/docs,/websites/supabase
+47,TypeScript,/microsoft/typescript,0.6982002407774942,2842471,18571,2026-04-13T21:04:10.516000Z,3d,9.9,True,69.9,repo,71,https://github.com/microsoft/typescript,,/microsoft/typescript
+48,Next.js,/websites/nextjs,0.6946504658884927,657703,2658,2026-04-13T17:41:41.474000Z,3d,10,True,87.1,website,143,https://github.com/context7/nextjs,https://nextjs.org/docs,/websites/nextjs
+49,FastAPI,/websites/fastapi_tiangolo,0.694455851037122,1003080,3528,2026-04-13T17:42:08.615000Z,3d,9,True,97.3,website,51,https://github.com/context7/fastapi_tiangolo,https://fastapi.tiangolo.com/,/websites/fastapi_tiangolo
+50,Astro,/withastro/docs,0.694144467274929,614963,2748,2026-04-13T17:33:07.633000Z,3d,8.5,True,87.1,repo,21,https://github.com/withastro/docs,,/withastro/docs
